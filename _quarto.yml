@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!materials/workshop/"
+
+website:
+  title: "Analisi di dati di trascrittomica con R"
+  twitter-card:
+    card-style: summary_large_image
+    description: "Corso Revelo - Analisi di dati di trascrittomica con R"
+  page-footer:
+    left: "This page was built with ❤️, [R](https://cran.r-project.org) and [Quarto](https://quarto.org/) by Marco Chiapello."
+  navbar:
+    background: "#447099"
+    logo: "materials/images/revelo.png"
+    left:
+      - text: Slides
+        menu: 
+          - href: materials/M1_intro.qmd
+            text: "Modulo I: Introduzione al corso"
+          - href: materials/M2_RiepilogoR.qmd
+            text: "Modulo II: Riepilogo di R"
+          - href: materials/M3_RNASeq_Intro.qmd
+            text: "Modulo III: Introduzione all'RNASeq"
+          - href: https://phd-toolbox-course.github.io/2022_PhD_Toolbox_course/M4_RicercaRiproducibile.html#1
+            text: "Modulo IV: Ricerca Riproducibile"
+          - href: materials/M5_software_code.qmd
+            text: "Modulo V: Files and Software"
+      - href: materials/risorse.qmd
+        text: "Materiale aggiuntivo"
+      - href: https://revelotraining.slack.com
+        text: "Slack chat"
+      - href: https://drive.google.com/drive/folders/1rfrM639jZcpSzGWYVPXALyWFbHOk92qX?usp=sharing
+        text: "Cartella condivisa"
+    right: 
+      - text: "Revelo DataLabs"
+        href: https://revelodatalabs.com
+      - icon: github
+        href: https://github.com/mchiapello/202304_REVELO_Torvergata
+
+format:
+  html:
+    theme: 
+      - litera
+      - style.css
+    toc: true
