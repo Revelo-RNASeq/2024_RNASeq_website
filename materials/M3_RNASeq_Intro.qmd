@@ -192,420 +192,24 @@ plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
 [A Brief History of Sequencing]{.subtit}
 
 
+::: {.p-img-center}
 ```{r}
 #| echo: false
 #| layout-ncol: 1
 plot(qrcode::qr_code("https://forms.gle/rWcwyAiA4L7EG8pm7"))
 ```
 
+:::
+
+
 ##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[A Brief History of Sequencing]{.subtit}
+[First generation NGS]{.tit .p-span-center}
 
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-
-[Sample Preparation]{.tit .p-span-center}
-
-
-#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-
-[Sequencing Technologies]{.tit .p-span-center}
-
-
-#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-
-[Emerging Trends and Future Directions]{.tit .p-span-center}
-
-
-
-
-
-
-
-################################################################################
-################################################################################
-################################################################################
-################################################################################
-################################################################################
-################################################################################
-
-
-
-
-
-
-
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-<br>
-
-::: {.p-img-center}
-
-```{r}
-#| echo: false
-#| layout-ncol: 1
-plot(qrcode::qr_code("https://forms.gle/t9vmzx6o2sedBNaB7"))
-```
-
-:::
-
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1953]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [The structure of the DNA double helix was discovered]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/wcf.jpg)
-:::
-
-:::{.tcenter}
-James Watson, Francis Crick and Rosalind Franklin
-:::
-
-
-:::{.notes}
-The structure of the DNA double helix was discovered in 1953 by **James Watson and Francis Crick**. 
-
-**Rosalind Franklin** was an English X-ray crystallographer who also **contributed** a great deal and was central to the understanding of the molecular structures of DNA. 
-
-Watson and Crick received a **Nobel Prize in 1962**
-
-Franklin had passed away before her work was fully appreciated, and so she is now often referred to as ‘the dark lady of DNA’.
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1964]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Robert Holley, the first person to sequence a tRNA molecule]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/rwh.jpg){width=300}
-:::
-
-:::{.tcenter}
-Robert W. Holley
-:::
-
-
-:::{.notes}
-**Nobel Prize** in Physiology or Medicine in **1968** (with Har Gobind Khorana and Marshall Warren Nirenberg) for describing the structure of alanine transfer RNA, linking DNA and protein synthesis. 
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1972]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Paul Berg developed the first technology that permitted the isolation of defined DNA fragments]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/pb.jpg){width=300}
-:::
-
-
-
-:::{.tcenter}
-Paul Berg
-:::
-
-
-:::{.notes}
-Morto il 15 febbraio 2023
-
-leading to the **development of modern genetic engineering**. Before this, only phages or virus DNA was available for sequencing.
-
-**Nobel Prize** in Chemistry in 1980, along with Walter Gilbert and Frederick Sanger. 
-
-The award recognized their contributions to basic **research involving nucleic acids**, especially recombinant DNA.
-
-
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1973]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Walter Gilbert published the first nucleotide sequence]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/wg.jpg){width=300}
-:::
-
-:::{.tcenter}
-Walter Gilbert
-:::
-
-
-:::{.notes}
-consisting of 24 base pairs of the DNA lac operator.
-:::
-
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1973]{style="font-family: 'Rock Salt', cursive;font-size: 40px"}: [Walter Gilbert produced ‘DNA sequencing by chemical degradation’.]{style="font-size: 50px"}
-
-[1973]{style="font-family: 'Rock Salt', cursive;font-size: 40px"}: [Frederick Sanger was the first to sequence the complete DNA genome of a bacteriophage, called phi X174]{style="font-size: 50px"}
-
-:::{layout-ncol=2 .p-img-center}
-![](images/wg.jpg){width=300}
-
-![](images/fs.jpg){width=300}
-:::
-
-:::{.notes}
-Sanger  developed ‘DNA sequencing with chain-terminating inhibitors’.
-
-Frederick Sanger was the first to sequence the complete DNA genome of a bacteriophage, called phi X174. He also developed ‘DNA sequencing with chain-terminating inhibitors’.
-
-Gilbert, Frederick Sanger and Paul Berg were awarded the 1980 Nobel Prize in Chemistry
-
-Gilbert and Sanger were recognized for their pioneering work in devising methods for determining the sequence of nucleotides in a nucleic acid. 
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1983]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [DNA amplification technique was developed]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/km.jpg){width=300}
-:::
-
-:::{.tcenter}
-Kary Mullis
-:::
-
-
-:::{.notes}
-1993 **Nobel Prize** for Chemistry in recognition of his role in the invention of the polymerase chain reaction (PCR) technique
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1986]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Leroy Hood announced the invention of the first semi-automated DNA sequencing machine ]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/lh.jpg){width=400}
-:::
-
-:::{.tcenter}
-Leroy Hood
-:::
-
-
-:::{.notes}
-Hood improved the existing Sanger method of enzymatic sequencing, which was becoming the laboratory standard
-
-fluorescent dyes
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1987]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Applied Biosystems produced the first automated sequencing machine, called ABI370.]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/373.jpg){width=600}
-:::
-
-:::{.tcenter}
-Applied Biosystems 370A Prototype Automated DNA Gene Sequencer,
-:::
-
-
-:::{.notes}
- This was a significant advance for several scientific research projects, including mapping the human genome.
-
-The system relied on Sanger’s dideoxy sequencing method and fluorescent dyes
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1990]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [The Human Genome Project formally began]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/hp.jpg){width=600}
-:::
-
-:::{.tcenter}
-Early days: a DNA-sequencing lab in 1994
-:::
-
-
-:::{.notes}
-It was expected to take around 15 years.
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[1998]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [‘Method of nucleic acid amplification’ was developed]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/impr.png){width=800}
-:::
-
-:::{.tcenter}
-[Patent: https://patents.google.com/patent/WO1998044151A1/en]{style="font-size: 30px"}
-:::
-
-
-:::{.notes}
-This was one of the major milestones in developing NGS technologies.
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-[2000]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [A ‘rough draft’ of the human genome was finished by the Human Genome Project]{style="font-size: 70px"}
-
-:::{.p-img-center}
-![](images/hgc.jpeg){width=700}
-:::
-
-:::{.tcenter}
-[Wadman, M. ‘Rough draft’ of human genome wins researchers' backing. Nature 393, 399–400 (1998). https://doi.org/10.1038/30790]{style="font-size: 20px"}
-:::
-
-
-:::{.notes}
-
-:::
-
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Key moments for DNA sequencing:]{.subtit}
-
-<br>
-
-:::{.p-img-center}
-![](images/over.png)
-:::
-
-:::{.tcenter}
-[A timeline illustrating the milestones in major genome assembly achievements [Formenti et al., 2020]]{style="font-size: 30px"}
-:::
-
-
-:::{.notes}
-The background colour indicates what type of sequencing was used: Red represents early sequencing methods, yellow is Sanger-based shotgun methods, green is NGS and blue represents third-generation sequencing.
-:::
-
-
-#  {background-image="images/stat001.jpg" background-size="cover" background-opacity="0.1"}
-
-[History of NGS platforms]{.tit .p-span-center}
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[First generation NGS]{.subtit}
-
-:::{.fragment .fade-in fragment-index=1}
-The technology was based on:
-
-- the chain-termination method
-
-- the chain-degradation method
-:::
-
-:::{.fragment .fade-in fragment-index=2}
-::: {.p-img-center}
-```{r}
-#| echo: false
-#| layout-ncol: 1
-plot(qrcode::qr_code("https://forms.gle/CqVFdQg8Rb8QC1W58"))
-```
-:::
-
-:::
-
-
-:::{.notes}
-- the chain-termination method developed by Sanger in 1975
-
-- the chain-degradation method invented by Gilbert in 1977
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Chain-degradation method]{.subtit}
-
-
-:::{.p-img-center}
-![](images/mg.png){width=500}
-:::
-
-:::{.notes}
-- Gilbert sequencing requires radioactive labeling at one 5′ end of the DNA fragment to be sequenced 
-
-- Chemical treatment generates breaks at a small proportion of one or two of the four nucleotide bases in each of four reactions (G, A+G, C, C+T)
-
-- with the improvement of the chain-termination method (see below), Gilbert sequencing has fallen out 
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[Chain-termination method]{.subtit}
+[Sanger Sequencing]{.subtit}
 
 <br>
 
@@ -614,18 +218,18 @@ plot(qrcode::qr_code("https://forms.gle/CqVFdQg8Rb8QC1W58"))
 :::
 
 :::{.notes}
-- Dideoxynucleotide triphosphates (ddNTPs) lack the 3'-OH group of dNTPs that is essential for polymerase-mediated strand elongation in a PCR
+- I dideossinucleotidi trifosfati (ddNTP) mancano del gruppo 3'-OH dei dNTP, essenziale per l'allungamento del filamento mediato dalla polimerasi in una PCR.
 
-- radioactive labels, which were unstable, posed a health hazard, and required separate gels for each of the four DNA bases
+- Le marcature radioattive, instabili, rappresentavano un rischio per la salute e richiedevano gel separati per ciascuna delle quattro basi del DNA.
 
-- The synthesis of the complementary DNA strand starts at the specific priming site and ends with the incorporation of a chain-terminating ddNTP that is randomly introduced instead of its corresponding dNTP
+- La sintesi del filamento di DNA complementare inizia nel sito specifico di innesco e termina con l'incorporazione di un ddNTP terminatore di catena che viene introdotto casualmente al posto del corrispondente dNTP.
 
-- When these fragments are separated on a suitable gel matrix the sequence information can be obtained from the migration order of the bands (bottom to top)
+- Quando questi frammenti vengono separati su una matrice di gel appropriata, l'informazione sulla sequenza può essere ottenuta dall'ordine di migrazione delle bande (dal basso verso l'alto).
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[Chain-termination method]{.subtit}
+[Sanger Sequencing]{.subtit}
 
 <br>
 
@@ -634,23 +238,23 @@ plot(qrcode::qr_code("https://forms.gle/CqVFdQg8Rb8QC1W58"))
 :::
 
 :::{.notes}
-- Leroy Hood developed chemistry that used fluorescent dyes of different colors—one for each of the four DNA bases. This system of "color-coding" eliminated the need to run several reactions in overlapping gels
+- Leroy Hood sviluppò una tecnica chimica che utilizzava coloranti fluorescenti di diversi colori, uno per ciascuna delle quattro basi del DNA. Questo sistema di "codifica a colori" eliminò la necessità di eseguire diverse reazioni in gel sovrapposti.
 
-- Hood integrated laser and computer technology, eliminating the tedious process of information-gathering by hand.
+- Hood integrò la tecnologia laser e informatica, eliminando il tedioso processo di raccolta manuale delle informazioni.
 
-- fluorescently labeled ddATP, ddCTP, ddGTP and ddUTP 
+- ddATP, ddCTP, ddGTP e ddUTP marcati con fluorescenza.
 
-- Subsequent fluorescent visualization of the product reveals the incorporated nucleotide and hence the sequence
+- La successiva visualizzazione fluorescente del prodotto rivela il nucleotide incorporato e quindi la sequenza.
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[Chain-termination method]{.subtit}
+[Sanger Sequencing ]{.subtit}
 
-:::: {.columns .f40}
+:::: {.columns .f30}
 
 ::: {.column width="40%"}
-**Advantages**
+**Advantages** {{< fa face-smile-beam >}}
 
 1. Gold standard method for accurate detection of single nucleotide variants and small insertions/deletions
 
@@ -665,7 +269,7 @@ plot(qrcode::qr_code("https://forms.gle/CqVFdQg8Rb8QC1W58"))
 :::
 
 ::: {.column width="40%"}
-**Limitations**
+**Limitations** {{< fa face-tired >}}
 
 1. Limited throughput
 
@@ -682,25 +286,7 @@ plot(qrcode::qr_code("https://forms.gle/CqVFdQg8Rb8QC1W58"))
 
 ::::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
-
-[First generation NGS]{.subtit}
-
-<br>
-
-The main advantages of first-generation NGS technologies are: 
-
-- Have a good overall sequence output 
-
-- A high accuracy of 99.99%
-
-- Preparing nucleic acids of the ideal size is relatively easy
-
-:::{.notes}
-Questi metodi non erano high througput!!
-:::
-
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Second generation NGS]{.subtit}
 
@@ -710,7 +296,7 @@ Questi metodi non erano high througput!!
 [Second-generation NGS machines immediately began to drive the ‘genomics revolution’ by massively increased throughput by parallelizing many reactions]{style="font-size: 50px; font-family: 'Julius Sans One', sans-serif"}
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Second generation NGS]{.subtit}
 
@@ -732,7 +318,7 @@ Second-generation sequencing platforms:
 1. NextSeq 550Dx: Illumina in 2017 
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by Ligation]{.subtit}
 
@@ -779,7 +365,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 :::
 
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Pyrosequencing]{.subtit}
 
@@ -823,7 +409,7 @@ L’ATP a sua volta è il cofattore utilizzato dalla luciferasi per catalizzare 
 La luce generata, solo in seguito alla incorporazione del nucleotide corretto,viene rilevata grazie ad un detector.
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by synthesis]{.subtit}
 
@@ -833,7 +419,7 @@ La luce generata, solo in seguito alla incorporazione del nucleotide corretto,vi
 Birthplace of high-throughput sequencing
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by synthesis - History]{.subtit}
 
@@ -858,7 +444,7 @@ Shankar Balasubramanian and David Klenerman
 - This technology was subsequently referred to as sequencing by synthesis technology, or SBS. This became the basis of an innovative DNA sequencing approach.
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by synthesis - History]{.subtit}
 
@@ -871,7 +457,7 @@ Shankar Balasubramanian and David Klenerman
 :::
 
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by synthesis - History]{.subtit}
 
@@ -894,7 +480,7 @@ Cluster generation (also known as “bridge amplification”)
 - The amplification of single DNA molecules into clusters enhanced the fidelity and accuracy of gene calling, while reducing the cost of the system optics through generation of a stronger signal.
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by synthesis - History]{.subtit}
 
@@ -951,14 +537,14 @@ Cluster generation (also known as “bridge amplification”)
 
 
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Sequence by synthesis - Process]{.subtit}
 
 {{< video https://www.youtube.com/embed/fCd6B5HRaZ8 width="100%" height="85%" >}}
 
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Third generation NGS]{.subtit}
 
@@ -968,7 +554,7 @@ Cluster generation (also known as “bridge amplification”)
 [Third-generation methods allow direct sequencing of single DNA molecules]{style="font-size: 50px; font-family: 'Julius Sans One', sans-serif"}
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Third generation NGS]{.subtit}
 
@@ -986,14 +572,812 @@ Third-generation NGS platforms:
 1. Oxford Nanopore Technologies on 2014
 :::
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [SMRS]{.subtit}
 
 
 {{< video https://www.youtube.com/embed/_lD8JyAbwEo width="100%" height="85%" >}}
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Nanopore sequencing]{.subtit}
+
+
+{{< video https://www.youtube.com/embed/CGWZvHIi3i0 width="100%" height="85%" >}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Sample Preparation]{.tit .p-span-center}
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Sequencing Technologies]{.tit .p-span-center}
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Emerging Trends and Future Directions]{.tit .p-span-center}
+
+
+
+
+
+
+
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+
+
+
+
+
+
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+<br>
+
+::: {.p-img-center}
+
+```{r}
+#| echo: false
+#| layout-ncol: 1
+plot(qrcode::qr_code("https://forms.gle/t9vmzx6o2sedBNaB7"))
+```
+
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1953]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [The structure of the DNA double helix was discovered]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/wcf.jpg)
+:::
+
+:::{.tcenter}
+James Watson, Francis Crick and Rosalind Franklin
+:::
+
+
+:::{.notes}
+The structure of the DNA double helix was discovered in 1953 by **James Watson and Francis Crick**. 
+
+**Rosalind Franklin** was an English X-ray crystallographer who also **contributed** a great deal and was central to the understanding of the molecular structures of DNA. 
+
+Watson and Crick received a **Nobel Prize in 1962**
+
+Franklin had passed away before her work was fully appreciated, and so she is now often referred to as ‘the dark lady of DNA’.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1964]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Robert Holley, the first person to sequence a tRNA molecule]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/rwh.jpg){width=300}
+:::
+
+:::{.tcenter}
+Robert W. Holley
+:::
+
+
+:::{.notes}
+**Nobel Prize** in Physiology or Medicine in **1968** (with Har Gobind Khorana and Marshall Warren Nirenberg) for describing the structure of alanine transfer RNA, linking DNA and protein synthesis. 
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1972]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Paul Berg developed the first technology that permitted the isolation of defined DNA fragments]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/pb.jpg){width=300}
+:::
+
+
+
+:::{.tcenter}
+Paul Berg
+:::
+
+
+:::{.notes}
+Morto il 15 febbraio 2023
+
+leading to the **development of modern genetic engineering**. Before this, only phages or virus DNA was available for sequencing.
+
+**Nobel Prize** in Chemistry in 1980, along with Walter Gilbert and Frederick Sanger. 
+
+The award recognized their contributions to basic **research involving nucleic acids**, especially recombinant DNA.
+
+
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1973]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Walter Gilbert published the first nucleotide sequence]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/wg.jpg){width=300}
+:::
+
+:::{.tcenter}
+Walter Gilbert
+:::
+
+
+:::{.notes}
+consisting of 24 base pairs of the DNA lac operator.
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1973]{style="font-family: 'Rock Salt', cursive;font-size: 40px"}: [Walter Gilbert produced ‘DNA sequencing by chemical degradation’.]{style="font-size: 50px"}
+
+[1973]{style="font-family: 'Rock Salt', cursive;font-size: 40px"}: [Frederick Sanger was the first to sequence the complete DNA genome of a bacteriophage, called phi X174]{style="font-size: 50px"}
+
+:::{layout-ncol=2 .p-img-center}
+![](images/wg.jpg){width=300}
+
+![](images/fs.jpg){width=300}
+:::
+
+:::{.notes}
+Sanger  developed ‘DNA sequencing with chain-terminating inhibitors’.
+
+Frederick Sanger was the first to sequence the complete DNA genome of a bacteriophage, called phi X174. He also developed ‘DNA sequencing with chain-terminating inhibitors’.
+
+Gilbert, Frederick Sanger and Paul Berg were awarded the 1980 Nobel Prize in Chemistry
+
+Gilbert and Sanger were recognized for their pioneering work in devising methods for determining the sequence of nucleotides in a nucleic acid. 
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1983]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [DNA amplification technique was developed]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/km.jpg){width=300}
+:::
+
+:::{.tcenter}
+Kary Mullis
+:::
+
+
+:::{.notes}
+1993 **Nobel Prize** for Chemistry in recognition of his role in the invention of the polymerase chain reaction (PCR) technique
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1986]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Leroy Hood announced the invention of the first semi-automated DNA sequencing machine ]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/lh.jpg){width=400}
+:::
+
+:::{.tcenter}
+Leroy Hood
+:::
+
+
+:::{.notes}
+Hood improved the existing Sanger method of enzymatic sequencing, which was becoming the laboratory standard
+
+fluorescent dyes
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1987]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Applied Biosystems produced the first automated sequencing machine, called ABI370.]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/373.jpg){width=600}
+:::
+
+:::{.tcenter}
+Applied Biosystems 370A Prototype Automated DNA Gene Sequencer,
+:::
+
+
+:::{.notes}
+ This was a significant advance for several scientific research projects, including mapping the human genome.
+
+The system relied on Sanger’s dideoxy sequencing method and fluorescent dyes
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1990]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [The Human Genome Project formally began]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/hp.jpg){width=600}
+:::
+
+:::{.tcenter}
+Early days: a DNA-sequencing lab in 1994
+:::
+
+
+:::{.notes}
+It was expected to take around 15 years.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[1998]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [‘Method of nucleic acid amplification’ was developed]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/impr.png){width=800}
+:::
+
+:::{.tcenter}
+[Patent: https://patents.google.com/patent/WO1998044151A1/en]{style="font-size: 30px"}
+:::
+
+
+:::{.notes}
+This was one of the major milestones in developing NGS technologies.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+[2000]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [A ‘rough draft’ of the human genome was finished by the Human Genome Project]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/hgc.jpeg){width=700}
+:::
+
+:::{.tcenter}
+[Wadman, M. ‘Rough draft’ of human genome wins researchers' backing. Nature 393, 399–400 (1998). https://doi.org/10.1038/30790]{style="font-size: 20px"}
+:::
+
+
+:::{.notes}
+
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Key moments for DNA sequencing:]{.subtit}
+
+<br>
+
+:::{.p-img-center}
+![](images/over.png)
+:::
+
+:::{.tcenter}
+[A timeline illustrating the milestones in major genome assembly achievements [Formenti et al., 2020]]{style="font-size: 30px"}
+:::
+
+
+:::{.notes}
+The background colour indicates what type of sequencing was used: Red represents early sequencing methods, yellow is Sanger-based shotgun methods, green is NGS and blue represents third-generation sequencing.
+:::
+
+
+#  {background-image="images/stat001.jpg" background-size="cover" background-opacity="0.1"}
+
+[History of NGS platforms]{.tit .p-span-center}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[First generation NGS]{.subtit}
+
+:::{.fragment .fade-in fragment-index=1}
+The technology was based on:
+
+- the chain-termination method
+
+- the chain-degradation method
+:::
+
+:::{.fragment .fade-in fragment-index=2}
+::: {.p-img-center}
+```{r}
+#| echo: false
+#| layout-ncol: 1
+plot(qrcode::qr_code("https://forms.gle/CqVFdQg8Rb8QC1W58"))
+```
+:::
+
+:::
+
+
+:::{.notes}
+- the chain-termination method developed by Sanger in 1975
+
+- the chain-degradation method invented by Gilbert in 1977
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Chain-degradation method]{.subtit}
+
+
+:::{.p-img-center}
+![](images/mg.png){width=500}
+:::
+
+:::{.notes}
+- Gilbert sequencing requires radioactive labeling at one 5′ end of the DNA fragment to be sequenced 
+
+- Chemical treatment generates breaks at a small proportion of one or two of the four nucleotide bases in each of four reactions (G, A+G, C, C+T)
+
+- with the improvement of the chain-termination method (see below), Gilbert sequencing has fallen out 
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Chain-termination method]{.subtit}
+
+<br>
+
+:::{.p-img-center}
+![](images/sanger1.png){width=1500}
+:::
+
+:::{.notes}
+- Dideoxynucleotide triphosphates (ddNTPs) lack the 3'-OH group of dNTPs that is essential for polymerase-mediated strand elongation in a PCR
+
+- radioactive labels, which were unstable, posed a health hazard, and required separate gels for each of the four DNA bases
+
+- The synthesis of the complementary DNA strand starts at the specific priming site and ends with the incorporation of a chain-terminating ddNTP that is randomly introduced instead of its corresponding dNTP
+
+- When these fragments are separated on a suitable gel matrix the sequence information can be obtained from the migration order of the bands (bottom to top)
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Chain-termination method]{.subtit}
+
+<br>
+
+:::{.p-img-center}
+![](images/sanger2.png){width=1500}
+:::
+
+:::{.notes}
+- Leroy Hood developed chemistry that used fluorescent dyes of different colors—one for each of the four DNA bases. This system of "color-coding" eliminated the need to run several reactions in overlapping gels
+
+- Hood integrated laser and computer technology, eliminating the tedious process of information-gathering by hand.
+
+- fluorescently labeled ddATP, ddCTP, ddGTP and ddUTP 
+
+- Subsequent fluorescent visualization of the product reveals the incorporated nucleotide and hence the sequence
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Chain-termination method]{.subtit}
+
+:::: {.columns .f40}
+
+::: {.column width="40%"}
+**Advantages**
+
+1. Gold standard method for accurate detection of single nucleotide variants and small insertions/deletions
+
+1. Cost effective where single samples need to be tested very urgently
+
+1. Less reliant on computational tools than NGS
+
+1. Longer fragments (up to approximately 1000bp) can be sequenced than in short read NGS
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="40%"}
+**Limitations**
+
+1. Limited throughput
+
+1. Not cost effective for sequencing many genes in parallel
+
+1. Can require a larger amount of input DNA than NGS
+
+1. Sanger methods can only sequence short pieces of DNA--about 300 to 1000 base pairs.
+
+1. The quality of a Sanger sequence is often not very good in the first 15 to 40 bases because that is where the primer binds.
+
+1. Sequence quality degrades after 700 to 900 bases
+:::
+
+::::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[First generation NGS]{.subtit}
+
+<br>
+
+The main advantages of first-generation NGS technologies are: 
+
+- Have a good overall sequence output 
+
+- A high accuracy of 99.99%
+
+- Preparing nucleic acids of the ideal size is relatively easy
+
+:::{.notes}
+Questi metodi non erano high througput!!
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Second generation NGS]{.subtit}
+
+<br>
+
+:::{.callout-important appearance="default"}
+[Second-generation NGS machines immediately began to drive the ‘genomics revolution’ by massively increased throughput by parallelizing many reactions]{style="font-size: 50px; font-family: 'Julius Sans One', sans-serif"}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Second generation NGS]{.subtit}
+
+<br>
+
+Second-generation sequencing platforms:
+
+1. SOLiD: Sequencing by Oligonucleotide Ligation and Detection
+
+1. 454 GS FLX+: It uses pyrosequencing chemistry
+
+1. NextSeq 550Dx: Sequence by synthesis
+
+:::{.notes}
+1. SOLiD: Life Technologies in 2006
+
+1. 454: Roche in 2011
+
+1. NextSeq 550Dx: Illumina in 2017 
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by Ligation]{.subtit}
+
+<br>
+
+::::{.columns}
+
+:::{.column width="55%"}
+:::{.r-stack .p-img-center}
+![](images/lig1.png){width="900"}
+
+![](images/lig2.png){.fragment width="900"}
+:::
+:::
+
+:::{.column width="45%"}
+
+<br>
+
+:::{.fragment}
+- `r fontawesome::fa("plus-circle", fill = "green")` Considered to be one of the most accurate second-generation sequencing technologies
+
+- `r fontawesome::fa("minus-circle", fill = "red")` it can take up to seven days to complete a  single run and its short read length of 35 bp
+
+- `r fontawesome::fa("minus-circle", fill = "red")` Thermo Fisher Scientific shut down all SOLiD sequencing platforms in 2016
+:::
+:::
+::::
+
+:::{.notes}
+- Fluorescently labeled molecules called 8-mers
+
+- 8-mers are short ssDNA fragments where: 
+
+    - the first and second nucleotides are the next two nucleotides of the elongating DNA strand    
+    - the third-to-fifth nucleotides are degenerate     
+    - the sixth to eighth nucleotides are inosine bases, where the eighth inosine base is attached to a characteristic fluorescent dye
+
+A. The addition of primer and 8-mers, where if the first two nucleotides are complementary, DNA ligase ligates it to the primer.    
+B. Unbound 8-mers are washed away, and a laser excites the fluorescent tag on the 8-mer to emit a detectable light signal that is captured    
+C. A-B is repeated until the end of the DNA fragment.    
+D. The newly synthesized DNA strand is melted off, and A-C is repeated using a primer with a length of N-1, N-2, and N-3
+
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Pyrosequencing]{.subtit}
+
+::::{.columns}
+
+:::{.column width="45%"}
+:::{.p-img-center}
+![](images/pyro.png){width=800}
+:::
+
+:::
+
+:::{.column width="10%"}
+:::
+
+:::{.column width="45%"}
+<br>
+<br>
+
+:::{.fragment}
+- `r fontawesome::fa("plus-circle", fill = "green")` Large read lenght generation
+
+- `r fontawesome::fa("minus-circle", fill = "red")` High reagent cost
+
+- `r fontawesome::fa("minus-circle", fill = "red")` High error rate for homopolymers
+:::
+:::
+::::
+
+:::{.notes}
+Durante il sequenziamento vengono, di volta in volta, aggiunti dei nucleotidi. 
+
+Se il nucleotide viene incorporato viene rilasciato un pirofosfato 
+
+Poi utilizzato come substrato dall’enzima ATP solforilasi. 
+
+Quest’ultimo enzima catalizza la conversione del pirofosfato in ATP. 
+
+L’ATP a sua volta è il cofattore utilizzato dalla luciferasi per catalizzare la reazione che coinvolge la luciferina e che porta alla produzione di luce. 
+
+La luce generata, solo in seguito alla incorporazione del nucleotide corretto,viene rilevata grazie ad un detector.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by synthesis]{.subtit}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="1"}
+
+:::{.notes}
+Birthplace of high-throughput sequencing
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by synthesis - History]{.subtit}
+
+<br>
+
+[1997]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Evolution of a Novel Approach to Sequencing]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/bk.jpg){width=600}
+:::
+
+:::{.tcenter}
+Shankar Balasubramanian and David Klenerman
+:::
+
+
+:::{.notes}
+- Cambridge scientists Shankar Balasubramanian, Ph.D. and David Klenerman, Ph.D. were using fluorescently labeled nucleotides to observe the motion of a polymerase at the single molecule level as it synthesized DNA immobilized to a surface
+
+- during the summer of 1997 sparked ideas surrounding the use of clonal arrays and massively parallel sequencing of short reads using solid phase sequencing by reversible terminators
+
+- This technology was subsequently referred to as sequencing by synthesis technology, or SBS. This became the basis of an innovative DNA sequencing approach.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by synthesis - History]{.subtit}
+
+<br>
+
+[1998]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Formation of Solexa]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/solexa.png){width=600}
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by synthesis - History]{.subtit}
+
+<br>
+
+[2004]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Molecular Clustering Technology Integration]{style="font-size: 70px"}
+
+:::{.p-img-center}
+![](images/polony.jpg){width=800}
+:::
+
+:::{.tcenter}
+Cluster generation (also known as “bridge amplification”)
+:::
+
+
+:::{.notes}
+- Solexa acquired molecular clustering technology from Manteia. 
+
+- The amplification of single DNA molecules into clusters enhanced the fidelity and accuracy of gene calling, while reducing the cost of the system optics through generation of a stronger signal.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by synthesis - History]{.subtit}
+
+<br>
+
+[2005]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [phiX-174 Genome Sequencing]{style="font-size: 70px"}
+
+:::{.fragment}
+[2005]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Integration of Lynx Therapeutics]{style="font-size: 70px"}
+:::
+
+:::{.fragment}
+[2007]{style="font-family: 'Rock Salt', cursive;font-size: 60px"}: [Illumina Acquires Solexa]{style="font-size: 70px"}
+
+::::{.columns}
+
+:::{.column width="45%"}
+:::{.p-img-center}
+![](images/ga.jpg){width=500}
+:::
+
+:::
+
+:::{.column width="10%"}
+:::
+
+:::{.column width="45%"}
+:::{.p-img-center}
+![](images/moore.png){width=500}
+:::
+
+:::
+
+::::
+
+:::
+
+
+:::{.notes}
+- The Solexa team sequenced the complete genome of the bacteriophage phiX-174, the same genome Sanger first sequenced using his method
+
+- However, the SBS technology generated significantly more sequencing data, delivering over 3 million bases from a single run.
+
+---
+
+- Solexa acquired instrumentation company Lynx Therapeutics, transforming the successful Solexa prototype into a commercial sequencing instrument: Genome Analyzer
+
+---
+
+- Solexa was acquired by Illumina
+
+- Next-generation sequencing (NGS) data output has increased at a rate that outpaces Moore's law, more than doubling each year
+:::
+
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequence by synthesis - Process]{.subtit}
+
+{{< video https://www.youtube.com/embed/fCd6B5HRaZ8 width="100%" height="85%" >}}
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Third generation NGS]{.subtit}
+
+<br>
+
+:::{.callout-important appearance="default"}
+[Third-generation methods allow direct sequencing of single DNA molecules]{style="font-size: 50px; font-family: 'Julius Sans One', sans-serif"}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Third generation NGS]{.subtit}
+
+<br>
+
+Third-generation NGS platforms:
+
+1. Single-molecule real-time sequencing
+
+1. Nanopore sequencing
+
+:::{.notes}
+1. Pacific Biosciences in 2011
+
+1. Oxford Nanopore Technologies on 2014
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[SMRS]{.subtit}
+
+
+{{< video https://www.youtube.com/embed/_lD8JyAbwEo width="100%" height="85%" >}}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Nanopore sequencing]{.subtit}
 
