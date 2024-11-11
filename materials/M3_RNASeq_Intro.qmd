@@ -156,7 +156,8 @@ plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
 
 [The Power of RNA-Seq]{.subtit}
 
-
+::: {.columns}
+::: {.column}
 *   **Unbiased & Comprehensive:**
     *   Discovers novel transcripts
     *   Not limited to known genes
@@ -164,7 +165,8 @@ plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
 *   **Higher Sensitivity:**
     *   Detects rare transcripts
     *   Wider dynamic range
-
+:::
+::: {.column}
 *   **Alternative Splicing:**
     *   Identifies and quantifies isoforms
 
@@ -173,6 +175,9 @@ plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
 
 *   **Non-Coding RNAs:**
     *   Studies microRNAs, lncRNAs, etc.
+:::
+::: 
+
 
 
 ::: {.notes}
@@ -181,6 +186,21 @@ plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
 - lncRNAs, or long non-coding RNAs, are a type of RNA molecule that is not translated into protein.  They were once considered "junk" DNA, but are now recognized as crucial regulators of gene expression and cellular processes
 :::
 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[A Brief History of Sequencing]{.subtit}
+
+
+```{r}
+#| echo: false
+#| layout-ncol: 1
+plot(qrcode::qr_code("https://forms.gle/rWcwyAiA4L7EG8pm7"))
+```
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[A Brief History of Sequencing]{.subtit}
 
 
 
