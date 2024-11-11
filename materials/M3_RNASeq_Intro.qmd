@@ -588,25 +588,71 @@ Third-generation NGS platforms:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 
 [Sample Preparation]{.tit .p-span-center}
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Importance of High-Quality RNA]{.subtit}
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/bioanal.png){width=600}
+:::
+::: {.column width="60%"}
+*   High-quality RNA is the cornerstone of successful RNA-Seq.
+*   Degraded or contaminated RNA can lead to:
+    *   Inaccurate gene expression measurements
+    *   Misleading conclusions
+    *   Wasted time and resources
+*   Prevent RNA degradation:
+    *   Use RNase-free reagents and equipment.
+    *   Store RNA at -80°C.
+    *   Minimize freeze-thaw cycles.
+:::
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[RNA Extraction]{.subtit}
+
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/rnaE.png){width=400}
+:::
+
+::: {.column width="60%"}
+*   **Goals:**
+    *   Lyse cells/tissues
+    *   Remove contaminants (DNA, proteins, lipids)
+    *   Preserve RNA integrity
+*   **Methods:**
+    *   Phenol-chloroform extraction {{< fa circle-xmark >}}
+    *   **Column-based kits** (silica membrane) {{< fa trophy >}}
+:::
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
