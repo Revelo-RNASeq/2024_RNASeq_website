@@ -6,7 +6,7 @@ format:
     width: 1600
     height: 900
     logo: "images/revelo.png"
-    footer: "[home page](https://mchiapello.github.io/202304_REVELO_Torvergata/)"
+    footer: "[home page](https://revelo-rnaseq.github.io/2024_RNASeq_website)"
     css: ["css/theme.css", "css/custom.css"]
     theme: simple
     controls: true
@@ -49,16 +49,192 @@ library(gtsummary)
 
 [Marco Chiapello, Revelo Datalab]{style="font-size: 40px; font-weight: bold;"}
 
-[2023-03-31]{style="font-size: 30px;font-weight: bold;"}
+[2024-11-18]{style="font-size: 30px;font-weight: bold;"}
 :::
 
-#  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[The history of sequencing]{.tit .p-span-center}
 
-##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
+[Introduction to RNA Sequencing]{.tit .p-span-center}
 
-[Key moments for DNA sequencing:]{.subtit}
+[(Primary analysis)]{.p-span-center}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[The central dogma]{.subtit}
+
+::: {.p-img-center}
+![](images/dogma.png)
+:::
+
+:::{.tcenter}
+*   **DNA:** The blueprint of genetic information
+*   **RNA:** The messenger carrying genetic instructions
+*   **Protein:** The functional molecules in cells
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Why Study RNA?]{.subtit}
+
+::: {.p-img-center}
+```{r}
+#| echo: false
+#| layout-ncol: 1
+plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
+```
+
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Why Study RNA?]{.subtit}
+
+:::: {.columns}
+::: {.column width="40%"}
+![](images/NMFaheatmap-1.png){width=400}
+:::
+::: {.column .f40}
+*   **Dynamic reflection of cellular activity:**  Unlike DNA, which is relatively static, RNA levels change rapidly in response to internal and external stimuli. 
+    *   Provides a snapshot of what genes are actively being expressed at a specific time.
+*   **Understanding gene regulation:** Studying RNA helps us understand how genes are turned on or off, and to what extent, in different conditions.
+:::
+:::: 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Why Study RNA?]{.subtit}
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/NMFaheatmap-1.png){width=400}
+:::
+::: {.column .f40}
+*   **Insights into cellular processes:**  RNA plays diverse roles in many cellular processes, including:
+    *   Protein synthesis (mRNA)
+    *   Gene regulation (microRNAs, long non-coding RNAs)
+    *   Catalysis (ribozymes)
+*   **Disease biomarkers and drug targets:**  Changes in RNA expression can be indicative of disease states, making RNA a valuable source of biomarkers for diagnosis and prognosis. 
+:::
+::: 
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Why RNA Sequencing?]{.subtit}
+
+::: {.columns .f60}
+::: {.column}
+*   **Microarrays:**
+    *   Limited to known genes
+    *   Lower sensitivity
+    *   Hybridization biases
+:::
+::: {.column}
+*   **RNA-Seq:**
+    *   Unbiased and comprehensive
+    *   Higher sensitivity
+    *   Wider range of applications
+:::
+::: 
+
+::: {.notes}
+- **Limitations of older techniques**: Explain that while microarrays were useful, they had significant drawbacks
+
+- **Enter RNA-Seq**: Introduce RNA-Seq as a revolutionary technology that overcomes these limitations
+ 
+---
+
+- **Create a sense of progress**: Explain how RNA-Seq represents a significant advancement over previous methods.
+
+- **Highlight the "discovery" aspect**: Emphasize that RNA-Seq allows researchers to explore the unknown and uncover new biological insights.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[The Power of RNA-Seq]{.subtit}
+
+
+*   **Unbiased & Comprehensive:**
+    *   Discovers novel transcripts
+    *   Not limited to known genes
+
+*   **Higher Sensitivity:**
+    *   Detects rare transcripts
+    *   Wider dynamic range
+
+*   **Alternative Splicing:**
+    *   Identifies and quantifies isoforms
+
+*   **Mutation Detection:**
+    *   SNPs, indels, fusion genes
+
+*   **Non-Coding RNAs:**
+    *   Studies microRNAs, lncRNAs, etc.
+
+
+::: {.notes}
+- "Wide dynamic range" refers to the ability of a system or device to accurately capture and represent a broad range of signal intensities
+
+- lncRNAs, or long non-coding RNAs, are a type of RNA molecule that is not translated into protein.  They were once considered "junk" DNA, but are now recognized as crucial regulators of gene expression and cellular processes
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Sample Preparation]{.tit .p-span-center}
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Sequencing Technologies]{.tit .p-span-center}
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Emerging Trends and Future Directions]{.tit .p-span-center}
+
+
+
+
+
+
+
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+################################################################################
+
+
+
+
+
+
+
 
 ##  {background-image="images/pant.jpg" background-size="cover" background-opacity="0.1"}
 
