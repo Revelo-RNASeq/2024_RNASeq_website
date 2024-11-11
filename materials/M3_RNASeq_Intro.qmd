@@ -596,23 +596,10 @@ Third-generation NGS platforms:
 
 ##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[Importance of High-Quality RNA]{.subtit}
+[Sample Preparation]{.subtit}
 
-::: {.columns}
-::: {.column width="40%"}
-![](images/bioanal.png){width=600}
-:::
-::: {.column width="60%"}
-*   High-quality RNA is the cornerstone of successful RNA-Seq.
-*   Degraded or contaminated RNA can lead to:
-    *   Inaccurate gene expression measurements
-    *   Misleading conclusions
-    *   Wasted time and resources
-*   Prevent RNA degradation:
-    *   Use RNase-free reagents and equipment.
-    *   Store RNA at -80°C.
-    *   Minimize freeze-thaw cycles.
-:::
+:::{.p-img-center}
+![](images/sample.png)
 :::
 
 
@@ -637,7 +624,78 @@ Third-generation NGS platforms:
 :::
 :::
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
+[Importance of High-Quality RNA]{.subtit}
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/bioanal.png){width=600}
+:::
+::: {.column width="60%"}
+*   High-quality RNA is the cornerstone of successful RNA-Seq.
+*   Degraded or contaminated RNA can lead to:
+    *   Inaccurate gene expression measurements
+    *   Misleading conclusions
+    *   Wasted time and resources
+*   Prevent RNA degradation:
+    *   Use RNase-free reagents and equipment.
+    *   Store RNA at -80°C.
+    *   Minimize freeze-thaw cycles.
+:::
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Enrich a specific type of RNA]{.subtit}
+
+- mRNA
+
+- rRNAs and tRNAs (involved in mRNA translation)
+
+- Small nuclear RNAs (involved in splicing)
+
+- Small nucleolar RNAs (involved in the modification of rRNAs)
+
+- microRNA (regulate gene expression at the posttranscriptional level)
+
+- Long noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)
+
+
+#### Two options for mRNA enrichment 
+
+- **mRNA enrichment** – Selectively enriching for poly(A)-tailed transcripts
+
+- **RNA depletion** – Selectively depleting abundant/off-target transcripts 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[RNA Fragmentation]{.subtit}
+
+:::{.callout-important}
+[A sequencing library is essentially a pool of RNA fragments with adapters attached]{style="font-size: 40px"}
+:::
+
+
+*   **Why?**
+    *   NGS platform compatibility
+    *   Increased library complexity
+*   **Methods:**
+    *   Enzymatic digestion (e.g., RNase III)
+    *   Mechanical shearing (e.g., sonication)
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Attachment of adapters]{.subtit}
+
+1. Adapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)
+
+1. Act as barcodes to identify where each nucleotide was originally located
+
+:::{.p-img-center}
+![](images/adapter.png){width=900}
+:::
 
 
 
