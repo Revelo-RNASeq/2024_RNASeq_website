@@ -200,119 +200,119 @@
     "href": "materials/M3_RNASeq_Intro.html#section-27",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sample Preparation"
+    "text": "Single-Ended vs. Paired-End\nChoosing Your Sequencing Strategy\n\n\n\n\n\n\nSingle-end sequencing:\n\nOne read per fragment\nSimpler, cost-effective\nSuitable for gene expression profiling\n\n\n\n\nPaired-end sequencing:\n\nTwo reads per fragment\nMore information, improved accuracy\nUseful for genome assembly, variant detection, isoform identification\n\n\n\n\nChoice depends on:\n\nResearch question\nBudget\nDesired accuracy"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-28",
     "href": "materials/M3_RNASeq_Intro.html#section-28",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sample Preparation"
+    "text": "Single-Ended vs. Paired-End\n\n\n\n\n\n\n\n\nTrade-off\nSingle-End Sequencing\nPaired-End Sequencing\n\n\n\n\nCost\nLower\nHigher\n\n\nInformation\nLess\nMore\n\n\nSimplicity\nSimpler\nMore Complex\n\n\nAccuracy\nLower\nHigher\n\n\nSequencing Depth\nHigher\nPotentially Lower\n\n\nRead Length\nShorter\nLonger (effective)\n\n\nIdeal Applications\nGene expression, small RNA-Seq\nGenome assembly, variant calling, isoform identification"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-29",
     "href": "materials/M3_RNASeq_Intro.html#section-29",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "RNA Extraction\n\n\n\n\n\nGoals:\n\nLyse cells/tissues\nRemove contaminants (DNA, proteins, lipids)\nPreserve RNA integrity\n\nMethods:\n\nPhenol-chloroform extraction \nColumn-based kits (silica membrane)"
+    "text": "Sample Preparation"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-30",
     "href": "materials/M3_RNASeq_Intro.html#section-30",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Importance of High-Quality RNA\n\n\n\n\n\nHigh-quality RNA is the cornerstone of successful RNA-Seq.\nDegraded or contaminated RNA can lead to:\n\nInaccurate gene expression measurements\nMisleading conclusions\nWasted time and resources\n\nPrevent RNA degradation:\n\nUse RNase-free reagents and equipment.\nStore RNA at -80°C.\nMinimize freeze-thaw cycles."
+    "text": "Sample Preparation"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-31",
     "href": "materials/M3_RNASeq_Intro.html#section-31",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Enrich a specific type of RNA\n\nmRNA\nrRNAs and tRNAs (involved in mRNA translation)\nSmall nuclear RNAs (involved in splicing)\nSmall nucleolar RNAs (involved in the modification of rRNAs)\nmicroRNA (regulate gene expression at the posttranscriptional level)\nLong noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)\n\nTwo options for mRNA enrichment\n\nmRNA enrichment – Selectively enriching for poly(A)-tailed transcripts\nRNA depletion – Selectively depleting abundant/off-target transcripts"
+    "text": "RNA Extraction\n\n\n\n\n\nGoals:\n\nLyse cells/tissues\nRemove contaminants (DNA, proteins, lipids)\nPreserve RNA integrity\n\nMethods:\n\nPhenol-chloroform extraction \nColumn-based kits (silica membrane)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-32",
     "href": "materials/M3_RNASeq_Intro.html#section-32",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "RNA Fragmentation\n\n\n\n\n\n\nImportant\n\n\nA sequencing library is essentially a pool of RNA fragments with adapters attached\n\n\n\n\nWhy?\n\nNGS platform compatibility\nIncreased library complexity\n\nMethods:\n\nEnzymatic digestion (e.g., RNase III)\nMechanical shearing (e.g., sonication)"
+    "text": "Importance of High-Quality RNA\n\n\n\n\n\nHigh-quality RNA is the cornerstone of successful RNA-Seq.\nDegraded or contaminated RNA can lead to:\n\nInaccurate gene expression measurements\nMisleading conclusions\nWasted time and resources\n\nPrevent RNA degradation:\n\nUse RNase-free reagents and equipment.\nStore RNA at -80°C.\nMinimize freeze-thaw cycles."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-33",
     "href": "materials/M3_RNASeq_Intro.html#section-33",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Attachment of adapters\n\nAdapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)\nAct as barcodes to identify where each nucleotide was originally located"
+    "text": "Enrich a specific type of RNA\n\nmRNA\nrRNAs and tRNAs (involved in mRNA translation)\nSmall nuclear RNAs (involved in splicing)\nSmall nucleolar RNAs (involved in the modification of rRNAs)\nmicroRNA (regulate gene expression at the posttranscriptional level)\nLong noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)\n\nTwo options for mRNA enrichment\n\nmRNA enrichment – Selectively enriching for poly(A)-tailed transcripts\nRNA depletion – Selectively depleting abundant/off-target transcripts"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-34",
     "href": "materials/M3_RNASeq_Intro.html#section-34",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Library quantification\n\n\n\n\n\nWhy quantify?\n\nOptimal sequencing results\nDetermine loading concentration\nEnsure even coverage\n\nMethods:\n\nFluorometric methods (e.g., Qubit)\nqPCR\nCapillary electrophoresis (e.g., Bioanalyzer)"
+    "text": "RNA Fragmentation\n\n\n\n\n\n\nImportant\n\n\nA sequencing library is essentially a pool of RNA fragments with adapters attached\n\n\n\n\nWhy?\n\nNGS platform compatibility\nIncreased library complexity\n\nMethods:\n\nEnzymatic digestion (e.g., RNase III)\nMechanical shearing (e.g., sonication)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-35",
     "href": "materials/M3_RNASeq_Intro.html#section-35",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
+    "text": "Attachment of adapters\n\nAdapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)\nAct as barcodes to identify where each nucleotide was originally located"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-36",
     "href": "materials/M3_RNASeq_Intro.html#section-36",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
+    "text": "Library quantification\n\n\n\n\n\nWhy quantify?\n\nOptimal sequencing results\nDetermine loading concentration\nEnsure even coverage\n\nMethods:\n\nFluorometric methods (e.g., Qubit)\nqPCR\nCapillary electrophoresis (e.g., Bioanalyzer)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-38",
     "href": "materials/M3_RNASeq_Intro.html#section-38",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nDisease Mechanisms: Investigate the cellular basis of disease.\n\nIdentify disease-associated cell types and gene expression changes.\nStudy the response of individual cells to drugs or treatments.\n\n\n\n\n\n\n\n\nImportant\n\n\nscRNA-seq represents a powerful tool for dissecting the complexities of gene expression and cellular heterogeneity across various biological contexts"
+    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-39",
     "href": "materials/M3_RNASeq_Intro.html#section-39",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: mapping gene expression in context\n\n\n \n\n\n\nBridges histology and genomics: Combines traditional tissue imaging with high-throughput RNA sequencing.\nPreserves spatial context: Maps gene expression while retaining spatial information, unlike traditional scRNA-seq.\nEnables:\n\nVisualization of gene expression patterns within tissues.\nQuantitative analysis of transcriptomes in a spatial context.\n\nApplications:\n\nUnderstanding tissue organization and cellular interactions.\nInvestigating developmental processes (organogenesis).\nStudying disease progression and heterogeneity."
+    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nCellular Heterogeneity: Identify and characterize different cell types within a complex tissue or population.\n\nDiscover new cell subtypes and rare cell populations.\nUnderstand the functional diversity of cells.\n\nDevelopmental Trajectories: Trace cell lineages and reconstruct developmental pathways.\n\nStudy cell differentiation and fate decisions.\nIdentify key genes and regulatory networks involved in development."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-40",
     "href": "materials/M3_RNASeq_Intro.html#section-40",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: from technology to discovery\n\n\n\n\n\nApplications:\n\nTissue heterogeneity: Studying complex tissues like the cochlea. (Tisi, 2023)\nDisease mechanisms: Uncovering cellular dynamics in diseases like Alzheimer’s. (Chen et al., 2020)\n\nData analysis:\n\nDimension reduction, deconvolution, and integration with histological images.\nSpecialized tools for cell type deconvolution. (Cable et al., 2021)"
+    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nDisease Mechanisms: Investigate the cellular basis of disease.\n\nIdentify disease-associated cell types and gene expression changes.\nStudy the response of individual cells to drugs or treatments.\n\n\n\n\n\n\n\n\nImportant\n\n\nscRNA-seq represents a powerful tool for dissecting the complexities of gene expression and cellular heterogeneity across various biological contexts"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-41",
     "href": "materials/M3_RNASeq_Intro.html#section-41",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Integration of RNA-Seq with other omics data\nBeyond RNA: integrating with other omics data\n\n\nThe Power of Integration: Combining RNA-Seq with other omics data provides a more complete picture of cellular processes.\n\nMetabolomics: Correlate gene expression with metabolic pathways and identify key metabolites.\nChromatin accessibility (ATAC-seq): Link gene expression changes to alterations in chromatin structure.\nOther omics layers: Integrate with genomics, proteomics, and epigenomics for a systems-level understanding.\n\nKey Findings:\n\nLimited overlap between DEGs and chromatin accessibility changes (~10%) (Malvi et al., 2022).\nHighlights the complexity of gene regulation beyond chromatin state. (Miao et al., 2021)"
+    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: mapping gene expression in context\n\n\n \n\n\n\nBridges histology and genomics: Combines traditional tissue imaging with high-throughput RNA sequencing.\nPreserves spatial context: Maps gene expression while retaining spatial information, unlike traditional scRNA-seq.\nEnables:\n\nVisualization of gene expression patterns within tissues.\nQuantitative analysis of transcriptomes in a spatial context.\n\nApplications:\n\nUnderstanding tissue organization and cellular interactions.\nInvestigating developmental processes (organogenesis).\nStudying disease progression and heterogeneity."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-42",
     "href": "materials/M3_RNASeq_Intro.html#section-42",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Integration of RNA-Seq with other omics data\nUnlocking biological insights through data integration\n\n\n\n\n\nApplications:\n\nIdentifying key pathways: Integration of RNA-seq and metabolomics reveals regulated pathways in liver metabolism. (Zhang et al., 2020)\nDisease biomarkers: Uncovering disease-specific biomarkers in NAFLD using RNA-seq and metabolomics. (Ji et al., 2022)\n\nTools and Techniques:\n\nMachine learning: rSeqTU for predicting transcription units and integrating with metagenomics and metabolomics. (Hou et al., 2022)\nStatistical analysis: DESeq2 for integrating RNA-seq and ChIP-seq data. (Niu et al., 2019)\nSingle-cell multi-omics: Combining scRNA-seq with lipidomics and metabolomics to study cellular heterogeneity. (Cao et al., 2020)"
+    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: from technology to discovery\n\n\n\n\n\nApplications:\n\nTissue heterogeneity: Studying complex tissues like the cochlea. (Tisi, 2023)\nDisease mechanisms: Uncovering cellular dynamics in diseases like Alzheimer’s. (Chen et al., 2020)\n\nData analysis:\n\nDimension reduction, deconvolution, and integration with histological images.\nSpecialized tools for cell type deconvolution. (Cable et al., 2021)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-43",
     "href": "materials/M3_RNASeq_Intro.html#section-43",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:"
+    "text": "Integration of RNA-Seq with other omics data\nBeyond RNA: integrating with other omics data\n\n\nThe Power of Integration: Combining RNA-Seq with other omics data provides a more complete picture of cellular processes.\n\nMetabolomics: Correlate gene expression with metabolic pathways and identify key metabolites.\nChromatin accessibility (ATAC-seq): Link gene expression changes to alterations in chromatin structure.\nOther omics layers: Integrate with genomics, proteomics, and epigenomics for a systems-level understanding.\n\nKey Findings:\n\nLimited overlap between DEGs and chromatin accessibility changes (~10%) (Malvi et al., 2022).\nHighlights the complexity of gene regulation beyond chromatin state. (Miao et al., 2021)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-44",
     "href": "materials/M3_RNASeq_Intro.html#section-44",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:"
+    "text": "Integration of RNA-Seq with other omics data\nUnlocking biological insights through data integration\n\n\n\n\n\nApplications:\n\nIdentifying key pathways: Integration of RNA-seq and metabolomics reveals regulated pathways in liver metabolism. (Zhang et al., 2020)\nDisease biomarkers: Uncovering disease-specific biomarkers in NAFLD using RNA-seq and metabolomics. (Ji et al., 2022)\n\nTools and Techniques:\n\nMachine learning: rSeqTU for predicting transcription units and integrating with metagenomics and metabolomics. (Hou et al., 2022)\nStatistical analysis: DESeq2 for integrating RNA-seq and ChIP-seq data. (Niu et al., 2019)\nSingle-cell multi-omics: Combining scRNA-seq with lipidomics and metabolomics to study cellular heterogeneity. (Cao et al., 2020)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-45",
@@ -648,7 +648,7 @@
     "href": "materials/M3_RNASeq_Intro.html#section-37",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nCellular Heterogeneity: Identify and characterize different cell types within a complex tissue or population.\n\nDiscover new cell subtypes and rare cell populations.\nUnderstand the functional diversity of cells.\n\nDevelopmental Trajectories: Trace cell lineages and reconstruct developmental pathways.\n\nStudy cell differentiation and fate decisions.\nIdentify key genes and regulatory networks involved in development."
+    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-59",

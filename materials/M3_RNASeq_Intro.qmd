@@ -294,7 +294,7 @@ plot(qrcode::qr_code("https://forms.gle/rWcwyAiA4L7EG8pm7"))
 ```{r}
 #| echo: false
 #| layout-ncol: 1
-plot(qrcode::qr_code("https://forms.gle/4yeYbAiUZc5EDiG96"))
+plot(qrcode::qr_code("https://forms.gle/b6byBimmjCfM91uU6"))
 ```
 
 :::
@@ -600,7 +600,52 @@ Third-generation NGS platforms:
 
 {{< video https://www.youtube.com/embed/CGWZvHIi3i0 width="100%" height="85%" >}}
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
+[Single-Ended vs. Paired-End]{.subtit}
+
+**Choosing Your Sequencing Strategy**
+
+:::{.p-img-center}
+![](images/SE_vs_PE.png){width=1000}
+:::
+
+::: {.columns .f30}
+::: {.column width="30%"}
+*   **Single-end sequencing:**
+    *   One read per fragment
+    *   Simpler, cost-effective
+    *   Suitable for gene expression profiling
+:::
+::: {.column width="30%"}
+*   **Paired-end sequencing:**
+    *   Two reads per fragment
+    *   More information, improved accuracy
+    *   Useful for genome assembly, variant detection, isoform identification
+:::
+::: {.column width="30%"}
+*   **Choice depends on:**
+    *   Research question
+    *   Budget
+    *   Desired accuracy
+
+:::
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Single-Ended vs. Paired-End]{.subtit}
+
+| Trade-off             | Single-End Sequencing | Paired-End Sequencing |
+|-----------------------|-----------------------|-----------------------|
+| **Cost**              | Lower                 | Higher                |
+| **Information**       | Less                  | More                  |
+| **Simplicity**        | Simpler               | More Complex          |
+| **Accuracy**          | Lower                 | Higher                |
+| **Sequencing Depth**  | Higher                | Potentially Lower      |
+| **Read Length**       | Shorter               | Longer (effective)    |
+| **Ideal Applications** | Gene expression, small RNA-Seq | Genome assembly, variant calling, isoform identification |
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
