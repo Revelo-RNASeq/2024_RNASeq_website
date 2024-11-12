@@ -52,6 +52,197 @@ library(gtsummary)
 [2024-11-18]{style="font-size: 30px;font-weight: bold;"}
 :::
 
+
+<!-- #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Overview]{.f60 .p-span-center}
+
+:::{.p-img-center}
+![](images/pst.jpg){width=1000}
+::: -->
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Three Stages of Transcriptomic Analysis]{.f60}
+
+<br>
+
+::: {.columns .f35}
+::: {.column width="30%" .pri}
+*   **Primary Analysis:**
+    *   Focuses on processing raw sequencing data.
+    *   **Key steps:**
+        *   Quality control (QC)
+        *   Read alignment/mapping
+        *   Transcript quantification
+:::
+::: {.column width="3%" .verticalLine}
+
+:::
+
+::: {.column width="30%" .sec}
+*   **Secondary Analysis:**
+    *   Extracts meaningful information from processed data.
+    *   **Key steps:**
+        *   Differential gene expression analysis
+        *   Clustering and classification
+        *   Pathway and network analysis
+
+:::
+::: {.column width="3%"}
+
+:::
+::: {.column width="30%" .ter}
+*   **Tertiary Analysis:**
+    *   Integrates transcriptomic data with other biological knowledge.
+    *   **Key steps:**
+        *   Data interpretation and visualization
+        *   Validation of findings
+        *   Hypothesis generation and further experimentation
+:::
+:::
+
+
+
+
+
+
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+
+[Sample Preparation]{.tit .p-span-center}
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sample Preparation]{.subtit}
+
+<br>
+<br>
+
+:::{.p-img-center}
+![](images/sample_top.png)
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[RNA Extraction]{.subtit}
+
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/rnaE.png){width=400}
+:::
+
+::: {.column width="60%"}
+*   **Goals:**
+    *   Lyse cells/tissues
+    *   Remove contaminants (DNA, proteins, lipids)
+    *   Preserve RNA integrity
+*   **Methods:**
+    *   Phenol-chloroform extraction {{< fa circle-xmark >}}
+    *   **Column-based kits** (silica membrane) {{< fa trophy >}}
+:::
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Importance of High-Quality RNA]{.subtit}
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/bioanal.png){width=600}
+:::
+::: {.column width="60%"}
+*   High-quality RNA is the cornerstone of successful RNA-Seq.
+*   Degraded or contaminated RNA can lead to:
+    *   Inaccurate gene expression measurements
+    *   Misleading conclusions
+    *   Wasted time and resources
+*   Prevent RNA degradation:
+    *   Use RNase-free reagents and equipment.
+    *   Store RNA at -80°C.
+    *   Minimize freeze-thaw cycles.
+:::
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Enrich a specific type of RNA]{.subtit}
+
+- mRNA
+
+- rRNAs and tRNAs (involved in mRNA translation)
+
+- Small nuclear RNAs (involved in splicing)
+
+- Small nucleolar RNAs (involved in the modification of rRNAs)
+
+- microRNA (regulate gene expression at the posttranscriptional level)
+
+- Long noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)
+
+
+#### Two options for mRNA enrichment 
+
+- **mRNA enrichment** – Selectively enriching for poly(A)-tailed transcripts
+
+- **RNA depletion** – Selectively depleting abundant/off-target transcripts 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[RNA Fragmentation]{.subtit}
+
+:::{.callout-important}
+[A sequencing library is essentially a pool of RNA fragments with adapters attached]{style="font-size: 40px"}
+:::
+
+
+*   **Why?**
+    *   NGS platform compatibility
+    *   Increased library complexity
+*   **Methods:**
+    *   Enzymatic digestion (e.g., RNase III)
+    *   Mechanical shearing (e.g., sonication)
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Attachment of adapters]{.subtit}
+
+1. Adapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)
+
+1. Act as barcodes to identify where each nucleotide was originally located
+
+:::{.p-img-center}
+![](images/adapter.png){width=900}
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Library quantification]{.subtit}
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/rin.jpg){width=600}
+:::
+::: {.column width="60%"}
+*   **Why quantify?**
+    *   Optimal sequencing results
+    *   Determine loading concentration
+    *   Ensure even coverage
+*   **Methods:**
+    *   Fluorometric methods (e.g., Qubit)
+    *   qPCR
+    *   Capillary electrophoresis (e.g., Bioanalyzer)
+:::
+:::
+
+
+
+
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 
@@ -706,139 +897,6 @@ Third-generation NGS platforms:
     *   **Library complexity:** A diverse library with a wide range of fragment sizes improves coverage.
     *   **RNA integrity:** High-quality RNA ensures that all transcripts are represented in the library.
     *   **Sequencing technology:**  Different platforms have different read lengths and biases, which can affect coverage.
-:::
-:::
-
-#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-
-[Sample Preparation]{.tit .p-span-center}
-
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[Sample Preparation]{.subtit}
-
-<br>
-<br>
-
-:::{.p-img-center}
-![](images/sample_top.png)
-:::
-
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[RNA Extraction]{.subtit}
-
-
-::: {.columns}
-::: {.column width="40%"}
-![](images/rnaE.png){width=400}
-:::
-
-::: {.column width="60%"}
-*   **Goals:**
-    *   Lyse cells/tissues
-    *   Remove contaminants (DNA, proteins, lipids)
-    *   Preserve RNA integrity
-*   **Methods:**
-    *   Phenol-chloroform extraction {{< fa circle-xmark >}}
-    *   **Column-based kits** (silica membrane) {{< fa trophy >}}
-:::
-:::
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[Importance of High-Quality RNA]{.subtit}
-
-::: {.columns}
-::: {.column width="40%"}
-![](images/bioanal.png){width=600}
-:::
-::: {.column width="60%"}
-*   High-quality RNA is the cornerstone of successful RNA-Seq.
-*   Degraded or contaminated RNA can lead to:
-    *   Inaccurate gene expression measurements
-    *   Misleading conclusions
-    *   Wasted time and resources
-*   Prevent RNA degradation:
-    *   Use RNase-free reagents and equipment.
-    *   Store RNA at -80°C.
-    *   Minimize freeze-thaw cycles.
-:::
-:::
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[Enrich a specific type of RNA]{.subtit}
-
-- mRNA
-
-- rRNAs and tRNAs (involved in mRNA translation)
-
-- Small nuclear RNAs (involved in splicing)
-
-- Small nucleolar RNAs (involved in the modification of rRNAs)
-
-- microRNA (regulate gene expression at the posttranscriptional level)
-
-- Long noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)
-
-
-#### Two options for mRNA enrichment 
-
-- **mRNA enrichment** – Selectively enriching for poly(A)-tailed transcripts
-
-- **RNA depletion** – Selectively depleting abundant/off-target transcripts 
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[RNA Fragmentation]{.subtit}
-
-:::{.callout-important}
-[A sequencing library is essentially a pool of RNA fragments with adapters attached]{style="font-size: 40px"}
-:::
-
-
-*   **Why?**
-    *   NGS platform compatibility
-    *   Increased library complexity
-*   **Methods:**
-    *   Enzymatic digestion (e.g., RNase III)
-    *   Mechanical shearing (e.g., sonication)
-
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[Attachment of adapters]{.subtit}
-
-1. Adapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)
-
-1. Act as barcodes to identify where each nucleotide was originally located
-
-:::{.p-img-center}
-![](images/adapter.png){width=900}
-:::
-
-
-##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-[Library quantification]{.subtit}
-
-::: {.columns}
-::: {.column width="40%"}
-![](images/rin.jpg){width=600}
-:::
-::: {.column width="60%"}
-*   **Why quantify?**
-    *   Optimal sequencing results
-    *   Determine loading concentration
-    *   Ensure even coverage
-*   **Methods:**
-    *   Fluorometric methods (e.g., Qubit)
-    *   qPCR
-    *   Capillary electrophoresis (e.g., Bioanalyzer)
 :::
 :::
 

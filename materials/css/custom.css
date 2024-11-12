@@ -56,6 +56,10 @@ p span.p-span-center{
   font-size: 40px;
 }
 
+.f35 {
+  font-size: 35px;
+}
+
 .f30 {
   font-size: 30px;
 }
@@ -71,3 +75,23 @@ p span.p-span-center{
 .red {
     color: "red";
 }
+
+.pri {
+  background-color:coral;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.sec {
+  background-color:lightgreen;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.ter {
+  background-color:cornflowerblue;
+  border-radius: 10%;
+  border-radius: 5%;
+  padding: 10px;
+}
+

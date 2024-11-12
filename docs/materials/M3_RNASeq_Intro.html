@@ -347,14 +347,211 @@
 <p><span style="font-size: 40px; font-weight: bold;">Marco Chiapello, Revelo Datalab</span></p>
 <p><span style="font-size: 30px;font-weight: bold;">2024-11-18</span></p>
 </div>
+<!-- #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Overview]{.f60 .p-span-center}
+
+:::{.p-img-center}
+![](images/pst.jpg){width=1000}
+::: -->
 </section>
-<section>
 <section id="section" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h1></h1>
+<p><span class="f60">Three Stages of Transcriptomic Analysis</span></p>
+<p><br></p>
+<div class="columns f35">
+<div class="column pri" style="width:30%;">
+<ul>
+<li><strong>Primary Analysis:</strong>
+<ul>
+<li>Focuses on processing raw sequencing data.</li>
+<li><strong>Key steps:</strong>
+<ul>
+<li>Quality control (QC)</li>
+<li>Read alignment/mapping</li>
+<li>Transcript quantification</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column verticalLine" style="width:3%;">
+
+</div><div class="column sec" style="width:30%;">
+<ul>
+<li><strong>Secondary Analysis:</strong>
+<ul>
+<li>Extracts meaningful information from processed data.</li>
+<li><strong>Key steps:</strong>
+<ul>
+<li>Differential gene expression analysis</li>
+<li>Clustering and classification</li>
+<li>Pathway and network analysis</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column ter" style="width:30%;">
+<ul>
+<li><strong>Tertiary Analysis:</strong>
+<ul>
+<li>Integrates transcriptomic data with other biological knowledge.</li>
+<li><strong>Key steps:</strong>
+<ul>
+<li>Data interpretation and visualization</li>
+<li>Validation of findings</li>
+<li>Hypothesis generation and further experimentation</li>
+</ul></li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+
+<section>
+<section id="section-1" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h1></h1>
+<p><span class="tit p-span-center">Sample Preparation</span></p>
+</section>
+<section id="section-2" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Sample Preparation</span></p>
+<p><br> <br></p>
+<div class="p-img-center">
+<p><img data-src="images/sample_top.png"></p>
+</div>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">RNA Extraction</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/rnaE.png" width="400"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><strong>Goals:</strong>
+<ul>
+<li>Lyse cells/tissues</li>
+<li>Remove contaminants (DNA, proteins, lipids)</li>
+<li>Preserve RNA integrity</li>
+</ul></li>
+<li><strong>Methods:</strong>
+<ul>
+<li>Phenol-chloroform extraction <i class="fa-solid fa-circle-xmark" aria-label="circle-xmark"></i></li>
+<li><strong>Column-based kits</strong> (silica membrane) <i class="fa-solid fa-trophy" aria-label="trophy"></i></li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="section-4" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Importance of High-Quality RNA</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/bioanal.png" width="600"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>High-quality RNA is the cornerstone of successful RNA-Seq.</li>
+<li>Degraded or contaminated RNA can lead to:
+<ul>
+<li>Inaccurate gene expression measurements</li>
+<li>Misleading conclusions</li>
+<li>Wasted time and resources</li>
+</ul></li>
+<li>Prevent RNA degradation:
+<ul>
+<li>Use RNase-free reagents and equipment.</li>
+<li>Store RNA at -80°C.</li>
+<li>Minimize freeze-thaw cycles.</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="section-5" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Enrich a specific type of RNA</span></p>
+<ul>
+<li><p>mRNA</p></li>
+<li><p>rRNAs and tRNAs (involved in mRNA translation)</p></li>
+<li><p>Small nuclear RNAs (involved in splicing)</p></li>
+<li><p>Small nucleolar RNAs (involved in the modification of rRNAs)</p></li>
+<li><p>microRNA (regulate gene expression at the posttranscriptional level)</p></li>
+<li><p>Long noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)</p></li>
+</ul>
+<h4 id="two-options-for-mrna-enrichment">Two options for mRNA enrichment</h4>
+<ul>
+<li><p><strong>mRNA enrichment</strong> – Selectively enriching for poly(A)-tailed transcripts</p></li>
+<li><p><strong>RNA depletion</strong> – Selectively depleting abundant/off-target transcripts</p></li>
+</ul>
+</section>
+<section id="section-6" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">RNA Fragmentation</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><span style="font-size: 40px">A sequencing library is essentially a pool of RNA fragments with adapters attached</span></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Why?</strong>
+<ul>
+<li>NGS platform compatibility</li>
+<li>Increased library complexity</li>
+</ul></li>
+<li><strong>Methods:</strong>
+<ul>
+<li>Enzymatic digestion (e.g., RNase III)</li>
+<li>Mechanical shearing (e.g., sonication)</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-7" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Attachment of adapters</span></p>
+<ol type="1">
+<li><p>Adapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)</p></li>
+<li><p>Act as barcodes to identify where each nucleotide was originally located</p></li>
+</ol>
+<div class="p-img-center">
+<p><img data-src="images/adapter.png" width="900"></p>
+</div>
+</section>
+<section id="section-8" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Library quantification</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/rin.jpg" width="600"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><strong>Why quantify?</strong>
+<ul>
+<li>Optimal sequencing results</li>
+<li>Determine loading concentration</li>
+<li>Ensure even coverage</li>
+</ul></li>
+<li><strong>Methods:</strong>
+<ul>
+<li>Fluorometric methods (e.g., Qubit)</li>
+<li>qPCR</li>
+<li>Capillary electrophoresis (e.g., Bioanalyzer)</li>
+</ul></li>
+</ul>
+</div></div>
+</section></section>
+<section>
+<section id="section-9" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Introduction to RNA Sequencing</span></p>
 <p><span class="p-span-center">(Primary analysis)</span></p>
 </section>
-<section id="section-1" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-10" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">The central dogma</span></p>
 <div class="p-img-center">
@@ -368,7 +565,7 @@
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-11" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Why Study RNA?</span></p>
 <div class="p-img-center">
@@ -384,7 +581,7 @@
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-12" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Why Study RNA?</span></p>
 <div class="columns">
@@ -400,7 +597,7 @@
 </ul>
 </div></div>
 </section>
-<section id="section-4" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-13" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Why Study RNA?</span></p>
 <div class="columns">
@@ -448,7 +645,7 @@
 - **Highlight the "discovery" aspect**: Emphasize that RNA-Seq allows researchers to explore the unknown and uncover new biological insights.
 ::: -->
 </section>
-<section id="section-5" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-14" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">The Power of RNA-Seq</span></p>
 <div class="columns">
@@ -498,7 +695,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-6" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-15" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">A Brief History of Sequencing</span></p>
 <div class="p-img-center">
@@ -514,11 +711,11 @@
 </div>
 </div>
 </section>
-<section id="section-7" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-16" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="tit p-span-center">First generation NGS</span></p>
 </section>
-<section id="section-8" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-17" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <p><br></p>
@@ -544,7 +741,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-9" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-18" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <p><br></p>
@@ -570,7 +767,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-10" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-19" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <div class="columns f30">
@@ -596,7 +793,7 @@
 </ol>
 </div></div>
 </section>
-<section id="section-11" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-20" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <div class="p-img-center">
@@ -612,7 +809,7 @@
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-21" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Second generation NGS</span></p>
 <p><br></p>
@@ -630,7 +827,7 @@
 </div>
 </div>
 </section>
-<section id="section-13" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-22" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Second generation NGS</span></p>
 <p><br></p>
@@ -658,7 +855,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-14" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-23" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by Ligation</span></p>
 <p><br></p>
@@ -706,7 +903,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-15" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-24" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Pyrosequencing</span></p>
 <div class="columns">
@@ -745,11 +942,11 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-16" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-25" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis</span></p>
 </section>
-<section id="section-17" class="slide level2" data-background-image="images/pant.jpg" data-background-size="cover" data-background-opacity="1">
+<section id="section-26" class="slide level2" data-background-image="images/pant.jpg" data-background-size="cover" data-background-opacity="1">
 <h2></h2>
 <aside class="notes">
 <p>Birthplace of high-throughput sequencing</p>
@@ -765,7 +962,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-18" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-27" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -794,7 +991,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-19" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-28" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -803,7 +1000,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 <p><img data-src="images/solexa.png" width="600"></p>
 </div>
 </section>
-<section id="section-20" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-29" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -831,7 +1028,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-21" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-30" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -880,12 +1077,12 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-22" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-31" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - Process</span></p>
 <iframe data-external="1" src="https://www.youtube.com/embed/fCd6B5HRaZ8" width="100%" height="85%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="section-23" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-32" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Third generation NGS</span></p>
 <p><br></p>
@@ -903,7 +1100,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </div>
 </div>
 </section>
-<section id="section-24" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-33" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Third generation NGS</span></p>
 <p><br></p>
@@ -929,17 +1126,17 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-25" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-34" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">SMRS</span></p>
 <iframe data-external="1" src="https://www.youtube.com/embed/_lD8JyAbwEo" width="100%" height="85%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="section-26" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-35" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Nanopore sequencing</span></p>
 <iframe data-external="1" src="https://www.youtube.com/embed/CGWZvHIi3i0" width="100%" height="85%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="section-27" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-36" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Ended vs.&nbsp;Paired-End</span></p>
 <p><strong>Choosing Your Sequencing Strategy</strong></p>
@@ -976,7 +1173,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-28" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-37" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Ended vs.&nbsp;Paired-End</span></p>
 <table class="caption-top">
@@ -1031,7 +1228,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </tbody>
 </table>
 </section>
-<section id="section-29" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-38" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequencing Depth</span></p>
 <p><strong>Sequencing Depth: Finding the Right Balance</strong></p>
@@ -1068,7 +1265,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-30" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-39" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Transcriptome Coverage</span></p>
 <p><strong>Transcriptome Coverage: Capturing the Full Picture</strong></p>
@@ -1099,150 +1296,11 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </div></div>
 </section></section>
 <section>
-<section id="section-31" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h1></h1>
-<p><span class="tit p-span-center">Sample Preparation</span></p>
-</section>
-<section id="section-32" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">Sample Preparation</span></p>
-<p><br> <br></p>
-<div class="p-img-center">
-<p><img data-src="images/sample_top.png"></p>
-</div>
-</section>
-<section id="section-33" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">RNA Extraction</span></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="images/rnaE.png" width="400"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li><strong>Goals:</strong>
-<ul>
-<li>Lyse cells/tissues</li>
-<li>Remove contaminants (DNA, proteins, lipids)</li>
-<li>Preserve RNA integrity</li>
-</ul></li>
-<li><strong>Methods:</strong>
-<ul>
-<li>Phenol-chloroform extraction <i class="fa-solid fa-circle-xmark" aria-label="circle-xmark"></i></li>
-<li><strong>Column-based kits</strong> (silica membrane) <i class="fa-solid fa-trophy" aria-label="trophy"></i></li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="section-34" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">Importance of High-Quality RNA</span></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="images/bioanal.png" width="600"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li>High-quality RNA is the cornerstone of successful RNA-Seq.</li>
-<li>Degraded or contaminated RNA can lead to:
-<ul>
-<li>Inaccurate gene expression measurements</li>
-<li>Misleading conclusions</li>
-<li>Wasted time and resources</li>
-</ul></li>
-<li>Prevent RNA degradation:
-<ul>
-<li>Use RNase-free reagents and equipment.</li>
-<li>Store RNA at -80°C.</li>
-<li>Minimize freeze-thaw cycles.</li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="section-35" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">Enrich a specific type of RNA</span></p>
-<ul>
-<li><p>mRNA</p></li>
-<li><p>rRNAs and tRNAs (involved in mRNA translation)</p></li>
-<li><p>Small nuclear RNAs (involved in splicing)</p></li>
-<li><p>Small nucleolar RNAs (involved in the modification of rRNAs)</p></li>
-<li><p>microRNA (regulate gene expression at the posttranscriptional level)</p></li>
-<li><p>Long noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)</p></li>
-</ul>
-<h4 id="two-options-for-mrna-enrichment">Two options for mRNA enrichment</h4>
-<ul>
-<li><p><strong>mRNA enrichment</strong> – Selectively enriching for poly(A)-tailed transcripts</p></li>
-<li><p><strong>RNA depletion</strong> – Selectively depleting abundant/off-target transcripts</p></li>
-</ul>
-</section>
-<section id="section-36" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">RNA Fragmentation</span></p>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p><span style="font-size: 40px">A sequencing library is essentially a pool of RNA fragments with adapters attached</span></p>
-</div>
-</div>
-</div>
-<ul>
-<li><strong>Why?</strong>
-<ul>
-<li>NGS platform compatibility</li>
-<li>Increased library complexity</li>
-</ul></li>
-<li><strong>Methods:</strong>
-<ul>
-<li>Enzymatic digestion (e.g., RNase III)</li>
-<li>Mechanical shearing (e.g., sonication)</li>
-</ul></li>
-</ul>
-</section>
-<section id="section-37" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">Attachment of adapters</span></p>
-<ol type="1">
-<li><p>Adapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)</p></li>
-<li><p>Act as barcodes to identify where each nucleotide was originally located</p></li>
-</ol>
-<div class="p-img-center">
-<p><img data-src="images/adapter.png" width="900"></p>
-</div>
-</section>
-<section id="section-38" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">Library quantification</span></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="images/rin.jpg" width="600"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li><strong>Why quantify?</strong>
-<ul>
-<li>Optimal sequencing results</li>
-<li>Determine loading concentration</li>
-<li>Ensure even coverage</li>
-</ul></li>
-<li><strong>Methods:</strong>
-<ul>
-<li>Fluorometric methods (e.g., Qubit)</li>
-<li>qPCR</li>
-<li>Capillary electrophoresis (e.g., Bioanalyzer)</li>
-</ul></li>
-</ul>
-</div></div>
-</section></section>
-<section>
-<section id="section-39" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-40" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Emerging Trends and Future Directions</span></p>
 </section>
-<section id="section-40" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-41" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Cell RNA Sequencing</span></p>
 <p><strong>Zooming In: Analyze gene expression in individual cells</strong></p>
@@ -1264,7 +1322,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 :::
 ::: -->
 </section>
-<section id="section-41" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-42" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Cell RNA Sequencing</span></p>
 <p><strong>scRNA-Seq: advantages in biological research</strong></p>
@@ -1281,7 +1339,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul></li>
 </ul>
 </section>
-<section id="section-42" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-43" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Cell RNA Sequencing</span></p>
 <p><strong>scRNA-Seq: advantages in biological research</strong></p>
@@ -1306,7 +1364,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </div>
 </div>
 </section>
-<section id="section-43" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-44" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Spatial Transcriptomics</span></p>
 <p><strong>Spatial Transcriptomics: mapping gene expression in context</strong></p>
@@ -1332,7 +1390,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-44" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-45" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Spatial Transcriptomics</span></p>
 <p><strong>Spatial Transcriptomics: from technology to discovery</strong></p>
@@ -1354,7 +1412,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-45" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-46" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Integration of RNA-Seq with other omics data</span></p>
 <p><strong>Beyond RNA: integrating with other omics data</strong></p>
@@ -1374,7 +1432,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div>
 </section>
-<section id="section-46" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-47" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Integration of RNA-Seq with other omics data</span></p>
 <p><strong>Unlocking biological insights through data integration</strong></p>
@@ -1397,7 +1455,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section></section>
-<section id="section-47" class="title-slide slide level1 center" data-background-image="images/qmark.jpg" data-background-size="cover" data-background-opacity="0.7">
+<section id="section-48" class="title-slide slide level1 center" data-background-image="images/qmark.jpg" data-background-size="cover" data-background-opacity="0.7">
 <h1></h1>
 <div style="position: absolute; left: 980px; top: 450px;">
 <p><span style="font-size: 130px; font-weight: bold; color: white">Domande?</span></p>
