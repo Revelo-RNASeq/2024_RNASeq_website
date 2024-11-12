@@ -598,8 +598,11 @@ Third-generation NGS platforms:
 
 [Sample Preparation]{.subtit}
 
+<br>
+<br>
+
 :::{.p-img-center}
-![](images/sample.png)
+![](images/sample_top.png)
 :::
 
 
@@ -698,31 +701,92 @@ Third-generation NGS platforms:
 :::
 
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
+[Library quantification]{.subtit}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
-
-
-[Sequencing Technologies]{.tit .p-span-center}
+::: {.columns}
+::: {.column width="40%"}
+![](images/rin.jpg){width=600}
+:::
+::: {.column width="60%"}
+*   **Why quantify?**
+    *   Optimal sequencing results
+    *   Determine loading concentration
+    *   Ensure even coverage
+*   **Methods:**
+    *   Fluorometric methods (e.g., Qubit)
+    *   qPCR
+    *   Capillary electrophoresis (e.g., Bioanalyzer)
+:::
+:::
 
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 
 [Emerging Trends and Future Directions]{.tit .p-span-center}
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Single-Cell RNA Sequencing]{.subtit}
+
+**Zooming In: Analyze gene expression in individual cells**
+
+:::{.p-img-center}
+![](images/scRNA1.jpg){width=1200}
+:::
+
+<!-- ::: {.columns}
+::: {.column width="50%"}
+*   **Advantages:**
+    *   Cellular heterogeneity
+    *   Cell-fate transitions
+    *   Rare cell populations
+:::
+::: {.column width="50%"}
+*   **Challenges:**
+    *   Technical complexity
+    *   Cost
+    *   Data analysis
+:::
+::: -->
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Advantages of scRNA-Seq in Biological Research]{.subtit}
+
+*   **Cellular Heterogeneity:**  Identify and characterize different cell types within a complex tissue or population.
+    *   Discover new cell subtypes and rare cell populations.
+    *   Understand the functional diversity of cells.
+*   **Developmental Trajectories:**  Trace cell lineages and reconstruct developmental pathways.
+    *   Study cell differentiation and fate decisions.
+    *   Identify key genes and regulatory networks involved in development.
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Advantages of scRNA-Seq in Biological Research]{.subtit}
+
+*   **Disease Mechanisms:**  Investigate the cellular basis of disease.
+    *   Identify disease-associated cell types and gene expression changes.
+    *   Study the response of individual cells to drugs or treatments.
+
+
+:::{.callout-important appearance="default"}
+scRNA-seq represents a powerful tool for dissecting the complexities of gene expression and cellular heterogeneity across various biological contexts
+:::
+
+
+
+
+
+
+
+
+
+
 
 
 
