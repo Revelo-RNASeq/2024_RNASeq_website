@@ -647,6 +647,68 @@ Third-generation NGS platforms:
 | **Read Length**       | Shorter               | Longer (effective)    |
 | **Ideal Applications** | Gene expression, small RNA-Seq | Genome assembly, variant calling, isoform identification |
 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Sequencing Depth]{.subtit}
+
+**Sequencing Depth: Finding the Right Balance**
+
+:::{.p-img-center}
+![](images/diagnostech-part3-diagram2.jpg)
+:::
+
+::: {.columns .f25}
+::: {.column width="33%"}
+*   **What it is:** The average number of times each base in the genome (or transcriptome) is sequenced.
+*   **Why it matters:**
+    *   **Sensitivity:** Higher depth increases the chance of detecting rare transcripts or variants.
+    *   **Accuracy:**  Higher depth improves the accuracy of gene expression quantification and variant calling.
+:::
+::: {.column width="33%"}
+*   **Factors to consider:**
+    *   **Research goals:**  Higher depth is needed for detecting rare events or subtle changes.
+    *   **Genome size and complexity:** Larger genomes require higher depth for adequate coverage.
+    *   **Budget:**  Higher depth increases sequencing costs.
+:::
+::: {.column width="33%"}
+*   **Typical ranges:**
+    *   RNA-Seq for gene expression: 10-30 million reads per sample
+    *   RNA-Seq for isoform detection: 30-60 million reads per sample
+    *   Variant calling: 30-50x coverage for whole-genome sequencing
+
+:::
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Transcriptome Coverage]{.subtit}
+
+**Transcriptome Coverage: Capturing the Full Picture**
+
+:::{.p-img-center}
+![](images/maxresdefault.jpg){width=400}
+:::
+
+
+::: {.columns .f25}
+::: {.column width="50%"}
+*   **What it is:** The extent to which the sequencing reads represent the entire transcriptome.
+*   **Why it matters:**
+    *   **Completeness:**  High coverage ensures that all expressed transcripts are captured, including rare and low-abundance transcripts.
+    *   **Accuracy:**  Adequate coverage is needed for accurate quantification of gene expression levels.
+    *   **Discovery:**  High coverage increases the chances of identifying novel transcripts and isoforms.
+:::
+::: {.column width="50%"}
+*   **Factors influencing coverage:**
+    *   **Sequencing depth:** Higher depth generally leads to better coverage.
+    *   **Library complexity:** A diverse library with a wide range of fragment sizes improves coverage.
+    *   **RNA integrity:** High-quality RNA ensures that all transcripts are represented in the library.
+    *   **Sequencing technology:**  Different platforms have different read lengths and biases, which can affect coverage.
+:::
+:::
+
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 
