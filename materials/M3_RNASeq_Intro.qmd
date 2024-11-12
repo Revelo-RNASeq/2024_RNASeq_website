@@ -755,7 +755,9 @@ Third-generation NGS platforms:
 
 ##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[Advantages of scRNA-Seq in Biological Research]{.subtit}
+[Single-Cell RNA Sequencing]{.subtit}
+
+**scRNA-Seq: advantages in biological research**
 
 *   **Cellular Heterogeneity:**  Identify and characterize different cell types within a complex tissue or population.
     *   Discover new cell subtypes and rare cell populations.
@@ -767,7 +769,9 @@ Third-generation NGS platforms:
 
 ##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[Advantages of scRNA-Seq in Biological Research]{.subtit}
+[Single-Cell RNA Sequencing]{.subtit}
+
+**scRNA-Seq: advantages in biological research**
 
 *   **Disease Mechanisms:**  Investigate the cellular basis of disease.
     *   Identify disease-associated cell types and gene expression changes.
@@ -780,9 +784,57 @@ scRNA-seq represents a powerful tool for dissecting the complexities of gene exp
 
 
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Spatial Transcriptomics]{.subtit}
+
+**Spatial Transcriptomics: mapping gene expression in context**
+
+::: {.columns}
+::: {.column width="40%"}
+<br>
+<br>
+
+![](images/sptr.png){width=600}
+
+:::
+::: {.column width="60%" .f30}
+*   **Bridges histology and genomics:** Combines traditional tissue imaging with high-throughput RNA sequencing.
+*   **Preserves spatial context:**  Maps gene expression while retaining spatial information, unlike traditional scRNA-seq.
+*   **Enables:**
+    *   Visualization of gene expression patterns within tissues.
+    *   Quantitative analysis of transcriptomes in a spatial context.
+*   **Applications:**
+    *   Understanding tissue organization and cellular interactions.
+    *   Investigating developmental processes (organogenesis).
+    *   Studying disease progression and heterogeneity.
+
+:::
+:::
 
 
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Spatial Transcriptomics]{.subtit}
+
+
+**Spatial Transcriptomics: from technology to discovery**
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/sctr2.jpg){width=600}
+:::
+::: {.column width="60%" .f30}
+*   **Applications:**
+    *   **Tissue heterogeneity:**  Studying complex tissues like the cochlea. (Tisi, 2023)
+    *   **Disease mechanisms:**  Uncovering cellular dynamics in diseases like Alzheimer's. (Chen et al., 2020)
+*   **Data analysis:**
+    *   Dimension reduction, deconvolution, and integration with histological images.
+    *   Specialized tools for cell type deconvolution. (Cable et al., 2021)
+
+:::
+:::
 
 
 
