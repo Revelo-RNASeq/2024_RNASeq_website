@@ -392,40 +392,311 @@ The quality score is used to identify the **probability of the correct identific
 :::
 :::: 
 
+#  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.tit .p-span-center}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### Read Alignment
 
 
+:::: {.columns}
+::: {.column width="50%" .f30}
+*   **Purpose:** 
+    * To map sequencing reads to a reference genome or transcriptome.
+*   **Why is it important?**
+    *   Identify the genomic origin of each read.
+    *   Determine which genes or transcripts are expressed.
+    *   Discover genetic variations (SNPs, indels).
+:::
+::: {.column width="50%" .f30}
+*   **Challenges:**
+    *   Reads may contain sequencing errors.
+    *   Reads may map to multiple locations (multi-mapping reads).
+    *   Genomes contain repetitive regions.
+*   **Output:**  A BAM (Binary Alignment/Map) file containing alignment information.
+
+:::
+:::: 
+
+:::{.p-img-center}
+![](images/align.png){width=1000}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### SAM/BAM Format:  Storing Alignment Information
+
+*   **What it is:**  
+    *   The standard file format for storing read alignments.
+    *   **SAM (Sequence Alignment/Map):**  A text-based format.
+    *   **BAM (Binary Alignment/Map):**  A compressed binary version of SAM.
+*   **Why is it important?**
+    *   Provides a standardized way to store alignment information.
+    *   Allows for efficient storage and retrieval of large alignment datasets.
+    *   Facilitates compatibility between different bioinformatics tools.
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### SAM/BAM Format:  Storing Alignment Information
+
+*   **Content:**
+    *   **Header section**: Contains metadata about the alignment (reference genome, aligner used, etc.).
+
+::: code
+    @RG     ID:1    SM:C5926_BM_IonCode_0118
+    @PG     ID:samtools     PN:samtools    VN:1.16.1    CL:samtools view -H C5926_BM_IonCode_0118.reassembled.bam
+:::
 
 
+::: notes
+-   @RG = read group
+    -   ID = Read group identifier
+    -   SM = Sample
+-   @PG = Program
+    -   ID = Program record identifier
+    -   PN = Program name
+    -   VN = software version
+    -   Cl = command line
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### SAM/BAM Format:  Storing Alignment Information
+
+*   **Alignment section**:  Each line represents a single read and its alignment to the reference.
+    *   Includes information about mapping position, quality scores, alignment flags, and more.
+
+![](images/bam2.png){.absolute top="500" left="0" width="800" height="auto"}
+
+![](images/bam1.png){.absolute top="400" right="20" width="550" height="auto"}
+
+::: notes
+-   11 campi obbligatori
+
+-   Metadati non obbligatori
+
+-   Concise Idiosyncratic Gapped Alignment Report (CIGAR) string
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### [STAR Aligner](https://github.com/alexdobin/STAR)
 
 
+:::: {.columns}
+::: {.column width="30%" .f40}
+![](images/alignment_STAR_step3.png){width=400}
+:::
+::: {.column width="70%" .f30}
+*   **What it is:**  
+    * A widely used splice-aware aligner for RNA-Seq data.
+*   **Key features:**
+    *   Fast and efficient alignment.
+    *   Accurate handling of spliced reads.
+    *   Can detect novel splice junctions.
+    *   Supports various RNA-Seq protocols.
+*   **Advantages:**
+    *   High accuracy
+    *   Speed
+    *   Versatility
+:::
+:::: 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### [HISAT2](http://daehwankimlab.github.io/hisat2/)
 
 
+:::: {.columns}
+::: {.column width="30%" .f40}
+![](images/alignment_STAR_step3.png){width=400}
+:::
+::: {.column width="70%" .f30}
+*   **What it is:** 
+    *   Another popular splice-aware aligner for RNA-Seq.
+*   **Key features:**
+    *   Based on the Burrows-Wheeler transform.
+    *   Fast and memory-efficient.
+    *   Supports both DNA and RNA alignment.
+*   **Comparison to STAR:**
+    *   May be slightly faster for some datasets.
+    *   May have slightly lower accuracy for certain types of reads.
+    *   Choice often depends on specific needs and preferences.
+:::
+:::: 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### UMI-tools dedup
 
 
+:::: {.columns}
+::: {.column width="30%" .f40}
+![](images/dedup.jpg){width=400}
+:::
+::: {.column width="70%" .f25}
+*   **What it does:**
+    *   Identifies and removes PCR duplicates from RNA-Seq data using Unique Molecular Identifiers (UMIs).
+    *   Groups reads with the same UMI and genomic mapping location.
+    *   Selects the read with the highest quality score as the representative read for each group.
+*   **Why is it important?**
+    *   PCR amplification during library preparation can introduce duplicate reads.
+    *   These duplicates can bias gene expression estimates, especially for low-abundance transcripts.
+    *   `UMI-tools dedup` helps to correct for this bias and improve accuracy.
+*   **Benefits:**
+    *   More accurate gene expression quantification.
+    *   Reduced false positives in differential expression analysis.
+    *   Improved sensitivity for detecting rare transcripts.
 
 
+[[UMI-tools](https://umi-tools.readthedocs.io/en/latest/index.html)]{.p-spam.center}
+:::
+:::: 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
 
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Alignment and Quantification]{.subtit}
+
+### [RSEM](https://github.com/deweylab/RSEM)
 
 
+:::: {.columns}
+::: {.column width="50%" .f40}
+<br>
+<br>
 
+![](images/RSEM.png){width=700}
+:::
+::: {.column width="50%" .f30}
+*   **What it is:**  
+    *   RSEM is a software package for estimating gene and isoform expression levels from RNA-Seq data.
+*   **Key features:**
+    *   Uses a statistical model to estimate transcript abundance from aligned reads.
+    *   Can handle different types of RNA-Seq data (single-end, paired-end).
+    *   Provides various output formats (counts, TPM, FPKM).
+:::
+:::: 
 
+::: notes
 
+RPKM (Reads Per Kilobase Million) or FPKM (Fragments Per Kilobase Million). However, TPM (Transcripts Per Kilobase Million) is now becoming quite popular
 
-
-
-
-
-
-
-
-
-
+:::
 
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
-[Alignment and Quantification]{.tit .p-span-center}
+[Pseudo-aligners]{.tit .p-span-center}
+
+[A New Approach to Quantification]{.f50 .p-span-center}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Pseudo-aligners]{.subtit}
+
+### Fast and Efficient Transcript Abundance Estimation
+
+:::: {.columns}
+::: {.column width="60%" .f30}
+*   **What they are:**  
+    * A class of RNA-Seq quantification tools that do not require exact alignment of reads to a reference genome.
+*   **How they work:**
+    *   Use lightweight algorithms to assign reads to transcripts    
+    *   Effectively "pseudo-align" reads to transcripts without determining their precise genomic location.
+*   **Advantages:**
+    *   **Speed:**  Significantly faster than traditional alignment-based methods.
+    *   **Efficiency:**  Reduced computational resources required.
+    *   **Accuracy:**  Comparable or even superior accuracy for transcript quantification.
+:::
+::: {.column width="40%" .f30}
+*   **Popular tools:**
+    *   Salmon
+    *   Kallisto
+*   **Applications:**
+    *   Gene expression profiling
+    *   Differential expression analysis
+    *   Transcript isoform identification
+:::
+:::: 
+
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Pseudo-aligners]{.subtit}
+
+### Kallisto vs Salmon
+
+::: f30
+| Feature            | [Kallisto]{.f50} ![](images/bear.jpg){width=100} | [Salmon]{.f50} ![](images/salmon.png){width=190}                |
+|---------------------|------------------------|-------------------------|
+| **Algorithm**       | Pseudoalignment (k-mers) | Quasi-mapping (BWT)     |
+| **Speed**           | Fast                   | Faster                  |
+| **Memory Usage**    | Lower                  | Higher                  |
+| **Features**         | Basic                  | More advanced (library types, bootstrapping) |
+| **Accuracy**        | High                   | High                    |
+| **Ease of Use**     | High                   | High                    |
+| **Output Formats**  | Abundance estimates     | Abundance estimates, counts, TPM, etc. |
+| **Applications**   | Gene expression, DE analysis | Gene expression, DE analysis, isoform quantification |
+
+:::
+
+
+
+
+
+
+
+
 
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}

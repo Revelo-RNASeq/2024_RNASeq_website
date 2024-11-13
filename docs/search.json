@@ -1096,84 +1096,84 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-22",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "A Brief History of Sequencing"
+    "text": "Alignment and Quantification\nRead Alignment\n\n\n\nPurpose:\n\nTo map sequencing reads to a reference genome or transcriptome.\n\nWhy is it important?\n\nIdentify the genomic origin of each read.\nDetermine which genes or transcripts are expressed.\nDiscover genetic variations (SNPs, indels).\n\n\n\n\nChallenges:\n\nReads may contain sequencing errors.\nReads may map to multiple locations (multi-mapping reads).\nGenomes contain repetitive regions.\n\nOutput: A BAM (Binary Alignment/Map) file containing alignment information."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-23",
     "href": "materials/M3_RNASeq_Pipeline.html#section-23",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "First generation NGS"
+    "text": "Alignment and Quantification\nRead Alignment\n\n\n\nPurpose:\n\nTo map sequencing reads to a reference genome or transcriptome.\n\nWhy is it important?\n\nIdentify the genomic origin of each read.\nDetermine which genes or transcripts are expressed.\nDiscover genetic variations (SNPs, indels).\n\n\n\n\nChallenges:\n\nReads may contain sequencing errors.\nReads may map to multiple locations (multi-mapping reads).\nGenomes contain repetitive regions.\n\nOutput: A BAM (Binary Alignment/Map) file containing alignment information."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-24",
     "href": "materials/M3_RNASeq_Pipeline.html#section-24",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing\n\n\n\n\n\n\nI dideossinucleotidi trifosfati (ddNTP) mancano del gruppo 3’-OH dei dNTP, essenziale per l’allungamento del filamento mediato dalla polimerasi in una PCR.\nLe marcature radioattive, instabili, rappresentavano un rischio per la salute e richiedevano gel separati per ciascuna delle quattro basi del DNA.\nLa sintesi del filamento di DNA complementare inizia nel sito specifico di innesco e termina con l’incorporazione di un ddNTP terminatore di catena che viene introdotto casualmente al posto del corrispondente dNTP.\nQuando questi frammenti vengono separati su una matrice di gel appropriata, l’informazione sulla sequenza può essere ottenuta dall’ordine di migrazione delle bande (dal basso verso l’alto)."
+    "text": "Alignment and Quantification\nSAM/BAM Format: Storing Alignment Information\n\nWhat it is:\n\nThe standard file format for storing read alignments.\nSAM (Sequence Alignment/Map): A text-based format.\nBAM (Binary Alignment/Map): A compressed binary version of SAM.\n\nWhy is it important?\n\nProvides a standardized way to store alignment information.\nAllows for efficient storage and retrieval of large alignment datasets.\nFacilitates compatibility between different bioinformatics tools."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-25",
     "href": "materials/M3_RNASeq_Pipeline.html#section-25",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing\n\n\n\n\n\n\nLeroy Hood sviluppò una tecnica chimica che utilizzava coloranti fluorescenti di diversi colori, uno per ciascuna delle quattro basi del DNA. Questo sistema di “codifica a colori” eliminò la necessità di eseguire diverse reazioni in gel sovrapposti.\nHood integrò la tecnologia laser e informatica, eliminando il tedioso processo di raccolta manuale delle informazioni.\nddATP, ddCTP, ddGTP e ddUTP marcati con fluorescenza.\nLa successiva visualizzazione fluorescente del prodotto rivela il nucleotide incorporato e quindi la sequenza."
+    "text": "Alignment and Quantification\nSAM/BAM Format: Storing Alignment Information\n\nContent:\n\nHeader section: Contains metadata about the alignment (reference genome, aligner used, etc.).\n\n\n\n@RG     ID:1    SM:C5926_BM_IonCode_0118\n@PG     ID:samtools     PN:samtools    VN:1.16.1    CL:samtools view -H C5926_BM_IonCode_0118.reassembled.bam\n\n\n\n@RG = read group\n\nID = Read group identifier\nSM = Sample\n\n@PG = Program\n\nID = Program record identifier\nPN = Program name\nVN = software version\nCl = command line"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-26",
     "href": "materials/M3_RNASeq_Pipeline.html#section-26",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing\n\n\nAdvantages \n\nGold standard method for accurate detection of single nucleotide variants and small insertions/deletions\nCost effective where single samples need to be tested very urgently\nLess reliant on computational tools than NGS\nLonger fragments (up to approximately 1000bp) can be sequenced than in short read NGS\n\n\n\n\nLimitations \n\nLimited throughput\nNot cost effective for sequencing many genes in parallel\nCan require a larger amount of input DNA than NGS\nSanger methods can only sequence short pieces of DNA–about 300 to 1000 base pairs.\nThe quality of a Sanger sequence is often not very good in the first 15 to 40 bases because that is where the primer binds.\nSequence quality degrades after 700 to 900 bases"
+    "text": "Alignment and Quantification\nSAM/BAM Format: Storing Alignment Information\n\nAlignment section: Each line represents a single read and its alignment to the reference.\n\nIncludes information about mapping position, quality scores, alignment flags, and more.\n\n\n\n\n\n\n11 campi obbligatori\nMetadati non obbligatori\nConcise Idiosyncratic Gapped Alignment Report (CIGAR) string"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-27",
     "href": "materials/M3_RNASeq_Pipeline.html#section-27",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing"
+    "text": "Alignment and Quantification\nSTAR Aligner\n\n\n\n\n\nWhat it is:\n\nA widely used splice-aware aligner for RNA-Seq data.\n\nKey features:\n\nFast and efficient alignment.\nAccurate handling of spliced reads.\nCan detect novel splice junctions.\nSupports various RNA-Seq protocols.\n\nAdvantages:\n\nHigh accuracy\nSpeed\nVersatility"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-28",
     "href": "materials/M3_RNASeq_Pipeline.html#section-28",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Second generation NGS\n\n\n\n\n\n\n\nImportant\n\n\nSecond-generation NGS machines immediately began to drive the ‘genomics revolution’ by massively increased throughput by parallelizing many reactions"
+    "text": "Alignment and Quantification\nSTAR Aligner\n\n\n\n\n\nWhat it is:\n\nA widely used splice-aware aligner for RNA-Seq data.\n\nKey features:\n\nFast and efficient alignment.\nAccurate handling of spliced reads.\nCan detect novel splice junctions.\nSupports various RNA-Seq protocols.\n\nAdvantages:\n\nHigh accuracy\nSpeed\nVersatility"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-29",
     "href": "materials/M3_RNASeq_Pipeline.html#section-29",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Second generation NGS\n\nSecond-generation sequencing platforms:\n\nSOLiD: Sequencing by Oligonucleotide Ligation and Detection\n454 GS FLX+: It uses pyrosequencing chemistry\nNextSeq 550Dx: Sequence by synthesis\n\n\n\nSOLiD: Life Technologies in 2006\n454: Roche in 2011\nNextSeq 550Dx: Illumina in 2017"
+    "text": "Alignment and Quantification\nHISAT2\n\n\n\n\n\nWhat it is:\n\nAnother popular splice-aware aligner for RNA-Seq.\n\nKey features:\n\nBased on the Burrows-Wheeler transform.\nFast and memory-efficient.\nSupports both DNA and RNA alignment.\n\nComparison to STAR:\n\nMay be slightly faster for some datasets.\nMay have slightly lower accuracy for certain types of reads.\nChoice often depends on specific needs and preferences."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-30",
     "href": "materials/M3_RNASeq_Pipeline.html#section-30",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by Ligation\n\n\n\n\n\n\n\n\n\n\n\n Considered to be one of the most accurate second-generation sequencing technologies\n it can take up to seven days to complete a single run and its short read length of 35 bp\n Thermo Fisher Scientific shut down all SOLiD sequencing platforms in 2016\n\n\n\n\n\nFluorescently labeled molecules called 8-mers\n8-mers are short ssDNA fragments where:\n\nthe first and second nucleotides are the next two nucleotides of the elongating DNA strand\n\nthe third-to-fifth nucleotides are degenerate\n\nthe sixth to eighth nucleotides are inosine bases, where the eighth inosine base is attached to a characteristic fluorescent dye\n\n\nA. The addition of primer and 8-mers, where if the first two nucleotides are complementary, DNA ligase ligates it to the primer.\nB. Unbound 8-mers are washed away, and a laser excites the fluorescent tag on the 8-mer to emit a detectable light signal that is captured\nC. A-B is repeated until the end of the DNA fragment.\nD. The newly synthesized DNA strand is melted off, and A-C is repeated using a primer with a length of N-1, N-2, and N-3"
+    "text": "Alignment and Quantification\nUMI-tools dedup\n\n\n\n\n\nWhat it does:\n\nIdentifies and removes PCR duplicates from RNA-Seq data using Unique Molecular Identifiers (UMIs).\nGroups reads with the same UMI and genomic mapping location.\nSelects the read with the highest quality score as the representative read for each group.\n\nWhy is it important?\n\nPCR amplification during library preparation can introduce duplicate reads.\nThese duplicates can bias gene expression estimates, especially for low-abundance transcripts.\nUMI-tools dedup helps to correct for this bias and improve accuracy.\n\nBenefits:\n\nMore accurate gene expression quantification.\nReduced false positives in differential expression analysis.\nImproved sensitivity for detecting rare transcripts.\n\n\nUMI-tools"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-31",
     "href": "materials/M3_RNASeq_Pipeline.html#section-31",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Pyrosequencing\n\n\n\n\n\n\n\n\n \n\n\n Large read lenght generation\n High reagent cost\n High error rate for homopolymers\n\n\n\n\nDurante il sequenziamento vengono, di volta in volta, aggiunti dei nucleotidi.\nSe il nucleotide viene incorporato viene rilasciato un pirofosfato\nPoi utilizzato come substrato dall’enzima ATP solforilasi.\nQuest’ultimo enzima catalizza la conversione del pirofosfato in ATP.\nL’ATP a sua volta è il cofattore utilizzato dalla luciferasi per catalizzare la reazione che coinvolge la luciferina e che porta alla produzione di luce.\nLa luce generata, solo in seguito alla incorporazione del nucleotide corretto,viene rilevata grazie ad un detector."
+    "text": "Alignment and Quantification\nUMI-tools dedup\n\n\n\n\n\nWhat it does:\n\nIdentifies and removes PCR duplicates from RNA-Seq data using Unique Molecular Identifiers (UMIs).\nGroups reads with the same UMI and genomic mapping location.\nSelects the read with the highest quality score as the representative read for each group.\n\nWhy is it important?\n\nPCR amplification during library preparation can introduce duplicate reads.\nThese duplicates can bias gene expression estimates, especially for low-abundance transcripts.\nUMI-tools dedup helps to correct for this bias and improve accuracy.\n\nBenefits:\n\nMore accurate gene expression quantification.\nReduced false positives in differential expression analysis.\nImproved sensitivity for detecting rare transcripts.\n\n\nUMI-tools"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-32",
     "href": "materials/M3_RNASeq_Pipeline.html#section-32",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis"
+    "text": "Alignment and Quantification\nRSEM\n\n\n\n\n\nWhat it is:\n\nRSEM is a software package for estimating gene and isoform expression levels from RNA-Seq data.\n\nKey features:\n\nUses a statistical model to estimate transcript abundance from aligned reads.\nCan handle different types of RNA-Seq data (single-end, paired-end).\nProvides various output formats (counts, TPM, FPKM)."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-33",
     "href": "materials/M3_RNASeq_Pipeline.html#section-33",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Birthplace of high-throughput sequencing"
+    "text": "Alignment and Quantification\nRSEM\n\n\n \n\n\n\nWhat it is:\n\nRSEM is a software package for estimating gene and isoform expression levels from RNA-Seq data.\n\nKey features:\n\nUses a statistical model to estimate transcript abundance from aligned reads.\nCan handle different types of RNA-Seq data (single-end, paired-end).\nProvides various output formats (counts, TPM, FPKM).\n\n\n\n\nRPKM (Reads Per Kilobase Million) or FPKM (Fragments Per Kilobase Million). However, TPM (Transcripts Per Kilobase Million) is now becoming quite popular"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-34",
@@ -1194,14 +1194,14 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-36",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - History\n\n2004: Molecular Clustering Technology Integration\n\n\n\n\nCluster generation (also known as “bridge amplification”)\n\n\n\nSolexa acquired molecular clustering technology from Manteia.\nThe amplification of single DNA molecules into clusters enhanced the fidelity and accuracy of gene calling, while reducing the cost of the system optics through generation of a stronger signal."
+    "text": "Pseudo-aligners\nFast and Efficient Transcript Abundance Estimation\n\n\n\nWhat they are:\n\nA class of RNA-Seq quantification tools that do not require exact alignment of reads to a reference genome.\n\nHow they work:\n\nUse lightweight algorithms to assign reads to transcripts\n\nEffectively “pseudo-align” reads to transcripts without determining their precise genomic location.\n\nAdvantages:\n\nSpeed: Significantly faster than traditional alignment-based methods.\nEfficiency: Reduced computational resources required.\nAccuracy: Comparable or even superior accuracy for transcript quantification.\n\n\n\n\nPopular tools:\n\nSalmon\nKallisto\n\nApplications:\n\nGene expression profiling\nDifferential expression analysis\nTranscript isoform identification"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-37",
     "href": "materials/M3_RNASeq_Pipeline.html#section-37",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - History\n\n2005: phiX-174 Genome Sequencing\n\n2005: Integration of Lynx Therapeutics\n\n\n2007: Illumina Acquires Solexa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Solexa team sequenced the complete genome of the bacteriophage phiX-174, the same genome Sanger first sequenced using his method\nHowever, the SBS technology generated significantly more sequencing data, delivering over 3 million bases from a single run.\n\n\n\nSolexa acquired instrumentation company Lynx Therapeutics, transforming the successful Solexa prototype into a commercial sequencing instrument: Genome Analyzer\n\n\n\nSolexa was acquired by Illumina\nNext-generation sequencing (NGS) data output has increased at a rate that outpaces Moore’s law, more than doubling each year"
+    "text": "Pseudo-aligners\nKallisto vs Salmon\n\n\n\n\n\n\n\n\n\nFeature\nKallisto \nSalmon \n\n\n\n\nAlgorithm\nPseudoalignment (k-mers)\nQuasi-mapping (BWT)\n\n\nSpeed\nFast\nFaster\n\n\nMemory Usage\nLower\nHigher\n\n\nFeatures\nBasic\nMore advanced (library types, bootstrapping)\n\n\nAccuracy\nHigh\nHigh\n\n\nEase of Use\nHigh\nHigh\n\n\nOutput Formats\nAbundance estimates\nAbundance estimates, counts, TPM, etc.\n\n\nApplications\nGene expression, DE analysis\nGene expression, DE analysis, isoform quantification"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-38",

@@ -714,17 +714,403 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 <p><br> <br> <span class="p-spam.center"><a href="https://sortmerna.readthedocs.io/en/latest/">SortMeRNA</a></span></p>
 </div></div>
 </section></section>
+<section>
 <section id="section-21" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Alignment and Quantification</span></p>
 </section>
-
-<section id="section-22" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-22" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-23" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="read-alignment">Read Alignment</h3>
+<div class="columns">
+<div class="column f30" style="width:50%;">
+<ul>
+<li><strong>Purpose:</strong>
+<ul>
+<li>To map sequencing reads to a reference genome or transcriptome.</li>
+</ul></li>
+<li><strong>Why is it important?</strong>
+<ul>
+<li>Identify the genomic origin of each read.</li>
+<li>Determine which genes or transcripts are expressed.</li>
+<li>Discover genetic variations (SNPs, indels).</li>
+</ul></li>
+</ul>
+</div><div class="column f30" style="width:50%;">
+<ul>
+<li><strong>Challenges:</strong>
+<ul>
+<li>Reads may contain sequencing errors.</li>
+<li>Reads may map to multiple locations (multi-mapping reads).</li>
+<li>Genomes contain repetitive regions.</li>
+</ul></li>
+<li><strong>Output:</strong> A BAM (Binary Alignment/Map) file containing alignment information.</li>
+</ul>
+</div></div>
+<div class="p-img-center">
+<p><img data-src="images/align.png" width="1000"></p>
+</div>
+</section>
+<section id="section-24" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="sambam-format-storing-alignment-information">SAM/BAM Format: Storing Alignment Information</h3>
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>The standard file format for storing read alignments.</li>
+<li><strong>SAM (Sequence Alignment/Map):</strong> A text-based format.</li>
+<li><strong>BAM (Binary Alignment/Map):</strong> A compressed binary version of SAM.</li>
+</ul></li>
+<li><strong>Why is it important?</strong>
+<ul>
+<li>Provides a standardized way to store alignment information.</li>
+<li>Allows for efficient storage and retrieval of large alignment datasets.</li>
+<li>Facilitates compatibility between different bioinformatics tools.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-25" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="sambam-format-storing-alignment-information-1">SAM/BAM Format: Storing Alignment Information</h3>
+<ul>
+<li><strong>Content:</strong>
+<ul>
+<li><strong>Header section</strong>: Contains metadata about the alignment (reference genome, aligner used, etc.).</li>
+</ul></li>
+</ul>
+<div class="code">
+<pre><code>@RG     ID:1    SM:C5926_BM_IonCode_0118
+@PG     ID:samtools     PN:samtools    VN:1.16.1    CL:samtools view -H C5926_BM_IonCode_0118.reassembled.bam</code></pre>
+</div>
+<aside class="notes">
+<ul>
+<li><span class="citation" data-cites="RG">@RG</span> = read group
+<ul>
+<li>ID = Read group identifier</li>
+<li>SM = Sample</li>
+</ul></li>
+<li><span class="citation" data-cites="PG">@PG</span> = Program
+<ul>
+<li>ID = Program record identifier</li>
+<li>PN = Program name</li>
+<li>VN = software version</li>
+<li>Cl = command line</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-26" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="sambam-format-storing-alignment-information-2">SAM/BAM Format: Storing Alignment Information</h3>
+<ul>
+<li><strong>Alignment section</strong>: Each line represents a single read and its alignment to the reference.
+<ul>
+<li>Includes information about mapping position, quality scores, alignment flags, and more.</li>
+</ul></li>
+</ul>
+<p><img data-src="images/bam2.png" class="absolute" style="top: 500px; left: 0px; width: 800px; height: auto; "></p>
+<p><img data-src="images/bam1.png" class="absolute" style="top: 400px; right: 20px; width: 550px; height: auto; "></p>
+<aside class="notes">
+<ul>
+<li><p>11 campi obbligatori</p></li>
+<li><p>Metadati non obbligatori</p></li>
+<li><p>Concise Idiosyncratic Gapped Alignment Report (CIGAR) string</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-27" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-28" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="star-aligner"><a href="https://github.com/alexdobin/STAR">STAR Aligner</a></h3>
+<div class="columns">
+<div class="column f40" style="width:30%;">
+<p><img data-src="images/alignment_STAR_step3.png" width="400"></p>
+</div><div class="column f30" style="width:70%;">
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>A widely used splice-aware aligner for RNA-Seq data.</li>
+</ul></li>
+<li><strong>Key features:</strong>
+<ul>
+<li>Fast and efficient alignment.</li>
+<li>Accurate handling of spliced reads.</li>
+<li>Can detect novel splice junctions.</li>
+<li>Supports various RNA-Seq protocols.</li>
+</ul></li>
+<li><strong>Advantages:</strong>
+<ul>
+<li>High accuracy</li>
+<li>Speed</li>
+<li>Versatility</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="section-29" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="hisat2"><a href="http://daehwankimlab.github.io/hisat2/">HISAT2</a></h3>
+<div class="columns">
+<div class="column f40" style="width:30%;">
+<p><img data-src="images/alignment_STAR_step3.png" width="400"></p>
+</div><div class="column f30" style="width:70%;">
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>Another popular splice-aware aligner for RNA-Seq.</li>
+</ul></li>
+<li><strong>Key features:</strong>
+<ul>
+<li>Based on the Burrows-Wheeler transform.</li>
+<li>Fast and memory-efficient.</li>
+<li>Supports both DNA and RNA alignment.</li>
+</ul></li>
+<li><strong>Comparison to STAR:</strong>
+<ul>
+<li>May be slightly faster for some datasets.</li>
+<li>May have slightly lower accuracy for certain types of reads.</li>
+<li>Choice often depends on specific needs and preferences.</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="section-30" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-31" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="umi-tools-dedup">UMI-tools dedup</h3>
+<div class="columns">
+<div class="column f40" style="width:30%;">
+<p><img data-src="images/dedup.jpg" width="400"></p>
+</div><div class="column f25" style="width:70%;">
+<ul>
+<li><strong>What it does:</strong>
+<ul>
+<li>Identifies and removes PCR duplicates from RNA-Seq data using Unique Molecular Identifiers (UMIs).</li>
+<li>Groups reads with the same UMI and genomic mapping location.</li>
+<li>Selects the read with the highest quality score as the representative read for each group.</li>
+</ul></li>
+<li><strong>Why is it important?</strong>
+<ul>
+<li>PCR amplification during library preparation can introduce duplicate reads.</li>
+<li>These duplicates can bias gene expression estimates, especially for low-abundance transcripts.</li>
+<li><code>UMI-tools dedup</code> helps to correct for this bias and improve accuracy.</li>
+</ul></li>
+<li><strong>Benefits:</strong>
+<ul>
+<li>More accurate gene expression quantification.</li>
+<li>Reduced false positives in differential expression analysis.</li>
+<li>Improved sensitivity for detecting rare transcripts.</li>
+</ul></li>
+</ul>
+<p><span class="p-spam.center"><a href="https://umi-tools.readthedocs.io/en/latest/index.html">UMI-tools</a></span></p>
+</div></div>
+</section>
+<section id="section-32" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-33" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Alignment and Quantification</span></p>
+<h3 id="rsem"><a href="https://github.com/deweylab/RSEM">RSEM</a></h3>
+<div class="columns">
+<div class="column f40" style="width:50%;">
+<p><br> <br></p>
+<p><img data-src="images/RSEM.png" width="700"></p>
+</div><div class="column f30" style="width:50%;">
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>RSEM is a software package for estimating gene and isoform expression levels from RNA-Seq data.</li>
+</ul></li>
+<li><strong>Key features:</strong>
+<ul>
+<li>Uses a statistical model to estimate transcript abundance from aligned reads.</li>
+<li>Can handle different types of RNA-Seq data (single-end, paired-end).</li>
+<li>Provides various output formats (counts, TPM, FPKM).</li>
+</ul></li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>RPKM (Reads Per Kilobase Million) or FPKM (Fragments Per Kilobase Million). However, TPM (Transcripts Per Kilobase Million) is now becoming quite popular</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="section-34" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h1></h1>
+<p><span class="tit p-span-center">Pseudo-aligners</span></p>
+<p><span class="f50 p-span-center">A New Approach to Quantification</span></p>
+</section>
+<section id="section-35" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-36" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pseudo-aligners</span></p>
+<h3 id="fast-and-efficient-transcript-abundance-estimation">Fast and Efficient Transcript Abundance Estimation</h3>
+<div class="columns">
+<div class="column f30" style="width:60%;">
+<ul>
+<li><strong>What they are:</strong>
+<ul>
+<li>A class of RNA-Seq quantification tools that do not require exact alignment of reads to a reference genome.</li>
+</ul></li>
+<li><strong>How they work:</strong>
+<ul>
+<li>Use lightweight algorithms to assign reads to transcripts<br>
+</li>
+<li>Effectively “pseudo-align” reads to transcripts without determining their precise genomic location.</li>
+</ul></li>
+<li><strong>Advantages:</strong>
+<ul>
+<li><strong>Speed:</strong> Significantly faster than traditional alignment-based methods.</li>
+<li><strong>Efficiency:</strong> Reduced computational resources required.</li>
+<li><strong>Accuracy:</strong> Comparable or even superior accuracy for transcript quantification.</li>
+</ul></li>
+</ul>
+</div><div class="column f30" style="width:40%;">
+<ul>
+<li><strong>Popular tools:</strong>
+<ul>
+<li>Salmon</li>
+<li>Kallisto</li>
+</ul></li>
+<li><strong>Applications:</strong>
+<ul>
+<li>Gene expression profiling</li>
+<li>Differential expression analysis</li>
+<li>Transcript isoform identification</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="section-37" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pseudo-aligners</span></p>
+<h3 id="kallisto-vs-salmon">Kallisto vs Salmon</h3>
+<div class="f30">
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 34%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th><span class="f50">Kallisto</span> <img data-src="images/bear.jpg" width="100"></th>
+<th><span class="f50">Salmon</span> <img data-src="images/salmon.png" width="190"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Algorithm</strong></td>
+<td>Pseudoalignment (k-mers)</td>
+<td>Quasi-mapping (BWT)</td>
+</tr>
+<tr class="even">
+<td><strong>Speed</strong></td>
+<td>Fast</td>
+<td>Faster</td>
+</tr>
+<tr class="odd">
+<td><strong>Memory Usage</strong></td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+<tr class="even">
+<td><strong>Features</strong></td>
+<td>Basic</td>
+<td>More advanced (library types, bootstrapping)</td>
+</tr>
+<tr class="odd">
+<td><strong>Accuracy</strong></td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td><strong>Ease of Use</strong></td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td><strong>Output Formats</strong></td>
+<td>Abundance estimates</td>
+<td>Abundance estimates, counts, TPM, etc.</td>
+</tr>
+<tr class="even">
+<td><strong>Applications</strong></td>
+<td>Gene expression, DE analysis</td>
+<td>Gene expression, DE analysis, isoform quantification</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></section>
+<section id="section-38" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Post-alignment Processing</span></p>
 </section>
 
-<section id="section-23" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-39" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Downstream Analysis</span></p>
 
