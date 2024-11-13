@@ -1012,56 +1012,56 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-9",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sample Preparation"
+    "text": "Raw reads: The Starting Point\nFASTQ format\nWhat does “quality score” mean?\n\nThe quality score is used to identify the probability of the correct identification of the corresponding nucleotide.\n\n\n\n\nI numeri da 33 a 126 sono i numeri ASCII corrispondenti alla lettera che indicano\nScore più alto osservato 40, quindi molti si fermano li"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-10",
     "href": "materials/M3_RNASeq_Pipeline.html#section-10",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "RNA Extraction\n\n\n\n\n\nGoals:\n\nLyse cells/tissues\nRemove contaminants (DNA, proteins, lipids)\nPreserve RNA integrity\n\nMethods:\n\nPhenol-chloroform extraction \nColumn-based kits (silica membrane)"
+    "text": "Raw reads: The Starting Point\nFASTQ format\nWhat does “quality score” mean?\n\nThe quality score is used to identify the probability of the correct identification of the corresponding nucleotide."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-11",
     "href": "materials/M3_RNASeq_Pipeline.html#section-11",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Importance of High-Quality RNA\n\n\n\n\n\nHigh-quality RNA is the cornerstone of successful RNA-Seq.\nDegraded or contaminated RNA can lead to:\n\nInaccurate gene expression measurements\nMisleading conclusions\nWasted time and resources\n\nPrevent RNA degradation:\n\nUse RNase-free reagents and equipment.\nStore RNA at -80°C.\nMinimize freeze-thaw cycles."
+    "text": "Raw reads: The Starting Point\nFASTQ format\n\nFASTQ files can be very large, so in most cases you won’t be dealing with myFile.fastq, but with myFile.fastq.gz.\nThis means that the file is compressed, so it is not readable by a text editor without first being decompressed."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-12",
     "href": "materials/M3_RNASeq_Pipeline.html#section-12",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Enrich a specific type of RNA\n\nmRNA\nrRNAs and tRNAs (involved in mRNA translation)\nSmall nuclear RNAs (involved in splicing)\nSmall nucleolar RNAs (involved in the modification of rRNAs)\nmicroRNA (regulate gene expression at the posttranscriptional level)\nLong noncoding RNAs (chromatin remodelling, transcriptional control and posttranscriptional processing)\n\nTwo options for mRNA enrichment\n\nmRNA enrichment – Selectively enriching for poly(A)-tailed transcripts\nRNA depletion – Selectively depleting abundant/off-target transcripts"
+    "text": "Pre-processing Tools\nFastQC\n\n\n\nWhat it is:\n\nA widely used tool for quality assessment of raw sequencing data.\n\nWhat it does:\n\nGenerates comprehensive reports with various quality metrics.\nVisualizes data quality using interactive plots and graphs.\n\nKey metrics:\n\nPer base sequence quality\nPer sequence quality scores\nSequence length distribution\nGC content\nAdapter content\nOverrepresented sequences\n\n\n\n  FastQC"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-13",
     "href": "materials/M3_RNASeq_Pipeline.html#section-13",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "RNA Fragmentation\n\n\n\n\n\n\nImportant\n\n\nA sequencing library is essentially a pool of RNA fragments with adapters attached\n\n\n\n\nWhy?\n\nNGS platform compatibility\nIncreased library complexity\n\nMethods:\n\nEnzymatic digestion (e.g., RNase III)\nMechanical shearing (e.g., sonication)"
+    "text": "Pre-processing Tools\nFastQC\n\n\n\nWhat it is:\n\nA widely used tool for quality assessment of raw sequencing data.\n\nWhat it does:\n\nGenerates comprehensive reports with various quality metrics.\nVisualizes data quality using interactive plots and graphs.\n\nKey metrics:\n\nPer base sequence quality\nPer sequence quality scores\nSequence length distribution\nGC content\nAdapter content\nOverrepresented sequences\n\n\n\n  FastQC"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-14",
     "href": "materials/M3_RNASeq_Pipeline.html#section-14",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Attachment of adapters\n\nAdapters are a short, chemically-synthesised oligonucleotide that can be attached to the ends of DNA molecules (cDNA Synthesis: RNA to DNA)\nAct as barcodes to identify where each nucleotide was originally located"
+    "text": "Pre-processing Tools\nFastP & Trim Galore!\n\n\n\nPurpose:\n\nTo clean up raw sequencing data and improve the accuracy of downstream analysis.\n\nKey functions:\n\nAdapter trimming: Remove adapter sequences from reads.\nQuality trimming: Trim low-quality bases from the ends of reads.\n\nFastP:\n\nAll-in-one tool with extensive pre-processing features.\nIncludes quality filtering, error correction, UMI handling, and more.\n\n\n\n\nTrim Galore!:\n\nWrapper script for cutadapt (adapter trimming) and often includes FastQC (quality assessment).\nFocuses on adapter and quality trimming with optimized parameters.\n\nBenefits:\n\nImproved alignment accuracy.\nReduced false positives in variant calling and gene expression analysis.\nIncreased efficiency of downstream analysis."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-15",
     "href": "materials/M3_RNASeq_Pipeline.html#section-15",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Library quantification\n\n\n\n\n\nWhy quantify?\n\nOptimal sequencing results\nDetermine loading concentration\nEnsure even coverage\n\nMethods:\n\nFluorometric methods (e.g., Qubit)\nqPCR\nCapillary electrophoresis (e.g., Bioanalyzer)"
+    "text": "Pre-processing Tools\nUMI-tools extract\n\n\n\nWhat are UMIs?\n\nUnique Molecular Identifiers (UMIs) are short random sequences attached to each cDNA molecule during library preparation.\nThey act as “molecular barcodes” to identify unique molecules.\n\nWhy are UMIs important?\n\nUMIs help to distinguish PCR duplicates from true biological duplicates.\nThis improves the accuracy of gene expression quantification, especially for low-abundance transcripts.\n\n\n\n\nWhat does UMI-tools extract do?\n\nIdentifies and extracts UMIs from sequencing reads.\nMoves UMIs to the read name for downstream analysis.\nRequires information about the UMI location in the read.\n\nBenefits:\n\nImproved accuracy in gene expression quantification.\nReduced bias due to PCR amplification.  UMI-tools"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-17",
     "href": "materials/M3_RNASeq_Pipeline.html#section-17",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "The central dogma\n\n\n\n\n\nDNA: The blueprint of genetic information\nRNA: The messenger carrying genetic instructions\nProtein: The functional molecules in cells"
+    "text": "Pre-processing Tools\nFastP & Trim Galore!\n\n\n\nPurpose:\n\nTo clean up raw sequencing data and improve the accuracy of downstream analysis.\n\nKey functions:\n\nAdapter trimming: Remove adapter sequences from reads.\nQuality trimming: Trim low-quality bases from the ends of reads.\n\nFastP:\n\nAll-in-one tool with extensive pre-processing features.\nIncludes quality filtering, error correction, UMI handling, and more.\n\n\n\n\nTrim Galore!:\n\nWrapper script for cutadapt (adapter trimming) and often includes FastQC (quality assessment).\nFocuses on adapter and quality trimming with optimized parameters.\n\nBenefits:\n\nImproved alignment accuracy.\nReduced false positives in variant calling and gene expression analysis.\nIncreased efficiency of downstream analysis."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-18",
@@ -1075,14 +1075,14 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-19",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Why Study RNA?\n\n\n\n\n\nDynamic reflection of cellular activity: Unlike DNA, which is relatively static, RNA levels change rapidly in response to internal and external stimuli.\n\nProvides a snapshot of what genes are actively being expressed at a specific time.\n\nUnderstanding gene regulation: Studying RNA helps us understand how genes are turned on or off, and to what extent, in different conditions."
+    "text": "Pre-processing Tools\nBBSplit\n\n\n\nWhat it is:\n\nA tool for removing contaminant reads from sequencing data.\n\nTypes of contamination:\n\nMicrobial DNA or RNA\nHost DNA (in the case of RNA-Seq from host-associated samples)\nOther unwanted sequences\n\nHow it works:\n\nAligns reads to a database of contaminant sequences.\nRemoves reads that map to the contaminant database.\n\n\n\n  BBMap"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-20",
     "href": "materials/M3_RNASeq_Pipeline.html#section-20",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Why Study RNA?\n\n\n\n\n\nInsights into cellular processes: RNA plays diverse roles in many cellular processes, including:\n\nProtein synthesis (mRNA)\nGene regulation (microRNAs, long non-coding RNAs)\nCatalysis (ribozymes)\n\nDisease biomarkers and drug targets: Changes in RNA expression can be indicative of disease states, making RNA a valuable source of biomarkers for diagnosis and prognosis."
+    "text": "Pre-processing Tools\nSortMeRNA\n\n\n\nWhat it is:\n\nA tool for filtering ribosomal RNA (rRNA) reads from sequencing data.\n\nWhy is it important?\n\nrRNA often makes up a large proportion of total RNA.\nRemoving rRNA enriches for mRNA and other non-coding RNAs of interest.\n\nHow it works:\n\nUses a database of rRNA sequences to identify and remove rRNA reads.\nCan be used with both single-end and paired-end data.\n\n\n\n  SortMeRNA"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-21",
@@ -1320,7 +1320,7 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-2",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\nI file contenenti queste sequenze possono avere varie desinenze: fasta, fna, ffn, faa, fa, frn"
+    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinition\n\n\nThe FASTA format is a text-based format for representing either nucleotide sequences or amino acid sequences. Both nucleotides and amino acids are represented using single-letter codes. The first line before the nucleotide/amino acid sequence contains the name of the sequence, preceded by the “&gt;” symbol.\n\n\n\nFile extension could be: fasta, fna, ffn, faa, fa, frn"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file",
@@ -1348,20 +1348,41 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-3",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\n&gt;NM_001404729.1 Oryza sativa ribulose bisphosphate carboxylase small chain A\nCTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT\nATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN"
+    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinition\n\n\nThe FASTA format is a text-based format for representing either nucleotide sequences or amino acid sequences. Both nucleotides and amino acids are represented using single-letter codes. The first line before the nucleotide/amino acid sequence contains the name of the sequence, preceded by the “&gt;” symbol.\n\n\n\nFile extension could be: fasta, fna, ffn, faa, fa, frn"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-4",
     "href": "materials/M3_RNASeq_Pipeline.html#section-4",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAKXXXXXX"
+    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinition\n\n\nThe FASTA format is a text-based format for representing either nucleotide sequences or amino acid sequences. Both nucleotides and amino acids are represented using single-letter codes. The first line before the nucleotide/amino acid sequence contains the name of the sequence, preceded by the “&gt;” symbol.\n\n\n\n&gt;NM_001404729.1 Oryza sativa ribulose bisphosphate carboxylase small chain A\nCTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT\nATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-5",
     "href": "materials/M3_RNASeq_Pipeline.html#section-5",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Raw reads: The Starting Point\nFASTA file\nÈ possibile creare dei file che contengano più sequenze concatenando singoli FASTA file.\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAK\n\n&gt;gi|5524211|gb|AAD44166.1| cytochrome b [Elephas maximus maximus]\nLCLYTHIGRNIYYGSYLYSETWNTGIMLLLITMATAFMGYVLPWGQMSFWGATVITNLFSAIPYIGTNLV\nEWIWGGFSVDKATLNRFFAFHFILPFTMVALAGVHLTFLHETGSNNPLGLTSDSDKIPFHPYYTIKDFLG\nLLILILLLLLLALLSPDMLGDPDNHMPADPLNTPLHIKPEWYFLFAYAILRSVPNKLGGVLALFLSIVIL\nGLMPFLHTSKHRSMMLRPLSQALFWTLTMDLLTLTWIGSQPVEYPYTIIGQMASILYFSIILAFLPIAGX\nIENY*"
+    "text": "Raw reads: The Starting Point\nFASTA file\nMulti-fasta file:\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAK\n\n&gt;NM_001404729.1 Oryza sativa ribulose bisphosphate carboxylase small chain A\nCTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT\nATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN\n&gt;HF583486.1 Homo sapiens SOD1 gene for alternative protein SOD1, isolate 144496\nATGGATTCCATGTTCATGAGTTTGGAGATAATACAGCAGGCTGTACCAGTGCAGGTCCTCACTTTAATCC\nTCTATCCAGAAAACACGGTGGGCCAAAGGATGAAGAGAGGCATGTTGGAGACTTGGGCAATGTGA"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-6",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-6",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTQ format\n\n\n\nDefinition\n\n\nThe FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity."
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-7",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-7",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTQ format\n\n\n\nDefinition\n\n\nThe FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity.  \n\n\n\n\nA FASTQ file is identified by 4 lines:\n\nLine 1: begins with the “@” symbol and is followed by the sequence identifier (as in FASTA sequences)\n\nLine 2: contains the nucleotide sequence\n\nLine 3: begins with a “+” and may contain additional sequence descriptions\n\nLine 4: contains the quality values for the individual nucleotides"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-8",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-8",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTQ format\n\n\n\nDefinition\n\n\nThe FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity.  \n\n\n\n\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65"
   }
 ]

@@ -367,31 +367,37 @@
 </section>
 <section id="section-2" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
 <p><span class="subtit">Raw reads: The Starting Point</span></p>
 <h3 id="fasta-file">FASTA file</h3>
 <div class="callout callout-important no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Definizione</strong></p>
+<p><strong>Definition</strong></p>
 </div>
 <div class="callout-content">
-<p>Il Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”</p>
+<p>The FASTA format is a text-based format for representing either nucleotide sequences or amino acid sequences. Both nucleotides and amino acids are represented using single-letter codes. The first line before the nucleotide/amino acid sequence contains the name of the sequence, preceded by the “&gt;” symbol.</p>
 </div>
 </div>
 </div>
-<p>I file contenenti queste sequenze possono avere varie desinenze: fasta, fna, ffn, faa, fa, frn</p>
+<p>File extension could be: fasta, fna, ffn, faa, fa, frn</p>
 </section>
-<section id="section-3" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-4" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Raw reads: The Starting Point</span></p>
 <h3 id="fasta-file-1">FASTA file</h3>
 <div class="callout callout-important no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Definizione</strong></p>
+<p><strong>Definition</strong></p>
 </div>
 <div class="callout-content">
-<p>Il Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”</p>
+<p>The FASTA format is a text-based format for representing either nucleotide sequences or amino acid sequences. Both nucleotides and amino acids are represented using single-letter codes. The first line before the nucleotide/amino acid sequence contains the name of the sequence, preceded by the “&gt;” symbol.</p>
 </div>
 </div>
 </div>
@@ -399,53 +405,326 @@
 CTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT
 ATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN</code></pre>
 </section>
-<section id="section-4" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
-<h2></h2>
-<p><span class="subtit">Raw reads: The Starting Point</span></p>
-<h3 id="fasta-file-2">FASTA file</h3>
-<div class="callout callout-important no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Definizione</strong></p>
-</div>
-<div class="callout-content">
-<p>Il Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”</p>
-</div>
-</div>
-</div>
-<pre><code>&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
-MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
-FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
-DIDGDGQVNYEEFVQMMTAKXXXXXX</code></pre>
-</section>
 <section id="section-5" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Raw reads: The Starting Point</span></p>
-<h3 id="fasta-file-3">FASTA file</h3>
-<p>È possibile creare dei file che contengano più sequenze concatenando singoli FASTA file.</p>
+<h3 id="fasta-file-2">FASTA file</h3>
+<p>Multi-fasta file:</p>
 <pre><code>&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
 MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID
 FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
 DIDGDGQVNYEEFVQMMTAK
 
-&gt;gi|5524211|gb|AAD44166.1| cytochrome b [Elephas maximus maximus]
-LCLYTHIGRNIYYGSYLYSETWNTGIMLLLITMATAFMGYVLPWGQMSFWGATVITNLFSAIPYIGTNLV
-EWIWGGFSVDKATLNRFFAFHFILPFTMVALAGVHLTFLHETGSNNPLGLTSDSDKIPFHPYYTIKDFLG
-LLILILLLLLLALLSPDMLGDPDNHMPADPLNTPLHIKPEWYFLFAYAILRSVPNKLGGVLALFLSIVIL
-GLMPFLHTSKHRSMMLRPLSQALFWTLTMDLLTLTWIGSQPVEYPYTIIGQMASILYFSIILAFLPIAGX
-IENY*</code></pre>
+&gt;NM_001404729.1 Oryza sativa ribulose bisphosphate carboxylase small chain A
+CTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT
+ATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN
+&gt;HF583486.1 Homo sapiens SOD1 gene for alternative protein SOD1, isolate 144496
+ATGGATTCCATGTTCATGAGTTTGGAGATAATACAGCAGGCTGTACCAGTGCAGGTCCTCACTTTAATCC
+TCTATCCAGAAAACACGGTGGGCCAAAGGATGAAGAGAGGCATGTTGGAGACTTGGGCAATGTGA</code></pre>
+</section>
+<section id="section-6" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Raw reads: The Starting Point</span></p>
+<h3 id="fastq-format">FASTQ format</h3>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>The FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. &nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Raw reads: The Starting Point</span></p>
+<h3 id="fastq-format-1">FASTQ format</h3>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>The FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. &nbsp;</p>
+</div>
+</div>
+</div>
+<div class="f30">
+<p>A FASTQ file is identified by 4 lines:</p>
+<ul>
+<li>Line 1: begins with the “@” symbol and is followed by the sequence identifier (as in FASTA sequences)<br>
+</li>
+<li>Line 2: contains the nucleotide sequence<br>
+</li>
+<li>Line 3: begins with a “+” and may contain additional sequence descriptions<br>
+</li>
+<li>Line 4: contains the quality values for the individual nucleotides</li>
+</ul>
+</div>
+</section>
+<section id="section-8" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Raw reads: The Starting Point</span></p>
+<h3 id="fastq-format-2">FASTQ format</h3>
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>The FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. &nbsp;</p>
+</div>
+</div>
+</div>
+<div class="f35">
+<pre><code>@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65</code></pre>
+</div>
+</section>
+<section id="section-9" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Raw reads: The Starting Point</span></p>
+<h3 id="fastq-format-3">FASTQ format</h3>
+<h4 id="what-does-quality-score-mean">What does “quality score” mean?</h4>
+<div class="f20">
+<p>The quality score is used to identify the <strong>probability of the correct identification of the corresponding nucleotide</strong>.</p>
+</div>
+
+<img data-src="images/phred1.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>I numeri da 33 a 126 sono i numeri ASCII corrispondenti alla lettera che indicano</li>
+<li>Score più alto osservato 40, quindi molti si fermano li</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-10" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Raw reads: The Starting Point</span></p>
+<h3 id="fastq-format-4">FASTQ format</h3>
+<h4 id="what-does-quality-score-mean-1">What does “quality score” mean?</h4>
+<div class="f20">
+<p>The quality score is used to identify the <strong>probability of the correct identification of the corresponding nucleotide</strong>.</p>
+</div>
+<div class="centerI">
+<p><img data-src="images/phred2.png" width="900"></p>
+</div>
+</section>
+<section id="section-11" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Raw reads: The Starting Point</span></p>
+<h3 id="fastq-format-5">FASTQ format</h3>
+<ul>
+<li><p>FASTQ files can be very large, so in most cases you won’t be dealing with myFile.fastq, but with myFile.fastq.gz.</p></li>
+<li><p>This means that the file is compressed, so it is not readable by a text editor without first being decompressed.</p></li>
+</ul>
+</section>
+<section id="section-12" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-13" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pre-processing Tools</span></p>
+<h3 id="fastqc">FastQC</h3>
+<div class="columns">
+<div class="column f30" style="width:60%;">
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>A widely used tool for quality assessment of raw sequencing data.</li>
+</ul></li>
+<li><strong>What it does:</strong>
+<ul>
+<li>Generates comprehensive reports with various quality metrics.</li>
+<li>Visualizes data quality using interactive plots and graphs.</li>
+</ul></li>
+<li><strong>Key metrics:</strong>
+<ul>
+<li>Per base sequence quality</li>
+<li>Per sequence quality scores</li>
+<li>Sequence length distribution</li>
+<li>GC content</li>
+<li>Adapter content</li>
+<li>Overrepresented sequences</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><br> <br> <span class="p-spam.center"><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></span></p>
+</div></div>
+</section>
+<section id="section-14" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-15" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pre-processing Tools</span></p>
+<h3 id="umi-tools-extract">UMI-tools extract</h3>
+<div class="columns">
+<div class="column f25" style="width:50%;">
+<ul>
+<li><strong>What are UMIs?</strong>
+<ul>
+<li>Unique Molecular Identifiers (UMIs) are short random sequences attached to each cDNA molecule during library preparation.</li>
+<li>They act as “molecular barcodes” to identify unique molecules.</li>
+</ul></li>
+<li><strong>Why are UMIs important?</strong>
+<ul>
+<li>UMIs help to distinguish PCR duplicates from true biological duplicates.</li>
+<li>This improves the accuracy of gene expression quantification, especially for low-abundance transcripts.</li>
+</ul></li>
+</ul>
+</div><div class="column f25" style="width:50%;">
+<ul>
+<li><strong>What does <code>UMI-tools extract</code> do?</strong>
+<ul>
+<li>Identifies and extracts UMIs from sequencing reads.</li>
+<li>Moves UMIs to the read name for downstream analysis.</li>
+<li>Requires information about the UMI location in the read.</li>
+</ul></li>
+<li><strong>Benefits:</strong>
+<ul>
+<li>Improved accuracy in gene expression quantification.</li>
+<li>Reduced bias due to PCR amplification.<br> <br> <span class="p-spam.center"><a href="https://umi-tools.readthedocs.io/en/latest/index.html">UMI-tools</a></span></li>
+</ul></li>
+</ul>
+</div></div>
+<div class="p-img-center">
+<p><img data-src="images/umi.png" width="1000"></p>
+</div>
+</section>
+<section id="section-16" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-17" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pre-processing Tools</span></p>
+<h3 id="fastp-trim-galore"><a href="https://github.com/OpenGene/fastp">FastP</a> &amp; <a href="https://github.com/FelixKrueger/TrimGalore">Trim Galore!</a></h3>
+<div class="columns">
+<div class="column f30" style="width:50%;">
+<ul>
+<li><strong>Purpose:</strong>
+<ul>
+<li>To clean up raw sequencing data and improve the accuracy of downstream analysis.</li>
+</ul></li>
+<li><strong>Key functions:</strong>
+<ul>
+<li><strong>Adapter trimming:</strong> Remove adapter sequences from reads.</li>
+<li><strong>Quality trimming:</strong> Trim low-quality bases from the ends of reads.</li>
+</ul></li>
+<li><strong>FastP:</strong>
+<ul>
+<li>All-in-one tool with extensive pre-processing features.</li>
+<li>Includes quality filtering, error correction, UMI handling, and more.</li>
+</ul></li>
+</ul>
+</div><div class="column f30" style="width:50%;">
+<ul>
+<li><strong>Trim Galore!:</strong>
+<ul>
+<li>Wrapper script for <code>cutadapt</code> (adapter trimming) and often includes <code>FastQC</code> (quality assessment).</li>
+<li>Focuses on adapter and quality trimming with optimized parameters.</li>
+</ul></li>
+<li><strong>Benefits:</strong>
+<ul>
+<li>Improved alignment accuracy.</li>
+<li>Reduced false positives in variant calling and gene expression analysis.</li>
+<li>Increased efficiency of downstream analysis.</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="section-18" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="p-img-center">
+<p><img data-src="images/nfcore.png" width="2000"></p>
+</div>
+</section>
+<section id="section-19" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pre-processing Tools</span></p>
+<h3 id="bbsplit">BBSplit</h3>
+<div class="columns">
+<div class="column f30" style="width:60%;">
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>A tool for removing contaminant reads from sequencing data.</li>
+</ul></li>
+<li><strong>Types of contamination:</strong>
+<ul>
+<li>Microbial DNA or RNA</li>
+<li>Host DNA (in the case of RNA-Seq from host-associated samples)</li>
+<li>Other unwanted sequences</li>
+</ul></li>
+<li><strong>How it works:</strong>
+<ul>
+<li>Aligns reads to a database of contaminant sequences.</li>
+<li>Removes reads that map to the contaminant database.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><br> <br> <span class="p-spam.center"><a href="https://sourceforge.net/projects/bbmap/">BBMap</a></span></p>
+</div></div>
+</section>
+<section id="section-20" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="subtit">Pre-processing Tools</span></p>
+<h3 id="sortmerna">SortMeRNA</h3>
+<div class="columns">
+<div class="column f30" style="width:60%;">
+<ul>
+<li><strong>What it is:</strong>
+<ul>
+<li>A tool for filtering ribosomal RNA (rRNA) reads from sequencing data.</li>
+</ul></li>
+<li><strong>Why is it important?</strong>
+<ul>
+<li>rRNA often makes up a large proportion of total RNA.</li>
+<li>Removing rRNA enriches for mRNA and other non-coding RNAs of interest.</li>
+</ul></li>
+<li><strong>How it works:</strong>
+<ul>
+<li>Uses a database of rRNA sequences to identify and remove rRNA reads.</li>
+<li>Can be used with both single-end and paired-end data.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><br> <br> <span class="p-spam.center"><a href="https://sortmerna.readthedocs.io/en/latest/">SortMeRNA</a></span></p>
+</div></div>
 </section></section>
-<section id="section-6" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-21" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Alignment and Quantification</span></p>
 </section>
 
-<section id="section-7" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-22" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Post-alignment Processing</span></p>
 </section>
 
-<section id="section-8" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-23" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Downstream Analysis</span></p>
 
