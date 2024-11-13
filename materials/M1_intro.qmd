@@ -44,7 +44,7 @@ library(gtsummary)
 
 [Marco Chiapello, Revelo Datalab]{style="font-size: 40px; font-weight: bold;"}
 
-[2023-03-31]{style="font-size: 30px;font-weight: bold;"}
+[2024-11-18]{style="font-size: 30px;font-weight: bold;"}
 :::
 
 
@@ -136,10 +136,10 @@ Any form of behaviour to [exclude]{.rn rn-color="orange"}, [intimidate]{.rn rn-c
 ```{r}
 #| echo: false
 #| layout-ncol: 1
-plot(qrcode::qr_code("https://mchiapello.github.io/202304_REVELO_Torvergata/"))
+plot(qrcode::qr_code("https://revelo-rnaseq.github.io/2024_RNASeq_website/"))
 ```
 
-[http://bit.ly/3ZcDcj9]{.p-span-center style="font-size: 100px; font-weight: bold;"}
+[http://bit.ly/4hKN5OA]{.p-span-center style="font-size: 100px; font-weight: bold;"}
 :::
 
 ##  {background-image="images/website.png" background-size="cover" background-opacity="0.1"}
@@ -157,17 +157,17 @@ plot(qrcode::qr_code("https://mchiapello.github.io/202304_REVELO_Torvergata/"))
 
 [Orari]{style="font-weight: bold;"}    
 9:30 : Introduzione al Corso   
-10:00: Riepilogo R             
+10:00: Ricerca Riproducibile            
 10:45: Pausa                   
-11:00: Introduzione all'RNASeq
+11:00: RNA sequencing (Primary analysis)
 
 
 12:30: Pausa pranzo            
 
 
-13:30: Ricerca Riproducibile       
+13:30: RNA sequencing (Secondary analysis)       
 14:45: Pausa                   
-15:00: Software and code       
+15:00: Data analysis       
 16:30: Considerazioni finali   
 
 :::
@@ -181,15 +181,15 @@ plot(qrcode::qr_code("https://mchiapello.github.io/202304_REVELO_Torvergata/"))
 
 :::{.fragment .fade-rigth fragment-index=2}
 [Orari]{style="font-weight: bold;"}    
-9:30 : Live Code (QC and quantification)   
+9:30 : Live Coding  
 10:45: Pausa                   
-11:00: Live Code (DGE)
+11:00: Live Coding
 
 
 12:30: Pausa pranzo            
 
 
-13:30: Live Code (DGE)      
+13:30: Live Coding    
 14:45: Pausa                   
 15:00: Capstone exercise                    
 16:30: Considerazioni finali   
@@ -235,20 +235,6 @@ plot(qrcode::qr_code("https://mchiapello.github.io/202304_REVELO_Torvergata/"))
 
   - Sticky notes
 
-##  {background-image="images/website.png" background-size="cover" background-opacity="0.1"}
-
-[Domande]{.p-span-center style="font-size: 100px"}
-
-<br>
-<br>
-
-::::{style="font-size: 100px; font-family: 'Julius Sans One', sans-serif;"}
-:::{.callout-tip}
-## Don Lorenzo Milani
-
-**Ogni parola che non capisci oggi è un calcio in culo domani**
-:::
-::::
 
 ##  {background-image="images/website.png" background-size="cover" background-opacity="0.1"}
 
@@ -312,14 +298,3 @@ plot(qrcode::qr_code("https://mchiapello.github.io/202304_REVELO_Torvergata/"))
 [Domande?]{style="font-size: 130px; font-weight: bold; color: white"}
 :::
 
-# {background-image="images/notice001.jpg" background-size="cover" background-opacity="0.8"}
-
-:::{.fragment .fade-in}
-:::{style="color: white; font-family: 'Rock Salt', cursive; font-size: 60px"}
-Tutto 
-
-in questo corso 
-
-è stato fatto in [R]{style="font-size: 80px"}
-:::
-:::
