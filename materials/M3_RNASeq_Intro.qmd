@@ -49,7 +49,7 @@ library(gtsummary)
 
 [Marco Chiapello, Revelo Datalab]{style="font-size: 40px; font-weight: bold;"}
 
-[2024-11-18]{style="font-size: 30px;font-weight: bold;"}
+[November 2024]{style="font-size: 30px;font-weight: bold;"}
 :::
 
 

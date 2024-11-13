@@ -34,13 +34,11 @@ website:
         text: "Materiale aggiuntivo"
       - href: https://revelotraining.slack.com
         text: "Slack chat"
-      - href: https://drive.google.com/drive/folders/1rfrM639jZcpSzGWYVPXALyWFbHOk92qX?usp=sharing
-        text: "Cartella condivisa"
     right: 
       - text: "Revelo DataLabs"
         href: https://revelodatalabs.com
       - icon: github
-        href: https://github.com/mchiapello/202304_REVELO_Torvergata
+        href: https://revelo-rnaseq.github.io/2024_RNASeq_website
 
 format:
   html:
