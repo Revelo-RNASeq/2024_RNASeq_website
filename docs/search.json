@@ -1314,5 +1314,54 @@
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
     "text": "Integration of RNA-Seq with other omics data\nUnlocking biological insights through data integration\n\n\n\n\n\nApplications:\n\nIdentifying key pathways: Integration of RNA-seq and metabolomics reveals regulated pathways in liver metabolism. (Zhang et al., 2020)\nDisease biomarkers: Uncovering disease-specific biomarkers in NAFLD using RNA-seq and metabolomics. (Ji et al., 2022)\n\nTools and Techniques:\n\nMachine learning: rSeqTU for predicting transcription units and integrating with metagenomics and metabolomics. (Hou et al., 2022)\nStatistical analysis: DESeq2 for integrating RNA-seq and ChIP-seq data. (Niu et al., 2019)\nSingle-cell multi-omics: Combining scRNA-seq with lipidomics and metabolomics to study cellular heterogeneity. (Cao et al., 2020)"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-2",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-2",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\nI file contenenti queste sequenze possono avere varie desinenze: fasta, fna, ffn, faa, fa, frn"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file",
+    "href": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "Diversi tipi di file",
+    "text": "Diversi tipi di file\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\n&gt;NM_001404729.1 Oryza sativa ribulose bisphosphate carboxylase small chain A\nCTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT\nATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file-1",
+    "href": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file-1",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "Diversi tipi di file",
+    "text": "Diversi tipi di file\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAKXXXXXX"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file-2",
+    "href": "materials/M3_RNASeq_Pipeline.html#diversi-tipi-di-file-2",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "Diversi tipi di file",
+    "text": "Diversi tipi di file\nFASTA file\nÈ possibile creare dei file che contengano più sequenze concatenando singoli FASTA file.\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAK\n\n&gt;gi|5524211|gb|AAD44166.1| cytochrome b [Elephas maximus maximus]\nLCLYTHIGRNIYYGSYLYSETWNTGIMLLLITMATAFMGYVLPWGQMSFWGATVITNLFSAIPYIGTNLV\nEWIWGGFSVDKATLNRFFAFHFILPFTMVALAGVHLTFLHETGSNNPLGLTSDSDKIPFHPYYTIKDFLG\nLLILILLLLLLALLSPDMLGDPDNHMPADPLNTPLHIKPEWYFLFAYAILRSVPNKLGGVLALFLSIVIL\nGLMPFLHTSKHRSMMLRPLSQALFWTLTMDLLTLTWIGSQPVEYPYTIIGQMASILYFSIILAFLPIAGX\nIENY*"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-3",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-3",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\n&gt;NM_001404729.1 Oryza sativa ribulose bisphosphate carboxylase small chain A\nCTCAACAGCACTGCTACTGGACATACTCTACTACTACTAGCCAGTAAGCTAGCTAACTAACTACGTGGCT\nATGGCCCCCACCGTGATGGCCTCCTCGGCCACCTCCGTGGCTCCATTCCAAGGGCTCAANNNNNNNNNNN"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-4",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-4",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTA file\n\n\n\nDefinizione\n\n\nIl Formato FASTA è un formato di testo per rappresentare le sequenze nucleotidiche o le sequenze aminoacidiche. Sia i nucleotidi che gli aminoacidi sono rappresentati da una singola lettera. Sulla prima linea antecedente alla sequenza nucleotidica/aminoacidica viene riportato il nome della sequenza, preceduto dal simbolo “&gt;”\n\n\n\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAKXXXXXX"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-5",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-5",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Raw reads: The Starting Point\nFASTA file\nÈ possibile creare dei file che contengano più sequenze concatenando singoli FASTA file.\n&gt;MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken\nMADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTID\nFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA\nDIDGDGQVNYEEFVQMMTAK\n\n&gt;gi|5524211|gb|AAD44166.1| cytochrome b [Elephas maximus maximus]\nLCLYTHIGRNIYYGSYLYSETWNTGIMLLLITMATAFMGYVLPWGQMSFWGATVITNLFSAIPYIGTNLV\nEWIWGGFSVDKATLNRFFAFHFILPFTMVALAGVHLTFLHETGSNNPLGLTSDSDKIPFHPYYTIKDFLG\nLLILILLLLLLALLSPDMLGDPDNHMPADPLNTPLHIKPEWYFLFAYAILRSVPNKLGGVLALFLSIVIL\nGLMPFLHTSKHRSMMLRPLSQALFWTLTMDLLTLTWIGSQPVEYPYTIIGQMASILYFSIILAFLPIAGX\nIENY*"
   }
 ]
