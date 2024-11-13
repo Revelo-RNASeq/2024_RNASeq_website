@@ -81,147 +81,147 @@
     "href": "materials/M3_RNASeq_Intro.html#section-9",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "The central dogma\n\n\n\n\n\nDNA: The blueprint of genetic information\nRNA: The messenger carrying genetic instructions\nProtein: The functional molecules in cells"
+    "text": "How many samples do I need?"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-10",
     "href": "materials/M3_RNASeq_Intro.html#section-10",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "The central dogma\n\n\n\n\n\nDNA: The blueprint of genetic information\nRNA: The messenger carrying genetic instructions\nProtein: The functional molecules in cells"
+    "text": "Power analysis"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-11",
     "href": "materials/M3_RNASeq_Intro.html#section-11",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Why Study RNA?"
+    "text": "Power analysis\n\n\nType I error: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-12",
     "href": "materials/M3_RNASeq_Intro.html#section-12",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Why Study RNA?\n\n\n\n\n\nDynamic reflection of cellular activity: Unlike DNA, which is relatively static, RNA levels change rapidly in response to internal and external stimuli.\n\nProvides a snapshot of what genes are actively being expressed at a specific time.\n\nUnderstanding gene regulation: Studying RNA helps us understand how genes are turned on or off, and to what extent, in different conditions."
+    "text": "Power analysis\n\n\nType I error: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.\nType II error: controlled by the β value. (1−β) will give you the power of your analysis. Should be set to 70 or 80% to detect 70 or 80% of the differentially expressed genes. The number of biological replicates might be hard to reach in practice for RNA-seq experiments."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-13",
     "href": "materials/M3_RNASeq_Intro.html#section-13",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Why Study RNA?\n\n\n\n\n\nInsights into cellular processes: RNA plays diverse roles in many cellular processes, including:\n\nProtein synthesis (mRNA)\nGene regulation (microRNAs, long non-coding RNAs)\nCatalysis (ribozymes)\n\nDisease biomarkers and drug targets: Changes in RNA expression can be indicative of disease states, making RNA a valuable source of biomarkers for diagnosis and prognosis."
+    "text": "Power analysis\n\n\nType I error: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.\nType II error: controlled by the β value. (1−β) will give you the power of your analysis. Should be set to 70 or 80% to detect 70 or 80% of the differentially expressed genes. The number of biological replicates might be hard to reach in practice for RNA-seq experiments.\nEffect size: this is a parameter you will set. For instance, if you want to investigate genes that differ between treatments with a difference of their mean of 2 then the effect size is equal to 2."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-14",
     "href": "materials/M3_RNASeq_Intro.html#section-14",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "The Power of RNA-Seq\n\n\n\nUnbiased & Comprehensive:\n\nDiscovers novel transcripts\nNot limited to known genes\n\nHigher Sensitivity:\n\nDetects rare transcripts\nWider dynamic range\n\n\n\n\nAlternative Splicing:\n\nIdentifies and quantifies isoforms\n\nMutation Detection:\n\nSNPs, indels, fusion genes\n\nNon-Coding RNAs:\n\nStudies microRNAs, lncRNAs, etc.\n\n\n\n\n\n“Wide dynamic range” refers to the ability of a system or device to accurately capture and represent a broad range of signal intensities\nlncRNAs, or long non-coding RNAs, are a type of RNA molecule that is not translated into protein. They were once considered “junk” DNA, but are now recognized as crucial regulators of gene expression and cellular processes"
+    "text": "Power analysis\n\n\nType I error: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.\nType II error: controlled by the β value. (1−β) will give you the power of your analysis. Should be set to 70 or 80% to detect 70 or 80% of the differentially expressed genes. The number of biological replicates might be hard to reach in practice for RNA-seq experiments.\nEffect size: this is a parameter you will set. For instance, if you want to investigate genes that differ between treatments with a difference of their mean of 2 then the effect size is equal to 2.\nSample size: the quantity you want to calculate."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-16",
     "href": "materials/M3_RNASeq_Intro.html#section-16",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "First generation NGS"
+    "text": "Let’s say we want:\n\nEffect size of 1. (d=1)\n\n\n\nlibrary(\"pwr\")\n\npwr.t.test(d = 1,\n           power = .8,\n           sig.level = .05,\n           type = \"two.sample\",\n           alternative = \"two.sided\")\n\n\n     Two-sample t test power calculation \n\n              n = 16.71472\n              d = 1\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-17",
     "href": "materials/M3_RNASeq_Intro.html#section-17",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing\n\n\n\n\n\n\nI dideossinucleotidi trifosfati (ddNTP) mancano del gruppo 3’-OH dei dNTP, essenziale per l’allungamento del filamento mediato dalla polimerasi in una PCR.\nLe marcature radioattive, instabili, rappresentavano un rischio per la salute e richiedevano gel separati per ciascuna delle quattro basi del DNA.\nLa sintesi del filamento di DNA complementare inizia nel sito specifico di innesco e termina con l’incorporazione di un ddNTP terminatore di catena che viene introdotto casualmente al posto del corrispondente dNTP.\nQuando questi frammenti vengono separati su una matrice di gel appropriata, l’informazione sulla sequenza può essere ottenuta dall’ordine di migrazione delle bande (dal basso verso l’alto)."
+    "text": "Power analysis for RNA-seq"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-18",
     "href": "materials/M3_RNASeq_Intro.html#section-18",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing\n\n\n\n\n\n\nLeroy Hood sviluppò una tecnica chimica che utilizzava coloranti fluorescenti di diversi colori, uno per ciascuna delle quattro basi del DNA. Questo sistema di “codifica a colori” eliminò la necessità di eseguire diverse reazioni in gel sovrapposti.\nHood integrò la tecnologia laser e informatica, eliminando il tedioso processo di raccolta manuale delle informazioni.\nddATP, ddCTP, ddGTP e ddUTP marcati con fluorescenza.\nLa successiva visualizzazione fluorescente del prodotto rivela il nucleotide incorporato e quindi la sequenza."
+    "text": "General Considerations\n\n\n\nRNA-seq experiments often suffer from a low statistical power"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-19",
     "href": "materials/M3_RNASeq_Intro.html#section-19",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing\n\n\nAdvantages \n\nGold standard method for accurate detection of single nucleotide variants and small insertions/deletions\nCost effective where single samples need to be tested very urgently\nLess reliant on computational tools than NGS\nLonger fragments (up to approximately 1000bp) can be sequenced than in short read NGS\n\n\n\n\nLimitations \n\nLimited throughput\nNot cost effective for sequencing many genes in parallel\nCan require a larger amount of input DNA than NGS\nSanger methods can only sequence short pieces of DNA–about 300 to 1000 base pairs.\nThe quality of a Sanger sequence is often not very good in the first 15 to 40 bases because that is where the primer binds.\nSequence quality degrades after 700 to 900 bases"
+    "text": "General Considerations\n\n\n\nRNA-seq experiments often suffer from a low statistical power\n\n\n\nLow power can lead to a lack of reproducibility of the research findings"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-20",
     "href": "materials/M3_RNASeq_Intro.html#section-20",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sanger Sequencing"
+    "text": "General Considerations\n\n\n\nRNA-seq experiments often suffer from a low statistical power\n\n\n\nLow power can lead to a lack of reproducibility of the research findings\n\n\n\nThe number of replicates is one of the critical parameter related to the power of an analysis"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-21",
     "href": "materials/M3_RNASeq_Intro.html#section-21",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Second generation NGS\n\n\n\n\n\n\n\nImportant\n\n\nSecond-generation NGS machines immediately began to drive the ‘genomics revolution’ by massively increased throughput by parallelizing many reactions"
+    "text": "Replicates"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-22",
     "href": "materials/M3_RNASeq_Intro.html#section-22",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Second generation NGS\n\nSecond-generation sequencing platforms:\n\nSOLiD: Sequencing by Oligonucleotide Ligation and Detection\n454 GS FLX+: It uses pyrosequencing chemistry\nNextSeq 550Dx: Sequence by synthesis\n\n\n\nSOLiD: Life Technologies in 2006\n454: Roche in 2011\nNextSeq 550Dx: Illumina in 2017"
+    "text": "Klaus B., EMBO J (2015) 34: 2727-2730\n\nTechnical replicates: use the same biological sample to repeat the technical or experimental steps in order to accurately measure technical variation and remove it during analysis.\nBiological replicates use different biological samples of the same condition to measure the biological variation between samples"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-23",
     "href": "materials/M3_RNASeq_Intro.html#section-23",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by Ligation\n\n\n\n\n\n\n\n\n\n\n\n Considered to be one of the most accurate second-generation sequencing technologies\n it can take up to seven days to complete a single run and its short read length of 35 bp\n Thermo Fisher Scientific shut down all SOLiD sequencing platforms in 2016\n\n\n\n\n\nFluorescently labeled molecules called 8-mers\n8-mers are short ssDNA fragments where:\n\nthe first and second nucleotides are the next two nucleotides of the elongating DNA strand\n\nthe third-to-fifth nucleotides are degenerate\n\nthe sixth to eighth nucleotides are inosine bases, where the eighth inosine base is attached to a characteristic fluorescent dye\n\n\nA. The addition of primer and 8-mers, where if the first two nucleotides are complementary, DNA ligase ligates it to the primer.\nB. Unbound 8-mers are washed away, and a laser excites the fluorescent tag on the 8-mer to emit a detectable light signal that is captured\nC. A-B is repeated until the end of the DNA fragment.\nD. The newly synthesized DNA strand is melted off, and A-C is repeated using a primer with a length of N-1, N-2, and N-3"
+    "text": "Do we need technical replicates?"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-24",
     "href": "materials/M3_RNASeq_Intro.html#section-24",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Pyrosequencing\n\n\n\n\n\n\n\n\n \n\n\n Large read lenght generation\n High reagent cost\n High error rate for homopolymers\n\n\n\n\nDurante il sequenziamento vengono, di volta in volta, aggiunti dei nucleotidi.\nSe il nucleotide viene incorporato viene rilasciato un pirofosfato\nPoi utilizzato come substrato dall’enzima ATP solforilasi.\nQuest’ultimo enzima catalizza la conversione del pirofosfato in ATP.\nL’ATP a sua volta è il cofattore utilizzato dalla luciferasi per catalizzare la reazione che coinvolge la luciferina e che porta alla produzione di luce.\nLa luce generata, solo in seguito alla incorporazione del nucleotide corretto,viene rilevata grazie ad un detector."
+    "text": "No"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-25",
     "href": "materials/M3_RNASeq_Intro.html#section-25",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis"
+    "text": "No\n\n\n\n\n\n\nImportant\n\n\nWith the current RNA-Seq technologies, technical variation is much lower than biological variation and technical replicates are unneccessary"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-26",
     "href": "materials/M3_RNASeq_Intro.html#section-26",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Birthplace of high-throughput sequencing"
+    "text": "Do we need biological replicates?"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-27",
     "href": "materials/M3_RNASeq_Intro.html#section-27",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - History\n\n1997: Evolution of a Novel Approach to Sequencing\n\n\n\n\nShankar Balasubramanian and David Klenerman\n\n\n\nCambridge scientists Shankar Balasubramanian, Ph.D. and David Klenerman, Ph.D. were using fluorescently labeled nucleotides to observe the motion of a polymerase at the single molecule level as it synthesized DNA immobilized to a surface\nduring the summer of 1997 sparked ideas surrounding the use of clonal arrays and massively parallel sequencing of short reads using solid phase sequencing by reversible terminators\nThis technology was subsequently referred to as sequencing by synthesis technology, or SBS. This became the basis of an innovative DNA sequencing approach."
+    "text": "YES"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-28",
     "href": "materials/M3_RNASeq_Intro.html#section-28",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - History\n\n1998: Formation of Solexa"
+    "text": "YES\n\n\n\n\n\n\nImportant\n\n\nBiological replicates are absolutely essential for differential expression analysis"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-29",
     "href": "materials/M3_RNASeq_Intro.html#section-29",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - History\n\n2004: Molecular Clustering Technology Integration\n\n\n\n\nCluster generation (also known as “bridge amplification”)\n\n\n\nSolexa acquired molecular clustering technology from Manteia.\nThe amplification of single DNA molecules into clusters enhanced the fidelity and accuracy of gene calling, while reducing the cost of the system optics through generation of a stronger signal."
+    "text": "YES\n\n\n\n\n\n\nImportant\n\n\nFor differential expression analysis, the more biological replicates, the better the estimates of biological variation and the more precise our estimates of the mean expression levels"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-30",
     "href": "materials/M3_RNASeq_Intro.html#section-30",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - History\n\n2005: phiX-174 Genome Sequencing\n\n2005: Integration of Lynx Therapeutics\n\n\n2007: Illumina Acquires Solexa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Solexa team sequenced the complete genome of the bacteriophage phiX-174, the same genome Sanger first sequenced using his method\nHowever, the SBS technology generated significantly more sequencing data, delivering over 3 million bases from a single run.\n\n\n\nSolexa acquired instrumentation company Lynx Therapeutics, transforming the successful Solexa prototype into a commercial sequencing instrument: Genome Analyzer\n\n\n\nSolexa was acquired by Illumina\nNext-generation sequencing (NGS) data output has increased at a rate that outpaces Moore’s law, more than doubling each year"
+    "text": "Biological replicates are of greater importance than sequencing depth\n\n\n\n\nLiu, Y., et al., Bioinformatics (2014) 30(3): 301–304\n\n\n\nCosa vedete? Come interpretate il grafico\nNote that an increase in the number of replicates tends to return more DE genes than increasing the sequencing depth."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-31",
@@ -235,196 +235,196 @@
     "href": "materials/M3_RNASeq_Intro.html#section-32",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Third generation NGS\n\n\n\n\n\n\n\nImportant\n\n\nThird-generation methods allow direct sequencing of single DNA molecules"
+    "text": "The central dogma\n\n\n\n\n\nDNA: The blueprint of genetic information\nRNA: The messenger carrying genetic instructions\nProtein: The functional molecules in cells"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-33",
     "href": "materials/M3_RNASeq_Intro.html#section-33",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Third generation NGS\n\nThird-generation NGS platforms:\n\nSingle-molecule real-time sequencing\nNanopore sequencing\n\n\n\nPacific Biosciences in 2011\nOxford Nanopore Technologies on 2014"
+    "text": "Why Study RNA?"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-34",
     "href": "materials/M3_RNASeq_Intro.html#section-34",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "SMRS"
+    "text": "Why Study RNA?\n\n\n\n\n\nDynamic reflection of cellular activity: Unlike DNA, which is relatively static, RNA levels change rapidly in response to internal and external stimuli.\n\nProvides a snapshot of what genes are actively being expressed at a specific time.\n\nUnderstanding gene regulation: Studying RNA helps us understand how genes are turned on or off, and to what extent, in different conditions."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-35",
     "href": "materials/M3_RNASeq_Intro.html#section-35",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Nanopore sequencing"
+    "text": "Why Study RNA?\n\n\n\n\n\nInsights into cellular processes: RNA plays diverse roles in many cellular processes, including:\n\nProtein synthesis (mRNA)\nGene regulation (microRNAs, long non-coding RNAs)\nCatalysis (ribozymes)\n\nDisease biomarkers and drug targets: Changes in RNA expression can be indicative of disease states, making RNA a valuable source of biomarkers for diagnosis and prognosis."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-36",
     "href": "materials/M3_RNASeq_Intro.html#section-36",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Ended vs. Paired-End\nChoosing Your Sequencing Strategy\n\n\n\n\n\n\nSingle-end sequencing:\n\nOne read per fragment\nSimpler, cost-effective\nSuitable for gene expression profiling\n\n\n\n\nPaired-end sequencing:\n\nTwo reads per fragment\nMore information, improved accuracy\nUseful for genome assembly, variant detection, isoform identification\n\n\n\n\nChoice depends on:\n\nResearch question\nBudget\nDesired accuracy"
+    "text": "The Power of RNA-Seq\n\n\n\nUnbiased & Comprehensive:\n\nDiscovers novel transcripts\nNot limited to known genes\n\nHigher Sensitivity:\n\nDetects rare transcripts\nWider dynamic range\n\n\n\n\nAlternative Splicing:\n\nIdentifies and quantifies isoforms\n\nMutation Detection:\n\nSNPs, indels, fusion genes\n\nNon-Coding RNAs:\n\nStudies microRNAs, lncRNAs, etc.\n\n\n\n\n\n“Wide dynamic range” refers to the ability of a system or device to accurately capture and represent a broad range of signal intensities\nlncRNAs, or long non-coding RNAs, are a type of RNA molecule that is not translated into protein. They were once considered “junk” DNA, but are now recognized as crucial regulators of gene expression and cellular processes"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-38",
     "href": "materials/M3_RNASeq_Intro.html#section-38",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequencing Depth\nSequencing Depth: Finding the Right Balance\n\n\n\n\n\n\nWhat it is: The average number of times each base in the genome (or transcriptome) is sequenced.\nWhy it matters:\n\nSensitivity: Higher depth increases the chance of detecting rare transcripts or variants.\nAccuracy: Higher depth improves the accuracy of gene expression quantification and variant calling.\n\n\n\n\nFactors to consider:\n\nResearch goals: Higher depth is needed for detecting rare events or subtle changes.\nGenome size and complexity: Larger genomes require higher depth for adequate coverage.\nBudget: Higher depth increases sequencing costs.\n\n\n\n\nTypical ranges:\n\nRNA-Seq for gene expression: 10-30 million reads per sample\nRNA-Seq for isoform detection: 30-60 million reads per sample\nVariant calling: 30-50x coverage for whole-genome sequencing"
+    "text": "First generation NGS"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-39",
     "href": "materials/M3_RNASeq_Intro.html#section-39",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Transcriptome Coverage\nTranscriptome Coverage: Capturing the Full Picture\n\n\n\n\n\n\nWhat it is: The extent to which the sequencing reads represent the entire transcriptome.\nWhy it matters:\n\nCompleteness: High coverage ensures that all expressed transcripts are captured, including rare and low-abundance transcripts.\nAccuracy: Adequate coverage is needed for accurate quantification of gene expression levels.\nDiscovery: High coverage increases the chances of identifying novel transcripts and isoforms.\n\n\n\n\nFactors influencing coverage:\n\nSequencing depth: Higher depth generally leads to better coverage.\nLibrary complexity: A diverse library with a wide range of fragment sizes improves coverage.\nRNA integrity: High-quality RNA ensures that all transcripts are represented in the library.\nSequencing technology: Different platforms have different read lengths and biases, which can affect coverage."
+    "text": "Sanger Sequencing\n\n\n\n\n\n\nI dideossinucleotidi trifosfati (ddNTP) mancano del gruppo 3’-OH dei dNTP, essenziale per l’allungamento del filamento mediato dalla polimerasi in una PCR.\nLe marcature radioattive, instabili, rappresentavano un rischio per la salute e richiedevano gel separati per ciascuna delle quattro basi del DNA.\nLa sintesi del filamento di DNA complementare inizia nel sito specifico di innesco e termina con l’incorporazione di un ddNTP terminatore di catena che viene introdotto casualmente al posto del corrispondente dNTP.\nQuando questi frammenti vengono separati su una matrice di gel appropriata, l’informazione sulla sequenza può essere ottenuta dall’ordine di migrazione delle bande (dal basso verso l’alto)."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-40",
     "href": "materials/M3_RNASeq_Intro.html#section-40",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
+    "text": "Sanger Sequencing\n\n\n\n\n\n\nLeroy Hood sviluppò una tecnica chimica che utilizzava coloranti fluorescenti di diversi colori, uno per ciascuna delle quattro basi del DNA. Questo sistema di “codifica a colori” eliminò la necessità di eseguire diverse reazioni in gel sovrapposti.\nHood integrò la tecnologia laser e informatica, eliminando il tedioso processo di raccolta manuale delle informazioni.\nddATP, ddCTP, ddGTP e ddUTP marcati con fluorescenza.\nLa successiva visualizzazione fluorescente del prodotto rivela il nucleotide incorporato e quindi la sequenza."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-41",
     "href": "materials/M3_RNASeq_Intro.html#section-41",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
+    "text": "Sanger Sequencing\n\n\nAdvantages \n\nGold standard method for accurate detection of single nucleotide variants and small insertions/deletions\nCost effective where single samples need to be tested very urgently\nLess reliant on computational tools than NGS\nLonger fragments (up to approximately 1000bp) can be sequenced than in short read NGS\n\n\n\n\nLimitations \n\nLimited throughput\nNot cost effective for sequencing many genes in parallel\nCan require a larger amount of input DNA than NGS\nSanger methods can only sequence short pieces of DNA–about 300 to 1000 base pairs.\nThe quality of a Sanger sequence is often not very good in the first 15 to 40 bases because that is where the primer binds.\nSequence quality degrades after 700 to 900 bases"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-42",
     "href": "materials/M3_RNASeq_Intro.html#section-42",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nCellular Heterogeneity: Identify and characterize different cell types within a complex tissue or population.\n\nDiscover new cell subtypes and rare cell populations.\nUnderstand the functional diversity of cells.\n\nDevelopmental Trajectories: Trace cell lineages and reconstruct developmental pathways.\n\nStudy cell differentiation and fate decisions.\nIdentify key genes and regulatory networks involved in development."
+    "text": "Sanger Sequencing"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-43",
     "href": "materials/M3_RNASeq_Intro.html#section-43",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nDisease Mechanisms: Investigate the cellular basis of disease.\n\nIdentify disease-associated cell types and gene expression changes.\nStudy the response of individual cells to drugs or treatments.\n\n\n\n\n\n\n\n\nImportant\n\n\nscRNA-seq represents a powerful tool for dissecting the complexities of gene expression and cellular heterogeneity across various biological contexts"
+    "text": "Second generation NGS\n\n\n\n\n\n\n\nImportant\n\n\nSecond-generation NGS machines immediately began to drive the ‘genomics revolution’ by massively increased throughput by parallelizing many reactions"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-44",
     "href": "materials/M3_RNASeq_Intro.html#section-44",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: mapping gene expression in context\n\n\n \n\n\n\nBridges histology and genomics: Combines traditional tissue imaging with high-throughput RNA sequencing.\nPreserves spatial context: Maps gene expression while retaining spatial information, unlike traditional scRNA-seq.\nEnables:\n\nVisualization of gene expression patterns within tissues.\nQuantitative analysis of transcriptomes in a spatial context.\n\nApplications:\n\nUnderstanding tissue organization and cellular interactions.\nInvestigating developmental processes (organogenesis).\nStudying disease progression and heterogeneity."
+    "text": "Second generation NGS\n\nSecond-generation sequencing platforms:\n\nSOLiD: Sequencing by Oligonucleotide Ligation and Detection\n454 GS FLX+: It uses pyrosequencing chemistry\nNextSeq 550Dx: Sequence by synthesis\n\n\n\nSOLiD: Life Technologies in 2006\n454: Roche in 2011\nNextSeq 550Dx: Illumina in 2017"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-45",
     "href": "materials/M3_RNASeq_Intro.html#section-45",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: from technology to discovery\n\n\n\n\n\nApplications:\n\nTissue heterogeneity: Studying complex tissues like the cochlea. (Tisi, 2023)\nDisease mechanisms: Uncovering cellular dynamics in diseases like Alzheimer’s. (Chen et al., 2020)\n\nData analysis:\n\nDimension reduction, deconvolution, and integration with histological images.\nSpecialized tools for cell type deconvolution. (Cable et al., 2021)"
+    "text": "Sequence by Ligation\n\n\n\n\n\n\n\n\n\n\n\n Considered to be one of the most accurate second-generation sequencing technologies\n it can take up to seven days to complete a single run and its short read length of 35 bp\n Thermo Fisher Scientific shut down all SOLiD sequencing platforms in 2016\n\n\n\n\n\nFluorescently labeled molecules called 8-mers\n8-mers are short ssDNA fragments where:\n\nthe first and second nucleotides are the next two nucleotides of the elongating DNA strand\n\nthe third-to-fifth nucleotides are degenerate\n\nthe sixth to eighth nucleotides are inosine bases, where the eighth inosine base is attached to a characteristic fluorescent dye\n\n\nA. The addition of primer and 8-mers, where if the first two nucleotides are complementary, DNA ligase ligates it to the primer.\nB. Unbound 8-mers are washed away, and a laser excites the fluorescent tag on the 8-mer to emit a detectable light signal that is captured\nC. A-B is repeated until the end of the DNA fragment.\nD. The newly synthesized DNA strand is melted off, and A-C is repeated using a primer with a length of N-1, N-2, and N-3"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-46",
     "href": "materials/M3_RNASeq_Intro.html#section-46",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Integration of RNA-Seq with other omics data\nBeyond RNA: integrating with other omics data\n\n\nThe Power of Integration: Combining RNA-Seq with other omics data provides a more complete picture of cellular processes.\n\nMetabolomics: Correlate gene expression with metabolic pathways and identify key metabolites.\nChromatin accessibility (ATAC-seq): Link gene expression changes to alterations in chromatin structure.\nOther omics layers: Integrate with genomics, proteomics, and epigenomics for a systems-level understanding.\n\nKey Findings:\n\nLimited overlap between DEGs and chromatin accessibility changes (~10%) (Malvi et al., 2022).\nHighlights the complexity of gene regulation beyond chromatin state. (Miao et al., 2021)"
+    "text": "Pyrosequencing\n\n\n\n\n\n\n\n\n \n\n\n Large read lenght generation\n High reagent cost\n High error rate for homopolymers\n\n\n\n\nDurante il sequenziamento vengono, di volta in volta, aggiunti dei nucleotidi.\nSe il nucleotide viene incorporato viene rilasciato un pirofosfato\nPoi utilizzato come substrato dall’enzima ATP solforilasi.\nQuest’ultimo enzima catalizza la conversione del pirofosfato in ATP.\nL’ATP a sua volta è il cofattore utilizzato dalla luciferasi per catalizzare la reazione che coinvolge la luciferina e che porta alla produzione di luce.\nLa luce generata, solo in seguito alla incorporazione del nucleotide corretto,viene rilevata grazie ad un detector."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-47",
     "href": "materials/M3_RNASeq_Intro.html#section-47",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Integration of RNA-Seq with other omics data\nUnlocking biological insights through data integration\n\n\n\n\n\nApplications:\n\nIdentifying key pathways: Integration of RNA-seq and metabolomics reveals regulated pathways in liver metabolism. (Zhang et al., 2020)\nDisease biomarkers: Uncovering disease-specific biomarkers in NAFLD using RNA-seq and metabolomics. (Ji et al., 2022)\n\nTools and Techniques:\n\nMachine learning: rSeqTU for predicting transcription units and integrating with metagenomics and metabolomics. (Hou et al., 2022)\nStatistical analysis: DESeq2 for integrating RNA-seq and ChIP-seq data. (Niu et al., 2019)\nSingle-cell multi-omics: Combining scRNA-seq with lipidomics and metabolomics to study cellular heterogeneity. (Cao et al., 2020)"
+    "text": "Sequence by synthesis"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-48",
     "href": "materials/M3_RNASeq_Intro.html#section-48",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1953: The structure of the DNA double helix was discovered\n\n\n\n\nJames Watson, Francis Crick and Rosalind Franklin\n\n\nThe structure of the DNA double helix was discovered in 1953 by James Watson and Francis Crick.\nRosalind Franklin was an English X-ray crystallographer who also contributed a great deal and was central to the understanding of the molecular structures of DNA.\nWatson and Crick received a Nobel Prize in 1962\nFranklin had passed away before her work was fully appreciated, and so she is now often referred to as ‘the dark lady of DNA’."
+    "text": "Birthplace of high-throughput sequencing"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-49",
     "href": "materials/M3_RNASeq_Intro.html#section-49",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:"
+    "text": "Sequence by synthesis - History\n\n1997: Evolution of a Novel Approach to Sequencing\n\n\n\n\nShankar Balasubramanian and David Klenerman\n\n\n\nCambridge scientists Shankar Balasubramanian, Ph.D. and David Klenerman, Ph.D. were using fluorescently labeled nucleotides to observe the motion of a polymerase at the single molecule level as it synthesized DNA immobilized to a surface\nduring the summer of 1997 sparked ideas surrounding the use of clonal arrays and massively parallel sequencing of short reads using solid phase sequencing by reversible terminators\nThis technology was subsequently referred to as sequencing by synthesis technology, or SBS. This became the basis of an innovative DNA sequencing approach."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-50",
     "href": "materials/M3_RNASeq_Intro.html#section-50",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1953: The structure of the DNA double helix was discovered\n\n\n\n\nJames Watson, Francis Crick and Rosalind Franklin\n\n\nThe structure of the DNA double helix was discovered in 1953 by James Watson and Francis Crick.\nRosalind Franklin was an English X-ray crystallographer who also contributed a great deal and was central to the understanding of the molecular structures of DNA.\nWatson and Crick received a Nobel Prize in 1962\nFranklin had passed away before her work was fully appreciated, and so she is now often referred to as ‘the dark lady of DNA’."
+    "text": "Sequence by synthesis - History\n\n1998: Formation of Solexa"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-51",
     "href": "materials/M3_RNASeq_Intro.html#section-51",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1964: Robert Holley, the first person to sequence a tRNA molecule\n\n\n\n\nRobert W. Holley\n\n\nNobel Prize in Physiology or Medicine in 1968 (with Har Gobind Khorana and Marshall Warren Nirenberg) for describing the structure of alanine transfer RNA, linking DNA and protein synthesis."
+    "text": "Sequence by synthesis - History\n\n2004: Molecular Clustering Technology Integration\n\n\n\n\nCluster generation (also known as “bridge amplification”)\n\n\n\nSolexa acquired molecular clustering technology from Manteia.\nThe amplification of single DNA molecules into clusters enhanced the fidelity and accuracy of gene calling, while reducing the cost of the system optics through generation of a stronger signal."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-52",
     "href": "materials/M3_RNASeq_Intro.html#section-52",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1972: Paul Berg developed the first technology that permitted the isolation of defined DNA fragments\n\n\n\n\nPaul Berg\n\n\nMorto il 15 febbraio 2023\nleading to the development of modern genetic engineering. Before this, only phages or virus DNA was available for sequencing.\nNobel Prize in Chemistry in 1980, along with Walter Gilbert and Frederick Sanger.\nThe award recognized their contributions to basic research involving nucleic acids, especially recombinant DNA."
+    "text": "Sequence by synthesis - History\n\n2005: phiX-174 Genome Sequencing\n\n2005: Integration of Lynx Therapeutics\n\n\n2007: Illumina Acquires Solexa\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Solexa team sequenced the complete genome of the bacteriophage phiX-174, the same genome Sanger first sequenced using his method\nHowever, the SBS technology generated significantly more sequencing data, delivering over 3 million bases from a single run.\n\n\n\nSolexa acquired instrumentation company Lynx Therapeutics, transforming the successful Solexa prototype into a commercial sequencing instrument: Genome Analyzer\n\n\n\nSolexa was acquired by Illumina\nNext-generation sequencing (NGS) data output has increased at a rate that outpaces Moore’s law, more than doubling each year"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-53",
     "href": "materials/M3_RNASeq_Intro.html#section-53",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1973: Walter Gilbert published the first nucleotide sequence\n\n\n\n\nWalter Gilbert\n\n\nconsisting of 24 base pairs of the DNA lac operator."
+    "text": "Sequence by synthesis - Process"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-54",
     "href": "materials/M3_RNASeq_Intro.html#section-54",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1973: Walter Gilbert produced ‘DNA sequencing by chemical degradation’.\n1973: Frederick Sanger was the first to sequence the complete DNA genome of a bacteriophage, called phi X174\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSanger developed ‘DNA sequencing with chain-terminating inhibitors’.\nFrederick Sanger was the first to sequence the complete DNA genome of a bacteriophage, called phi X174. He also developed ‘DNA sequencing with chain-terminating inhibitors’.\nGilbert, Frederick Sanger and Paul Berg were awarded the 1980 Nobel Prize in Chemistry\nGilbert and Sanger were recognized for their pioneering work in devising methods for determining the sequence of nucleotides in a nucleic acid."
+    "text": "Third generation NGS\n\n\n\n\n\n\n\nImportant\n\n\nThird-generation methods allow direct sequencing of single DNA molecules"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-55",
     "href": "materials/M3_RNASeq_Intro.html#section-55",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1983: DNA amplification technique was developed\n\n\n\n\nKary Mullis\n\n\n1993 Nobel Prize for Chemistry in recognition of his role in the invention of the polymerase chain reaction (PCR) technique"
+    "text": "Third generation NGS\n\nThird-generation NGS platforms:\n\nSingle-molecule real-time sequencing\nNanopore sequencing\n\n\n\nPacific Biosciences in 2011\nOxford Nanopore Technologies on 2014"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-56",
     "href": "materials/M3_RNASeq_Intro.html#section-56",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1986: Leroy Hood announced the invention of the first semi-automated DNA sequencing machine\n\n\n\n\nLeroy Hood\n\n\nHood improved the existing Sanger method of enzymatic sequencing, which was becoming the laboratory standard\nfluorescent dyes"
+    "text": "SMRS"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-57",
     "href": "materials/M3_RNASeq_Intro.html#section-57",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1987: Applied Biosystems produced the first automated sequencing machine, called ABI370.\n\n\n\n\nApplied Biosystems 370A Prototype Automated DNA Gene Sequencer,\n\n\nThis was a significant advance for several scientific research projects, including mapping the human genome.\nThe system relied on Sanger’s dideoxy sequencing method and fluorescent dyes"
+    "text": "Nanopore sequencing"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-58",
     "href": "materials/M3_RNASeq_Intro.html#section-58",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1990: The Human Genome Project formally began\n\n\n\n\nEarly days: a DNA-sequencing lab in 1994\n\n\nIt was expected to take around 15 years."
+    "text": "Single-Ended vs. Paired-End\nChoosing Your Sequencing Strategy\n\n\n\n\n\n\nSingle-end sequencing:\n\nOne read per fragment\nSimpler, cost-effective\nSuitable for gene expression profiling\n\n\n\n\nPaired-end sequencing:\n\nTwo reads per fragment\nMore information, improved accuracy\nUseful for genome assembly, variant detection, isoform identification\n\n\n\n\nChoice depends on:\n\nResearch question\nBudget\nDesired accuracy"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-60",
     "href": "materials/M3_RNASeq_Intro.html#section-60",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n2000: A ‘rough draft’ of the human genome was finished by the Human Genome Project\n\n\n\n\nWadman, M. ‘Rough draft’ of human genome wins researchers’ backing. Nature 393, 399–400 (1998). https://doi.org/10.1038/30790"
+    "text": "Sequencing Depth\nSequencing Depth: Finding the Right Balance\n\n\n\n\n\n\nWhat it is: The average number of times each base in the genome (or transcriptome) is sequenced.\nWhy it matters:\n\nSensitivity: Higher depth increases the chance of detecting rare transcripts or variants.\nAccuracy: Higher depth improves the accuracy of gene expression quantification and variant calling.\n\n\n\n\nFactors to consider:\n\nResearch goals: Higher depth is needed for detecting rare events or subtle changes.\nGenome size and complexity: Larger genomes require higher depth for adequate coverage.\nBudget: Higher depth increases sequencing costs.\n\n\n\n\nTypical ranges:\n\nRNA-Seq for gene expression: 10-30 million reads per sample\nRNA-Seq for isoform detection: 30-60 million reads per sample\nVariant calling: 30-50x coverage for whole-genome sequencing"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-61",
     "href": "materials/M3_RNASeq_Intro.html#section-61",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n\n\n\n\nA timeline illustrating the milestones in major genome assembly achievements [Formenti et al., 2020]\n\n\nThe background colour indicates what type of sequencing was used: Red represents early sequencing methods, yellow is Sanger-based shotgun methods, green is NGS and blue represents third-generation sequencing."
+    "text": "Transcriptome Coverage\nTranscriptome Coverage: Capturing the Full Picture\n\n\n\n\n\n\nWhat it is: The extent to which the sequencing reads represent the entire transcriptome.\nWhy it matters:\n\nCompleteness: High coverage ensures that all expressed transcripts are captured, including rare and low-abundance transcripts.\nAccuracy: Adequate coverage is needed for accurate quantification of gene expression levels.\nDiscovery: High coverage increases the chances of identifying novel transcripts and isoforms.\n\n\n\n\nFactors influencing coverage:\n\nSequencing depth: Higher depth generally leads to better coverage.\nLibrary complexity: A diverse library with a wide range of fragment sizes improves coverage.\nRNA integrity: High-quality RNA ensures that all transcripts are represented in the library.\nSequencing technology: Different platforms have different read lengths and biases, which can affect coverage."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-62",
@@ -438,49 +438,49 @@
     "href": "materials/M3_RNASeq_Intro.html#section-63",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "First generation NGS\n\nThe technology was based on:\n\nthe chain-termination method\nthe chain-degradation method\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthe chain-termination method developed by Sanger in 1975\nthe chain-degradation method invented by Gilbert in 1977"
+    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-64",
     "href": "materials/M3_RNASeq_Intro.html#section-64",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Chain-degradation method\n\n\n\n\n\nGilbert sequencing requires radioactive labeling at one 5′ end of the DNA fragment to be sequenced\nChemical treatment generates breaks at a small proportion of one or two of the four nucleotide bases in each of four reactions (G, A+G, C, C+T)\nwith the improvement of the chain-termination method (see below), Gilbert sequencing has fallen out"
+    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nCellular Heterogeneity: Identify and characterize different cell types within a complex tissue or population.\n\nDiscover new cell subtypes and rare cell populations.\nUnderstand the functional diversity of cells.\n\nDevelopmental Trajectories: Trace cell lineages and reconstruct developmental pathways.\n\nStudy cell differentiation and fate decisions.\nIdentify key genes and regulatory networks involved in development."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-65",
     "href": "materials/M3_RNASeq_Intro.html#section-65",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Chain-termination method\n\n\n\n\n\n\nDideoxynucleotide triphosphates (ddNTPs) lack the 3’-OH group of dNTPs that is essential for polymerase-mediated strand elongation in a PCR\nradioactive labels, which were unstable, posed a health hazard, and required separate gels for each of the four DNA bases\nThe synthesis of the complementary DNA strand starts at the specific priming site and ends with the incorporation of a chain-terminating ddNTP that is randomly introduced instead of its corresponding dNTP\nWhen these fragments are separated on a suitable gel matrix the sequence information can be obtained from the migration order of the bands (bottom to top)"
+    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nDisease Mechanisms: Investigate the cellular basis of disease.\n\nIdentify disease-associated cell types and gene expression changes.\nStudy the response of individual cells to drugs or treatments.\n\n\n\n\n\n\n\n\nImportant\n\n\nscRNA-seq represents a powerful tool for dissecting the complexities of gene expression and cellular heterogeneity across various biological contexts"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-66",
     "href": "materials/M3_RNASeq_Intro.html#section-66",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Chain-termination method\n\n\n\n\n\n\nLeroy Hood developed chemistry that used fluorescent dyes of different colors—one for each of the four DNA bases. This system of “color-coding” eliminated the need to run several reactions in overlapping gels\nHood integrated laser and computer technology, eliminating the tedious process of information-gathering by hand.\nfluorescently labeled ddATP, ddCTP, ddGTP and ddUTP\nSubsequent fluorescent visualization of the product reveals the incorporated nucleotide and hence the sequence"
+    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: mapping gene expression in context\n\n\n \n\n\n\nBridges histology and genomics: Combines traditional tissue imaging with high-throughput RNA sequencing.\nPreserves spatial context: Maps gene expression while retaining spatial information, unlike traditional scRNA-seq.\nEnables:\n\nVisualization of gene expression patterns within tissues.\nQuantitative analysis of transcriptomes in a spatial context.\n\nApplications:\n\nUnderstanding tissue organization and cellular interactions.\nInvestigating developmental processes (organogenesis).\nStudying disease progression and heterogeneity."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-67",
     "href": "materials/M3_RNASeq_Intro.html#section-67",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Chain-termination method\n\n\nAdvantages\n\nGold standard method for accurate detection of single nucleotide variants and small insertions/deletions\nCost effective where single samples need to be tested very urgently\nLess reliant on computational tools than NGS\nLonger fragments (up to approximately 1000bp) can be sequenced than in short read NGS\n\n\n\n\nLimitations\n\nLimited throughput\nNot cost effective for sequencing many genes in parallel\nCan require a larger amount of input DNA than NGS\nSanger methods can only sequence short pieces of DNA–about 300 to 1000 base pairs.\nThe quality of a Sanger sequence is often not very good in the first 15 to 40 bases because that is where the primer binds.\nSequence quality degrades after 700 to 900 bases"
+    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: from technology to discovery\n\n\n\n\n\nApplications:\n\nTissue heterogeneity: Studying complex tissues like the cochlea. (Tisi, 2023)\nDisease mechanisms: Uncovering cellular dynamics in diseases like Alzheimer’s. (Chen et al., 2020)\n\nData analysis:\n\nDimension reduction, deconvolution, and integration with histological images.\nSpecialized tools for cell type deconvolution. (Cable et al., 2021)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-68",
     "href": "materials/M3_RNASeq_Intro.html#section-68",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "First generation NGS\n\nThe main advantages of first-generation NGS technologies are:\n\nHave a good overall sequence output\nA high accuracy of 99.99%\nPreparing nucleic acids of the ideal size is relatively easy\n\n\nQuesti metodi non erano high througput!!"
+    "text": "Integration of RNA-Seq with other omics data\nBeyond RNA: integrating with other omics data\n\n\nThe Power of Integration: Combining RNA-Seq with other omics data provides a more complete picture of cellular processes.\n\nMetabolomics: Correlate gene expression with metabolic pathways and identify key metabolites.\nChromatin accessibility (ATAC-seq): Link gene expression changes to alterations in chromatin structure.\nOther omics layers: Integrate with genomics, proteomics, and epigenomics for a systems-level understanding.\n\nKey Findings:\n\nLimited overlap between DEGs and chromatin accessibility changes (~10%) (Malvi et al., 2022).\nHighlights the complexity of gene regulation beyond chromatin state. (Miao et al., 2021)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-69",
     "href": "materials/M3_RNASeq_Intro.html#section-69",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Second generation NGS\n\n\n\n\n\n\n\nImportant\n\n\nSecond-generation NGS machines immediately began to drive the ‘genomics revolution’ by massively increased throughput by parallelizing many reactions"
+    "text": "Integration of RNA-Seq with other omics data\nUnlocking biological insights through data integration\n\n\n\n\n\nApplications:\n\nIdentifying key pathways: Integration of RNA-seq and metabolomics reveals regulated pathways in liver metabolism. (Zhang et al., 2020)\nDisease biomarkers: Uncovering disease-specific biomarkers in NAFLD using RNA-seq and metabolomics. (Ji et al., 2022)\n\nTools and Techniques:\n\nMachine learning: rSeqTU for predicting transcription units and integrating with metagenomics and metabolomics. (Hou et al., 2022)\nStatistical analysis: DESeq2 for integrating RNA-seq and ChIP-seq data. (Niu et al., 2019)\nSingle-cell multi-omics: Combining scRNA-seq with lipidomics and metabolomics to study cellular heterogeneity. (Cao et al., 2020)"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-70",
@@ -641,21 +641,21 @@
     "href": "materials/M3_RNASeq_Intro.html#section-15",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "A Brief History of Sequencing"
+    "text": "Let’s say we want:\n\nType I error of 5%. (α=0.05)\nType II error of 0.2. (Power=1−β=0.8)\nEffect size of 2. (d=2)\n\n\n\nlibrary(\"pwr\")\n\npwr.t.test(d = 2,\n           power = .8,\n           sig.level = .05,\n           type = \"two.sample\",\n           alternative = \"two.sided\")\n\n\n     Two-sample t test power calculation \n\n              n = 5.089995\n              d = 2\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-37",
     "href": "materials/M3_RNASeq_Intro.html#section-37",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Ended vs. Paired-End\n\n\n\n\n\n\n\n\nTrade-off\nSingle-End Sequencing\nPaired-End Sequencing\n\n\n\n\nCost\nLower\nHigher\n\n\nInformation\nLess\nMore\n\n\nSimplicity\nSimpler\nMore Complex\n\n\nAccuracy\nLower\nHigher\n\n\nSequencing Depth\nHigher\nPotentially Lower\n\n\nRead Length\nShorter\nLonger (effective)\n\n\nIdeal Applications\nGene expression, small RNA-Seq\nGenome assembly, variant calling, isoform identification"
+    "text": "A Brief History of Sequencing"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-59",
     "href": "materials/M3_RNASeq_Intro.html#section-59",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Key moments for DNA sequencing:\n\n1998: ‘Method of nucleic acid amplification’ was developed\n\n\n\n\nPatent: https://patents.google.com/patent/WO1998044151A1/en\n\n\nThis was one of the major milestones in developing NGS technologies."
+    "text": "Single-Ended vs. Paired-End\n\n\n\n\n\n\n\n\nTrade-off\nSingle-End Sequencing\nPaired-End Sequencing\n\n\n\n\nCost\nLower\nHigher\n\n\nInformation\nLess\nMore\n\n\nSimplicity\nSimpler\nMore Complex\n\n\nAccuracy\nLower\nHigher\n\n\nSequencing Depth\nHigher\nPotentially Lower\n\n\nRead Length\nShorter\nLonger (effective)\n\n\nIdeal Applications\nGene expression, small RNA-Seq\nGenome assembly, variant calling, isoform identification"
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html#section-85",

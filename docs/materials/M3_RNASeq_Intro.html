@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="css/theme.css">
@@ -544,14 +609,291 @@
 </ul></li>
 </ul>
 </div></div>
+</section>
+<section id="section-9" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="tit p-span-center">How many samples do I need?</span></p>
+</section>
+<section id="section-10" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 80px; text-align: center">
+<p>Power analysis</p>
+</div>
+</section>
+<section id="section-11" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 80px; text-align: center">
+<p>Power analysis</p>
+</div>
+<ul>
+<li><strong>Type I error</strong>: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.</li>
+</ul>
+</section>
+<section id="section-12" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 80px; text-align: center">
+<p>Power analysis</p>
+</div>
+<ul>
+<li><p><strong>Type I error</strong>: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.</p></li>
+<li><p><strong>Type II error</strong>: controlled by the β value. (1−β) will give you the power of your analysis. Should be set to 70 or 80% to detect 70 or 80% of the differentially expressed genes. The number of biological replicates might be hard to reach in practice for RNA-seq experiments.</p></li>
+</ul>
+</section>
+<section id="section-13" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 80px; text-align: center">
+<p>Power analysis</p>
+</div>
+<ul>
+<li><p><strong>Type I error</strong>: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.</p></li>
+<li><p><strong>Type II error</strong>: controlled by the β value. (1−β) will give you the power of your analysis. Should be set to 70 or 80% to detect 70 or 80% of the differentially expressed genes. The number of biological replicates might be hard to reach in practice for RNA-seq experiments.</p></li>
+<li><p><strong>Effect size</strong>: this is a parameter you will set. For instance, if you want to investigate genes that differ between treatments with a difference of their mean of 2 then the effect size is equal to 2.</p></li>
+</ul>
+</section>
+<section id="section-14" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 80px; text-align: center">
+<p>Power analysis</p>
+</div>
+<ul>
+<li><p><strong>Type I error</strong>: controlled by the α value. Often set to 0.01 (1%) or 0.001 (0.1%) in RNA-seq experiments.</p></li>
+<li><p><strong>Type II error</strong>: controlled by the β value. (1−β) will give you the power of your analysis. Should be set to 70 or 80% to detect 70 or 80% of the differentially expressed genes. The number of biological replicates might be hard to reach in practice for RNA-seq experiments.</p></li>
+<li><p><strong>Effect size</strong>: this is a parameter you will set. For instance, if you want to investigate genes that differ between treatments with a difference of their mean of 2 then the effect size is equal to 2.</p></li>
+<li><p><strong>Sample size</strong>: the quantity you want to calculate.</p></li>
+</ul>
+</section>
+<section id="section-15" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<h4 id="lets-say-we-want">Let’s say we want:</h4>
+<ul>
+<li>Type I error of 5%. (α=0.05)</li>
+<li>Type II error of 0.2. (Power=1−β=0.8)</li>
+<li>Effect size of 2. (d=2)</li>
+</ul>
+<div class="fragment fade-in">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1|3|4|5|1-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(<span class="st">"pwr"</span>)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="dv">2</span>,</span>
+<span id="cb1-4"><a></a>           <span class="at">power =</span> .<span class="dv">8</span>,</span>
+<span id="cb1-5"><a></a>           <span class="at">sig.level =</span> .<span class="dv">05</span>,</span>
+<span id="cb1-6"><a></a>           <span class="at">type =</span> <span class="st">"two.sample"</span>,</span>
+<span id="cb1-7"><a></a>           <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Two-sample t test power calculation 
+
+              n = 5.089995
+              d = 2
+      sig.level = 0.05
+          power = 0.8
+    alternative = two.sided
+
+NOTE: n is number in *each* group</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="section-16" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<h4 id="lets-say-we-want-1">Let’s say we want:</h4>
+<ul>
+<li>Effect size of 1. (d=1)</li>
+</ul>
+<div class="fragment fade-in">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(<span class="st">"pwr"</span>)</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="dv">1</span>,</span>
+<span id="cb3-4"><a></a>           <span class="at">power =</span> .<span class="dv">8</span>,</span>
+<span id="cb3-5"><a></a>           <span class="at">sig.level =</span> .<span class="dv">05</span>,</span>
+<span id="cb3-6"><a></a>           <span class="at">type =</span> <span class="st">"two.sample"</span>,</span>
+<span id="cb3-7"><a></a>           <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Two-sample t test power calculation 
+
+              n = 16.71472
+              d = 1
+      sig.level = 0.05
+          power = 0.8
+    alternative = two.sided
+
+NOTE: n is number in *each* group</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="section-17" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="tit p-span-center">Power analysis for RNA-seq</span></p>
+</section>
+<section id="section-18" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 60px; text-align:center">
+<p><strong>General Considerations</strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 60px">
+<p>RNA-seq experiments often suffer from a low statistical power</p>
+</div>
+</section>
+<section id="section-19" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 60px; text-align:center">
+<p><strong>General Considerations</strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 60px">
+<p>RNA-seq experiments often suffer from a low statistical power</p>
+</div>
+<p><br></p>
+<div style="font-size: 60px">
+<p>Low power can lead to a lack of reproducibility of the research findings</p>
+</div>
+</section>
+<section id="section-20" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="font-size: 60px; text-align:center">
+<p><strong>General Considerations</strong></p>
+</div>
+<p><br></p>
+<div style="font-size: 60px">
+<p>RNA-seq experiments often suffer from a low statistical power</p>
+</div>
+<p><br></p>
+<div style="font-size: 60px">
+<p>Low power can lead to a lack of reproducibility of the research findings</p>
+</div>
+<p><br></p>
+<div style="font-size: 60px">
+<p>The number of replicates is one of the critical parameter related to the power of an analysis</p>
+</div>
+</section>
+<section id="section-21" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="tit p-span-center">Replicates</span></p>
+</section>
+<section id="section-22" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+
+<img data-src="images/image-259602676.png" class="r-stretch quarto-figure-center"><p class="caption">Klaus B., EMBO J (2015) 34: 2727-2730</p><aside class="notes">
+<ul>
+<li><p>Technical replicates: use the same biological sample to repeat the technical or experimental steps in order to accurately measure technical variation and remove it during analysis.</p></li>
+<li><p>Biological replicates use different biological samples of the same condition to measure the biological variation between samples</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-23" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="tit p-span-center">Do we need technical replicates?</span></p>
+</section>
+<section id="section-24" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p><span class="tit p-span-center">No</span></p>
+</section>
+<section id="section-25" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p><span class="tit p-span-center">No</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="f40">With the current RNA-Seq technologies, technical variation is much lower than biological variation and technical replicates are unneccessary</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-26" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<p><span class="tit p-span-center">Do we need biological replicates?</span></p>
+</section>
+<section id="section-27" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p><span class="tit p-span-center">YES</span></p>
+</section>
+<section id="section-28" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p><span class="tit p-span-center">YES</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="f40">Biological replicates are absolutely essential for <span class="rn">differential expression analysis</span></span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-29" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p><span class="tit p-span-center">YES</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="f40">For differential expression analysis, the more biological replicates, the better the estimates of biological variation and the more precise our estimates of the mean expression levels</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-30" class="slide level2" data-background-image="images/stat001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<h2></h2>
+<div class="f40 tcenter fragment">
+<p>Biological replicates are of greater importance than sequencing depth</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/image-154795781.png" height="700"></p>
+<figcaption>Liu, Y., et al., Bioinformatics (2014) 30(3): 301–304</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p><span style="font-size: 50px; color: red">Cosa vedete? Come interpretate il grafico</span></p>
+<p>Note that an increase in the number of replicates tends to return more DE genes than increasing the sequencing depth.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
-<section id="section-9" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-31" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Introduction to RNA Sequencing</span></p>
 <p><span class="p-span-center">(Primary analysis)</span></p>
 </section>
-<section id="section-10" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-32" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">The central dogma</span></p>
 <div class="p-img-center">
@@ -565,7 +907,7 @@
 </ul>
 </div>
 </section>
-<section id="section-11" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-33" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Why Study RNA?</span></p>
 <div class="p-img-center">
@@ -575,13 +917,13 @@
 <div class="cell quarto-layout-panel" data-layout-ncol="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img data-src="M3_RNASeq_Intro_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+<p><img data-src="M3_RNASeq_Intro_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-34" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Why Study RNA?</span></p>
 <div class="columns">
@@ -597,7 +939,7 @@
 </ul>
 </div></div>
 </section>
-<section id="section-13" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-35" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Why Study RNA?</span></p>
 <div class="columns">
@@ -645,7 +987,7 @@
 - **Highlight the "discovery" aspect**: Emphasize that RNA-Seq allows researchers to explore the unknown and uncover new biological insights.
 ::: -->
 </section>
-<section id="section-14" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-36" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">The Power of RNA-Seq</span></p>
 <div class="columns">
@@ -695,7 +1037,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-15" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-37" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">A Brief History of Sequencing</span></p>
 <div class="p-img-center">
@@ -705,17 +1047,17 @@
 <div class="cell quarto-layout-panel" data-layout-ncol="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img data-src="M3_RNASeq_Intro_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="M3_RNASeq_Intro_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-38" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="tit p-span-center">First generation NGS</span></p>
 </section>
-<section id="section-17" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-39" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <p><br></p>
@@ -741,7 +1083,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-18" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-40" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <p><br></p>
@@ -767,7 +1109,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-19" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-41" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <div class="columns f30">
@@ -793,7 +1135,7 @@
 </ol>
 </div></div>
 </section>
-<section id="section-20" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-42" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sanger Sequencing</span></p>
 <div class="p-img-center">
@@ -803,13 +1145,13 @@
 <div class="cell quarto-layout-panel" data-layout-ncol="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img data-src="M3_RNASeq_Intro_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<p><img data-src="M3_RNASeq_Intro_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-21" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-43" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Second generation NGS</span></p>
 <p><br></p>
@@ -827,7 +1169,7 @@
 </div>
 </div>
 </section>
-<section id="section-22" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-44" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Second generation NGS</span></p>
 <p><br></p>
@@ -855,7 +1197,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-23" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-45" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by Ligation</span></p>
 <p><br></p>
@@ -903,7 +1245,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-24" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-46" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Pyrosequencing</span></p>
 <div class="columns">
@@ -942,11 +1284,11 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-25" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-47" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis</span></p>
 </section>
-<section id="section-26" class="slide level2" data-background-image="images/pant.jpg" data-background-size="cover" data-background-opacity="1">
+<section id="section-48" class="slide level2" data-background-image="images/pant.jpg" data-background-size="cover" data-background-opacity="1">
 <h2></h2>
 <aside class="notes">
 <p>Birthplace of high-throughput sequencing</p>
@@ -962,7 +1304,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-27" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-49" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -991,7 +1333,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-28" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-50" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -1000,7 +1342,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 <p><img data-src="images/solexa.png" width="600"></p>
 </div>
 </section>
-<section id="section-29" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-51" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -1028,7 +1370,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-30" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-52" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - History</span></p>
 <p><br></p>
@@ -1077,12 +1419,12 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-31" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-53" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequence by synthesis - Process</span></p>
 <iframe data-external="1" src="https://www.youtube.com/embed/fCd6B5HRaZ8" width="100%" height="85%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="section-32" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-54" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Third generation NGS</span></p>
 <p><br></p>
@@ -1100,7 +1442,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-55" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Third generation NGS</span></p>
 <p><br></p>
@@ -1126,17 +1468,17 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-34" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-56" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">SMRS</span></p>
 <iframe data-external="1" src="https://www.youtube.com/embed/_lD8JyAbwEo" width="100%" height="85%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="section-35" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-57" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Nanopore sequencing</span></p>
 <iframe data-external="1" src="https://www.youtube.com/embed/CGWZvHIi3i0" width="100%" height="85%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="section-36" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-58" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Ended vs.&nbsp;Paired-End</span></p>
 <p><strong>Choosing Your Sequencing Strategy</strong></p>
@@ -1173,7 +1515,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-37" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-59" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Ended vs.&nbsp;Paired-End</span></p>
 <table class="caption-top">
@@ -1228,7 +1570,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </tbody>
 </table>
 </section>
-<section id="section-38" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-60" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Sequencing Depth</span></p>
 <p><strong>Sequencing Depth: Finding the Right Balance</strong></p>
@@ -1265,7 +1607,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-39" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-61" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Transcriptome Coverage</span></p>
 <p><strong>Transcriptome Coverage: Capturing the Full Picture</strong></p>
@@ -1296,11 +1638,11 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </div></div>
 </section></section>
 <section>
-<section id="section-40" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-62" class="title-slide slide level1 center" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h1></h1>
 <p><span class="tit p-span-center">Emerging Trends and Future Directions</span></p>
 </section>
-<section id="section-41" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-63" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Cell RNA Sequencing</span></p>
 <p><strong>Zooming In: Analyze gene expression in individual cells</strong></p>
@@ -1322,7 +1664,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 :::
 ::: -->
 </section>
-<section id="section-42" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-64" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Cell RNA Sequencing</span></p>
 <p><strong>scRNA-Seq: advantages in biological research</strong></p>
@@ -1339,7 +1681,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul></li>
 </ul>
 </section>
-<section id="section-43" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-65" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Single-Cell RNA Sequencing</span></p>
 <p><strong>scRNA-Seq: advantages in biological research</strong></p>
@@ -1364,7 +1706,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </div>
 </div>
 </section>
-<section id="section-44" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-66" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Spatial Transcriptomics</span></p>
 <p><strong>Spatial Transcriptomics: mapping gene expression in context</strong></p>
@@ -1390,7 +1732,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-45" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-67" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Spatial Transcriptomics</span></p>
 <p><strong>Spatial Transcriptomics: from technology to discovery</strong></p>
@@ -1412,7 +1754,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section>
-<section id="section-46" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-68" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Integration of RNA-Seq with other omics data</span></p>
 <p><strong>Beyond RNA: integrating with other omics data</strong></p>
@@ -1432,7 +1774,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div>
 </section>
-<section id="section-47" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
+<section id="section-69" class="slide level2" data-background-image="images/back001.jpg" data-background-size="cover" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="subtit">Integration of RNA-Seq with other omics data</span></p>
 <p><strong>Unlocking biological insights through data integration</strong></p>
@@ -1455,7 +1797,7 @@ D. The newly synthesized DNA strand is melted off, and A-C is repeated using a p
 </ul>
 </div></div>
 </section></section>
-<section id="section-48" class="title-slide slide level1 center" data-background-image="images/qmark.jpg" data-background-size="cover" data-background-opacity="0.7">
+<section id="section-70" class="title-slide slide level1 center" data-background-image="images/qmark.jpg" data-background-size="cover" data-background-opacity="0.7">
 <h1></h1>
 <div style="position: absolute; left: 980px; top: 450px;">
 <p><span style="font-size: 130px; font-weight: bold; color: white">Domande?</span></p>
