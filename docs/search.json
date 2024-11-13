@@ -1208,7 +1208,7 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-38",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequence by synthesis - Process"
+    "text": "Pseudo-aligners\nSalmon Output File Formats\n\n\n\n\n\n\n\n\n\nFolder\n\n\n\n\n \n\n\n\n\n\nquant.sf\n\n\n\n\n\n\n\nSalmon’s main output is its quantification file =&gt; quant.sf\ncmd_info.json. This is a JSON format file that records the main command line parameters with which Salmon was invoked\nAuxiliary files: The top-level quantification directory will contain an auxiliary directory called aux_info\n\nThe auxiliary directory will contain a JSON format file called meta_info.json which contains meta information about the run, including stats such as the number of observed and mapped fragments\nIf Salmon was run with automatic inference of the library type, information contained in this file is the inferred library type\n\nWhen run in mapping-based mode, the quantification directory will contain a file called lib_format_counts.json. This JSON file reports the number of fragments that had at least one mapping compatible with the designated library format\n\n\nd"
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-39",
@@ -1229,77 +1229,77 @@
     "href": "materials/M3_RNASeq_Pipeline.html#section-41",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "SMRS"
+    "text": "Post-alignment Processing\nRefining Your Alignments\n\n\nWhat it is:\n\nA series of steps performed after read alignment to improve data quality and prepare for downstream analysis.\n\nKey steps:\n\nDeduplication: Removing PCR duplicates to avoid bias in gene expression estimates. (Blue line)\nGenerating coverage tracks: Visualizing read distribution and assessing sequencing uniformity.\n(Optional) Other steps: Depending on the analysis goals, this may include filtering reads, recalibrating base quality scores, and other processing steps.\n\nWhy is it important?\n\nImproves the accuracy and reliability of downstream analysis.\nReduces noise and bias in the data.\nFacilitates data interpretation and visualization."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-42",
     "href": "materials/M3_RNASeq_Pipeline.html#section-42",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Nanopore sequencing"
+    "text": "Post-alignment Processing\nSAMtools: Manipulating and Analyzing Alignments\n\n\nWhat it is:\n\nA suite of command-line utilities for working with SAM/BAM files.\nA Swiss Army Knife for SAM/BAM Files\n\nKey functions:\n\nsamtools sort: Sorts alignments in a BAM file by coordinate.\n\nWhy is sorting important? Many downstream tools require sorted BAM files for efficient processing.\n\nsamtools index: Creates an index file for a sorted BAM file.\n\nWhy is indexing important? Allows for fast retrieval of specific regions of the alignment.\n\nsamtools stats: Generates statistics about an alignment file.\n\nProvides insights into alignment quality, read depth, and other metrics."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-43",
     "href": "materials/M3_RNASeq_Pipeline.html#section-43",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Ended vs. Paired-End\nChoosing Your Sequencing Strategy\n\n\n\n\n\n\nSingle-end sequencing:\n\nOne read per fragment\nSimpler, cost-effective\nSuitable for gene expression profiling\n\n\n\n\nPaired-end sequencing:\n\nTwo reads per fragment\nMore information, improved accuracy\nUseful for genome assembly, variant detection, isoform identification\n\n\n\n\nChoice depends on:\n\nResearch question\nBudget\nDesired accuracy"
+    "text": "Post-alignment Processing\nPicard MarkDuplicates: Deduplication without UMIs\n\n\nHow it works:\n\nIdentifies duplicates based on mapping coordinates of reads.\nMarks duplicate reads in the BAM file.\n\nConsiderations:\n\nLess accurate than UMI-based methods.\nCan be used when UMIs are not available.\nOften used in combination with other filtering steps."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-44",
     "href": "materials/M3_RNASeq_Pipeline.html#section-44",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Ended vs. Paired-End\n\n\n\n\n\n\n\n\nTrade-off\nSingle-End Sequencing\nPaired-End Sequencing\n\n\n\n\nCost\nLower\nHigher\n\n\nInformation\nLess\nMore\n\n\nSimplicity\nSimpler\nMore Complex\n\n\nAccuracy\nLower\nHigher\n\n\nSequencing Depth\nHigher\nPotentially Lower\n\n\nRead Length\nShorter\nLonger (effective)\n\n\nIdeal Applications\nGene expression, small RNA-Seq\nGenome assembly, variant calling, isoform identification"
+    "text": "Post-alignment Processing\nBEDTools genomecov: Quantifying Read Depth\n\n\nWhat it does:\n\nCalculates the number of reads overlapping each position in the genome.\nOutputs a coverage file in various formats (BEDGRAPH, bed, etc.).\n\nOptions:\n\nCalculate coverage for different strand orientations.\nNormalize coverage by library size.\nGenerate histograms of coverage depth."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-45",
     "href": "materials/M3_RNASeq_Pipeline.html#section-45",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Sequencing Depth\nSequencing Depth: Finding the Right Balance\n\n\n\n\n\n\nWhat it is: The average number of times each base in the genome (or transcriptome) is sequenced.\nWhy it matters:\n\nSensitivity: Higher depth increases the chance of detecting rare transcripts or variants.\nAccuracy: Higher depth improves the accuracy of gene expression quantification and variant calling.\n\n\n\n\nFactors to consider:\n\nResearch goals: Higher depth is needed for detecting rare events or subtle changes.\nGenome size and complexity: Larger genomes require higher depth for adequate coverage.\nBudget: Higher depth increases sequencing costs.\n\n\n\n\nTypical ranges:\n\nRNA-Seq for gene expression: 10-30 million reads per sample\nRNA-Seq for isoform detection: 30-60 million reads per sample\nVariant calling: 30-50x coverage for whole-genome sequencing"
+    "text": "BEDTools genomecov: Quantifying Read Depth\n\n\nWhat it does:\n\nCalculates the number of reads overlapping each position in the genome.\nOutputs a coverage file in various formats (BEDGRAPH, bed, etc.).\n\nOptions:\n\nCalculate coverage for different strand orientations.\nNormalize coverage by library size.\nGenerate histograms of coverage depth."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-46",
     "href": "materials/M3_RNASeq_Pipeline.html#section-46",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Transcriptome Coverage\nTranscriptome Coverage: Capturing the Full Picture\n\n\n\n\n\n\nWhat it is: The extent to which the sequencing reads represent the entire transcriptome.\nWhy it matters:\n\nCompleteness: High coverage ensures that all expressed transcripts are captured, including rare and low-abundance transcripts.\nAccuracy: Adequate coverage is needed for accurate quantification of gene expression levels.\nDiscovery: High coverage increases the chances of identifying novel transcripts and isoforms.\n\n\n\n\nFactors influencing coverage:\n\nSequencing depth: Higher depth generally leads to better coverage.\nLibrary complexity: A diverse library with a wide range of fragment sizes improves coverage.\nRNA integrity: High-quality RNA ensures that all transcripts are represented in the library.\nSequencing technology: Different platforms have different read lengths and biases, which can affect coverage."
+    "text": "Downstream Analysis\nKraken2: Identifying Microbial Communities in Your Samples\n\n\n\n\n\nWhat it is:\n\nA fast and accurate tool for assigning taxonomic labels to sequencing reads.\n\nWhy is it useful for RNA-Seq?\n\nRNA-Seq data can sometimes contain reads from microbial organisms (e.g., in microbiome studies, host-associated samples).\nKraken2 can identify and classify these microbial reads, providing insights into the microbial community present in the sample.\n\nHow it works:\n\nAssigns taxonomic classifications to reads based on the best match.\n\nBenefits:\n\nFast and efficient classification.\nAccurate identification of microbial species.\nCan be used with both DNA and RNA sequencing data."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-48",
     "href": "materials/M3_RNASeq_Pipeline.html#section-48",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nZooming In: Analyze gene expression in individual cells"
+    "text": "Downstream Analysis\nPreseq: Assessing the Diversity of Your Library\n\n\nWhat it is: A tool for estimating the complexity of a sequencing library.\nWhy is library complexity important?\n\nLibrary complexity refers to the number of unique DNA fragments in your library.\nHigher complexity means a more diverse representation of the original RNA population.\nLow complexity can lead to reduced sequencing efficiency and biased results.\n\nWhat does Preseq do?\n\nUses statistical modeling to predict the number of unique reads that would be obtained with deeper sequencing.\nHelps to assess whether additional sequencing is likely to yield new information.\nCan be used to compare the complexity of different libraries.\n\nBenefits:\n\nOptimize sequencing depth.\nAvoid unnecessary sequencing costs.\nImprove the quality and efficiency of RNA-Seq experiments."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-49",
     "href": "materials/M3_RNASeq_Pipeline.html#section-49",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nCellular Heterogeneity: Identify and characterize different cell types within a complex tissue or population.\n\nDiscover new cell subtypes and rare cell populations.\nUnderstand the functional diversity of cells.\n\nDevelopmental Trajectories: Trace cell lineages and reconstruct developmental pathways.\n\nStudy cell differentiation and fate decisions.\nIdentify key genes and regulatory networks involved in development."
+    "text": "Downstream Analysis\nQualimap RNA-Seq: A Deep Dive into Your RNA-Seq Data\n\n\nWhat it is:\n\nA comprehensive tool for quality control and analysis of RNA-Seq data.\n\nKey features:\n\nAlignment quality: Assesses mapping quality, mismatch rates, and indel rates.\nCoverage analysis: Evaluates coverage uniformity across genes and transcripts.\nJunction analysis: Examines splice junctions and identifies non-canonical junctions.\nTranscript coverage: Assesses coverage of known transcripts and identifies potential novel transcripts.\nrRNA content: Estimates the proportion of rRNA reads in the data.\n5’ and 3’ bias: Detects biases in read coverage towards the 5’ or 3’ ends of transcripts.\n\nBenefits:\n\nProvides detailed insights into the quality of RNA-Seq alignments.\nIdentifies potential biases and technical artifacts.\nHelps to ensure the reliability and accuracy of downstream analysis."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-50",
     "href": "materials/M3_RNASeq_Pipeline.html#section-50",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Single-Cell RNA Sequencing\nscRNA-Seq: advantages in biological research\n\nDisease Mechanisms: Investigate the cellular basis of disease.\n\nIdentify disease-associated cell types and gene expression changes.\nStudy the response of individual cells to drugs or treatments.\n\n\n\n\n\n\n\n\nImportant\n\n\nscRNA-seq represents a powerful tool for dissecting the complexities of gene expression and cellular heterogeneity across various biological contexts"
+    "text": "Downstream Analysis\nKraken2: Identifying Microbial Communities in Your Samples\n\n\n\n\n\nWhat it is:\n\nA fast and accurate tool for assigning taxonomic labels to sequencing reads.\n\nWhy is it useful for RNA-Seq?\n\nRNA-Seq data can sometimes contain reads from microbial organisms (e.g., in microbiome studies, host-associated samples).\nKraken2 can identify and classify these microbial reads, providing insights into the microbial community present in the sample.\n\nHow it works:\n\nAssigns taxonomic classifications to reads based on the best match.\n\nBenefits:\n\nFast and efficient classification.\nAccurate identification of microbial species.\nCan be used with both DNA and RNA sequencing data."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-51",
     "href": "materials/M3_RNASeq_Pipeline.html#section-51",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: mapping gene expression in context\n\n\n \n\n\n\nBridges histology and genomics: Combines traditional tissue imaging with high-throughput RNA sequencing.\nPreserves spatial context: Maps gene expression while retaining spatial information, unlike traditional scRNA-seq.\nEnables:\n\nVisualization of gene expression patterns within tissues.\nQuantitative analysis of transcriptomes in a spatial context.\n\nApplications:\n\nUnderstanding tissue organization and cellular interactions.\nInvestigating developmental processes (organogenesis).\nStudying disease progression and heterogeneity."
+    "text": "Downstream Analysis\nDifferential Expression: Finding the Genes that Matter\n\n\nWhat it is:\n\nIdentifying genes that are expressed at significantly different levels between two or more conditions (e.g., treated vs. control, healthy vs. diseased).\n\nWhy is it important?\n\nUncover genes involved in specific biological processes or disease states.\nIdentify potential biomarkers or therapeutic targets.\n\nTools:\n\nDESeq2: A popular R package for differential expression analysis.\nedgeR: Another widely used R package.\nlimma: A flexible package for linear modeling and differential expression analysis."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-52",
     "href": "materials/M3_RNASeq_Pipeline.html#section-52",
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
-    "text": "Spatial Transcriptomics\nSpatial Transcriptomics: from technology to discovery\n\n\n\n\n\nApplications:\n\nTissue heterogeneity: Studying complex tissues like the cochlea. (Tisi, 2023)\nDisease mechanisms: Uncovering cellular dynamics in diseases like Alzheimer’s. (Chen et al., 2020)\n\nData analysis:\n\nDimension reduction, deconvolution, and integration with histological images.\nSpecialized tools for cell type deconvolution. (Cable et al., 2021)"
+    "text": "Downstream Analysis\nMultiQC: Your One-Stop Shop for QC Reports\n\n\nWhat it is: A tool that aggregates results from multiple bioinformatics tools into a single HTML report.\nWhy is it useful for RNA-Seq?\n\nRNA-Seq analysis involves multiple QC steps (FastQC, SortMeRNA, Trim Galore!, etc.).\nMultiQC combines the results from these tools into a user-friendly report.\nThis saves time and simplifies the QC assessment process.\n\nKey features:\n\nSupports a wide range of bioinformatics tools.\nGenerates interactive plots and tables for easy visualization.\nHighlights potential issues and inconsistencies in the data.\nFacilitates comparison of QC metrics across multiple samples.\n\nBenefits:\n\nSaves time and effort in QC assessment.\nImproves clarity and organization of QC results.\nFacilitates data interpretation and decision-making."
   },
   {
     "objectID": "materials/M3_RNASeq_Pipeline.html#section-53",
@@ -1384,5 +1384,12 @@
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
     "text": "Raw reads: The Starting Point\nFASTQ format\n\n\n\nDefinition\n\n\nThe FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity.  \n\n\n\n\n@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html#section-47",
+    "href": "materials/M3_RNASeq_Pipeline.html#section-47",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Downstream Analysis\nRSeQC: Comprehensive Quality Assessment of Your RNA-Seq Data\n\n\nWhat it is:\n\nA suite of tools for RNA-Seq quality control and analysis.\n\nKey functions:\n\nRead distribution: Assess the distribution of reads across different genomic features (e.g., coding regions, introns, UTRs).\nGene body coverage: Evaluate the uniformity of coverage across gene bodies.\nStrand specificity: Check the strand specificity of the library.\nJunction saturation: Determine if sufficient sequencing depth has been achieved for junction detection.\nOther QC metrics: Assess rRNA contamination, insert size distribution, and more.\n\nBenefits:\n\nProvides comprehensive quality assessment of RNA-Seq data.\nIdentifies potential biases and issues in library preparation or sequencing.\nHelps to ensure the reliability and accuracy of downstream analysis."
   }
 ]

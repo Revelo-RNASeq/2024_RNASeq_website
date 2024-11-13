@@ -691,22 +691,279 @@ RPKM (Reads Per Kilobase Million) or FPKM (Fragments Per Kilobase Million). Howe
 :::
 
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Pseudo-aligners]{.subtit}
+
+### Salmon Output File Formats
+
+::: {layout="[40,-20,60]"}
+
+![Folder](images/salm1.png)
+
+![quant.sf](images/salmon2.png)
+:::
+
+:::{.notes}
+1. Salmon’s main output is its quantification file => quant.sf
+
+1. cmd_info.json. This is a JSON format file that records the main command line parameters with which Salmon was invoked
+
+1. Auxiliary files: The top-level quantification directory will contain an auxiliary directory called aux_info
+
+     - The auxiliary directory will contain a JSON format file called meta_info.json which contains meta information about the run, including stats such as the number of observed and mapped fragments
+
+     -  If Salmon was run with automatic inference of the library type, information contained in this file is the inferred library type
+
+1. When run in mapping-based mode, the quantification directory will contain a file called lib_format_counts.json. This JSON file reports the number of fragments that had at least one mapping compatible with the designated library format
 
 
+:::
 
-
-
-
-
+d
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Post-alignment Processing]{.tit .p-span-center}
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Post-alignment Processing]{.subtit}
+
+### Refining Your Alignments
+
+::: f30
+*   **What it is:** 
+    * A series of steps performed after read alignment to improve data quality and prepare for downstream analysis.
+*   **Key steps:**
+    *   **Deduplication:**  Removing PCR duplicates to avoid bias in gene expression estimates. (Blue line)
+    *   **Generating coverage tracks:**  Visualizing read distribution and assessing sequencing uniformity.
+    *   **(Optional) Other steps:**  Depending on the analysis goals, this may include filtering reads, recalibrating base quality scores, and other processing steps.
+*   **Why is it important?**
+    *   Improves the accuracy and reliability of downstream analysis.
+    *   Reduces noise and bias in the data.
+    *   Facilitates data interpretation and visualization.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Post-alignment Processing]{.subtit}
+
+### [SAMtools](https://samtools.github.io/): Manipulating and Analyzing Alignments
+
+::: f30
+*   **What it is:**  
+    * A suite of command-line utilities for working with SAM/BAM files.
+    * A Swiss Army Knife for SAM/BAM Files
+*   **Key functions:**
+    *   **`samtools sort`:** Sorts alignments in a BAM file by coordinate.
+        *   Why is sorting important?  Many downstream tools require sorted BAM files for efficient processing.
+    *   **`samtools index`:** Creates an index file for a sorted BAM file.
+        *   Why is indexing important?  Allows for fast retrieval of specific regions of the alignment.
+    *   **`samtools stats`:**  Generates statistics about an alignment file.
+        *   Provides insights into alignment quality, read depth, and other metrics.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Post-alignment Processing]{.subtit}
+
+### [Picard](https://broadinstitute.github.io/picard/) MarkDuplicates:  Deduplication without UMIs
+
+::: f40
+*   **How it works:**
+    *   Identifies duplicates based on mapping coordinates of reads.
+    *   Marks duplicate reads in the BAM file.
+*   **Considerations:**
+    *   Less accurate than UMI-based methods.
+    *   Can be used when UMIs are not available.
+    *   Often used in combination with other filtering steps.
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Post-alignment Processing]{.subtit}
+
+
+### [BEDTools](https://bedtools.readthedocs.io/en/latest/) genomecov:  Quantifying Read Depth
+
+::: f40
+*   **What it does:**
+    *   Calculates the number of reads overlapping each position in the genome.
+    *   Outputs a coverage file in various formats (BEDGRAPH, bed, etc.).
+*   **Options:**
+    *   Calculate coverage for different strand orientations.
+    *   Normalize coverage by library size.
+    *   Generate histograms of coverage depth.
+:::
 
 
 #  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
 [Downstream Analysis]{.tit .p-span-center}
 
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
 
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Downstream Analysis]{.subtit}
+
+### [RSeQC](https://rseqc.sourceforge.net):  Comprehensive Quality Assessment of Your RNA-Seq Data
+
+::: f25
+*   **What it is:**  
+    * A suite of tools for RNA-Seq quality control and analysis.
+*   **Key functions:**
+    *   **Read distribution:**  Assess the distribution of reads across different genomic features (e.g., coding regions, introns, UTRs).
+    *   **Gene body coverage:**  Evaluate the uniformity of coverage across gene bodies.
+    *   **Strand specificity:**  Check the strand specificity of the library.
+    *   **Junction saturation:**  Determine if sufficient sequencing depth has been achieved for junction detection.
+    *   **Other QC metrics:**  Assess rRNA contamination, insert size distribution, and more.
+*   **Benefits:**
+    *   Provides comprehensive quality assessment of RNA-Seq data.
+    *   Identifies potential biases and issues in library preparation or sequencing.
+    *   Helps to ensure the reliability and accuracy of downstream analysis.
+
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Downstream Analysis]{.subtit}
+
+### [Preseq](http://smithlabresearch.org/software/preseq/):  Assessing the Diversity of Your Library
+
+::: f25
+*   **What it is:**  A tool for estimating the complexity of a sequencing library.
+*   **Why is library complexity important?**
+    *   Library complexity refers to the number of unique DNA fragments in your library.
+    *   Higher complexity means a more diverse representation of the original RNA population.
+    *   Low complexity can lead to reduced sequencing efficiency and biased results.
+*   **What does Preseq do?**
+    *   Uses statistical modeling to predict the number of unique reads that would be obtained with deeper sequencing.
+    *   Helps to assess whether additional sequencing is likely to yield new information.
+    *   Can be used to compare the complexity of different libraries.
+*   **Benefits:**
+    *   Optimize sequencing depth.
+    *   Avoid unnecessary sequencing costs.
+    *   Improve the quality and efficiency of RNA-Seq experiments.
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Downstream Analysis]{.subtit}
+
+### [Qualimap RNA-Seq](http://qualimap.conesalab.org):  A Deep Dive into Your RNA-Seq Data
+
+
+::: f25
+*   **What it is:**  
+    * A comprehensive tool for quality control and analysis of RNA-Seq data.
+*   **Key features:**
+    *   **Alignment quality:**  Assesses mapping quality, mismatch rates, and indel rates.
+    *   **Coverage analysis:**  Evaluates coverage uniformity across genes and transcripts.
+    *   **Junction analysis:**  Examines splice junctions and identifies non-canonical junctions.
+    *   **Transcript coverage:**  Assesses coverage of known transcripts and identifies potential novel transcripts.
+    *   **rRNA content:**  Estimates the proportion of rRNA reads in the data.
+    *   **5' and 3' bias:**  Detects biases in read coverage towards the 5' or 3' ends of transcripts.
+*   **Benefits:**
+    *   Provides detailed insights into the quality of RNA-Seq alignments.
+    *   Identifies potential biases and technical artifacts.
+    *   Helps to ensure the reliability and accuracy of downstream analysis.
+
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Downstream Analysis]{.subtit}
+
+### Kraken2:  Identifying Microbial Communities in Your Samples
+
+:::: {.columns}
+::: {.column width="40%" .f40}
+![](images/kraken.png){width=700}
+:::
+::: {.column width="60%" .f25}
+*   **What it is:**  
+    * A fast and accurate tool for assigning taxonomic labels to sequencing reads.
+*   **Why is it useful for RNA-Seq?**
+    *   RNA-Seq data can sometimes contain reads from microbial organisms (e.g., in microbiome studies, host-associated samples).
+    *   Kraken2 can identify and classify these microbial reads, providing insights into the microbial community present in the sample.
+*   **How it works:**
+    *   Assigns taxonomic classifications to reads based on the best match.
+*   **Benefits:**
+    *   Fast and efficient classification.
+    *   Accurate identification of microbial species.
+    *   Can be used with both DNA and RNA sequencing data.
+:::
+:::: 
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Downstream Analysis]{.subtit}
+
+### Differential Expression:  Finding the Genes that Matter
+
+
+::: f30
+*   **What it is:**  
+    * Identifying genes that are expressed at significantly different levels between two or more conditions (e.g., treated vs. control, healthy vs. diseased).
+*   **Why is it important?**
+    *   Uncover genes involved in specific biological processes or disease states.
+    *   Identify potential biomarkers or therapeutic targets.
+*   **Tools:**
+    *   `DESeq2`:  A popular R package for differential expression analysis.
+    *   `edgeR`:  Another widely used R package.
+    *   `limma`:  A flexible package for linear modeling and differential expression analysis.
+
+
+:::
+
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+[Downstream Analysis]{.subtit}
+
+### [MultiQC](https://seqera.io/examples/rna-seq/multiqc_report.html):  Your One-Stop Shop for QC Reports
+
+::: f25
+*   **What it is:**  A tool that aggregates results from multiple bioinformatics tools into a single HTML report.
+*   **Why is it useful for RNA-Seq?**
+    *   RNA-Seq analysis involves multiple QC steps (FastQC, SortMeRNA, Trim Galore!, etc.).
+    *   MultiQC combines the results from these tools into a user-friendly report.
+    *   This saves time and simplifies the QC assessment process.
+*   **Key features:**
+    *   Supports a wide range of bioinformatics tools.
+    *   Generates interactive plots and tables for easy visualization.
+    *   Highlights potential issues and inconsistencies in the data.
+    *   Facilitates comparison of QC metrics across multiple samples.
+*   **Benefits:**
+    *   Saves time and effort in QC assessment.
+    *   Improves clarity and organization of QC results.
+    *   Facilitates data interpretation and decision-making.
+:::
+
+##  {background-image="images/back001.jpg" background-size="cover" background-opacity="0.1"}
+
+:::{.p-img-center}
+![](images/nfcore.png){width=2000}
+:::
+
+#  {background-image="images/qmark.jpg" background-size="cover" background-opacity="0.7"}
+
+
+::: {style="position: absolute; left: 980px; top: 450px;"}
+[Domande?]{style="font-size: 130px; font-weight: bold; color: white"}
+:::
 
