@@ -20,14 +20,16 @@ website:
         menu: 
           - href: materials/M1_intro.qmd
             text: "Modulo I: Introduzione al corso"
-          - href: materials/M2_RiepilogoR.qmd
-            text: "Modulo II: Riepilogo di R"
-          - href: materials/M3_RNASeq_Intro.qmd
-            text: "Modulo III: Introduzione all'RNASeq"
           - href: https://phd-toolbox-course.github.io/2022_PhD_Toolbox_course/M4_RicercaRiproducibile.html#1
-            text: "Modulo IV: Ricerca Riproducibile"
-          - href: materials/M5_software_code.qmd
-            text: "Modulo V: Files and Software"
+            text: "Modulo II: Ricerca Riproducibile"
+          - href: materials/M3_RNASeq_Intro.qmd
+            text: "Modulo III: Introduzione all'RNASeq (Primary analysis)"
+          - href: materials/M3_RNASeq_Pipeline.qmd
+            text: "Modulo IV: Introduzione all'RNASeq (Secondary analysis)"
+          - href: https://revelo-rnaseq.github.io/2024_RNASeq_book/
+            text: "Modulo V: DEG"
+          - href: materials/M2_RiepilogoR.qmd
+            text: "Riepilogo di R"
       - href: materials/risorse.qmd
         text: "Materiale aggiuntivo"
       - href: https://revelotraining.slack.com

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Introduzione all’analisi di RNASeq con R",
     "section": "",
-    "text": "Location\nIl corso si terrà in:\nDipartimento di Biomedicina e Prevenzione\nUniversità di Roma Tor Vergata\nEdificio E Nord 2 piano aula 290\nVia Montpellier 1\n00133 Rome\n\n\nProgramma del corso\n\nPrimo giorno\n\n\n\nOrario\nTema\n\n\n\n\n9:30\nIntroduzione al Corso\n\n\n10:15\nRiepilogo R\n\n\n10:45\nPausa\n\n\n11:00\nIntroduzione all’RNASeq\n\n\n12:30\nPausa pranzo\n\n\n13:30\nRicerca Riproducibile\n\n\n14:45\nPausa\n\n\n15:00\nSoftware and code\n\n\n16:30\nConsiderazioni finali\n\n\n\n\n\nSecondo giorno\n\n\n\nOrario\nTema\n\n\n\n\n9:30\nLive code (QC and quantification)\n\n\n10:45\nPausa\n\n\n11:00\nLive Code (Summarized Experiment)\n\n\n12:30\nPausa pranzo\n\n\n13:30\nLive Code (DEG)\n\n\n14:45\nPausa\n\n\n15:00\nLive Code (DEG)\n\n\n16:30\nConsiderazioni finali\n\n\n\n\n\n\nCome installare i software necessari al corso\nPer questo corso ci serviranno diversi software. Alcuni dei quali possono essere usati indistintamente su diversi sistemi operativi, altri invece no. Di seguito troverete le istruzioni per installare i software necessari sul vostro computer.\n\nR\nPer installare R cliccate sul seguente link e seguite le istruzioni per il vostro sistema operativo.\n\n\nRStudio\nPer installare RStudio cliccate sul seguente link e seguite le istruzioni per il vostro sistema operativo.\n\n\nDocker\nPer installare Docker cliccate sul seguente link e seguite le istruzioni per il vostro sistema operativo.\n\n\nSlack\nSeguire il link per iscriversi al canale Slack del corso\n\n\n\nDocente\nMarco Chiapello è un bioinformatico con lunga esperieza di utilizzo di R e Bioconductor. Dal 2016 è un istruttore certificato per l’organizzazione internazionale The Carpentries con la quale ha insegnato negli ultimi anni più di 10 corsi in varie università Europee di analisi dati con R. Dal 2015 insegna il corso PhD ToolBox presso l’Università degli Studi di Torino. Attualmente è Application Engineer presso Agilent Technologies nella divisione “Diagnostics & Genomics”."
+    "text": "Location\nIl corso si terrà in:\nDipartimento di Biomedicina e Prevenzione\nUniversità di Roma Tor Vergata\nEdificio E Nord 2 piano aula 290\nVia Montpellier 1\n00133 Rome\n\n\nProgramma del corso\n\nPrimo giorno\n\n\n\nOrario\nTema\n\n\n\n\n9:30\nIntroduzione al Corso\n\n\n10:15\nRicerca Riproducibile\n\n\n11:00\nPausa\n\n\n11:30\nIntroduzione all’RNASeq (Primary analysis)\n\n\n12:45\nPausa pranzo\n\n\n13:45\nIntroduzione all’RNASeq (Secondary analysis)\n\n\n15:00\nPausa\n\n\n15:30\nDEG\n\n\n16:30\nConsiderazioni finali\n\n\n\n\n\nSecondo giorno\n\n\n\nOrario\nTema\n\n\n\n\n9:30\nDEG\n\n\n10:45\nPausa\n\n\n11:15\nLive coding\n\n\n12:45\nPausa pranzo\n\n\n13:45\nLive coding\n\n\n15:00\nPausa\n\n\n15:30\nCap stone project\n\n\n16:30\nConsiderazioni finali\n\n\n\n\n\n\nCome installare i software necessari al corso\n\nR\nPer installare R cliccate sul seguente link e seguite le istruzioni per il vostro sistema operativo.\n\n\nRStudio\nPer installare RStudio cliccate sul seguente link e seguite le istruzioni per il vostro sistema operativo.\n\n\nSlack\nSeguire il link per iscriversi al canale Slack del corso\n\n\n\nDocente\nMarco Chiapello è un bioinformatico con lunga esperieza di utilizzo di R e Bioconductor. Dal 2016 è un istruttore certificato per l’organizzazione internazionale The Carpentries con la quale ha insegnato negli ultimi anni più di 10 corsi in varie università Europee di analisi dati con R. Dal 2015 insegna il corso PhD ToolBox presso l’Università degli Studi di Torino. Attualmente è Application Engineer presso Agilent Technologies nella divisione “Diagnostics & Genomics”."
   },
   {
     "objectID": "materials/M3_RNASeq_Intro.html",
@@ -1468,5 +1468,82 @@
     "title": "Analisi di dati di trascrittomica con R",
     "section": "",
     "text": "Goals\n\n\n\n\nBecome a better data scientist\n\n\n\n\n\n\nLeanr best practices for working with R/Bioconductor\n\n\n\n\n\n\nUnderstand how to do RNASeq bulk data analysis\n\n\n\n\n\n\nDevelop a lightweight and reusable RNASeq pipeline"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html",
+    "href": "materials/M2_RiepilogoR.html",
+    "title": "",
+    "section": "",
+    "text": "R recall\nIntroduzione all’analisi RNASeq in R\nDipartimento di Biomedicina e Prevenzione\n \nMarco Chiapello, Revelo Datalab\n2023-03-31"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#TitleSlide",
+    "href": "materials/M2_RiepilogoR.html#TitleSlide",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "R recall\nIntroduzione all’analisi RNASeq in R\nDipartimento di Biomedicina e Prevenzione\n \nMarco Chiapello, Revelo Datalab\n2023-03-31"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-3",
+    "href": "materials/M2_RiepilogoR.html#section-3",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Variable\n\n\n\n\n\n\n\nDefinition\n\n\n\nVariables are used to store information to be referenced and manipulated in a computer program.\nThey also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves.\nIt is helpful to think of variables as containers that hold information.\nTheir sole purpose is to label and store data in memory\n\n\n\n\n\nVariabile come una scatola da mettere in soffitta"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-4",
+    "href": "materials/M2_RiepilogoR.html#section-4",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Variable\n\n\nYou want your object names to be explicit and not too long.\nThey cannot start with a number (2x is not valid, but x2 is).\nR is case sensitive, so for example, weight_kg is different from Weight_kg.\nThere are some names that cannot be used because they are the names of fundamental functions in R (e.g., if, else, for, see here for a complete list). In general, even if it’s allowed, it’s best to not use other function names (e.g., c, T, mean, data, df, weights).\nIt’s best to avoid dots (.) within names. Many function names in R itself have them and dots also have a special meaning (methods) in R.\nIt is recommended to use nouns for object names and verbs for function names.\nBe consistent in the styling of your code, such as where you put spaces, how you name objects, etc."
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-5",
+    "href": "materials/M2_RiepilogoR.html#section-5",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Variable"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-6",
+    "href": "materials/M2_RiepilogoR.html#section-6",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Assignment operator\n\n\n4 + 5\nx &lt;- 4 + 5\nx + 2\nx &lt;- 2 + 1\nx &lt;- x + 2\n\nx = x + 2\nx + 2 -&gt; x"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-7",
+    "href": "materials/M2_RiepilogoR.html#section-7",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Data Structures\nThe most essential data structures used in R include:\n\n\nVectors: A vector is an ordered collection of basic data types of a given length\nLists: A list is a generic object consisting of an ordered collection of objects. Lists are heterogeneous data structures\nDataframes: Dataframes are generic data objects of R which are used to store the tabular data. Dataframes are the foremost popular data objects in R\nMatrices: A matrix is a rectangular arrangement of numbers in rows and columns. Matrices are two-dimensional, homogeneous data structures.\nArrays: Arrays are the R data objects which store the data in more than two dimensions.\nFactors: Factors are the data objects which are used to categorize the data and store it as levels. They are useful for storing categorical data.\n\n\n\nA vector is the most common and basic data type in R, and is pretty much the workhorse of R\nR is vectorized program"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-10",
+    "href": "materials/M2_RiepilogoR.html#section-10",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "tidyverse.org"
+  },
+  {
+    "objectID": "materials/M2_RiepilogoR.html#section-12",
+    "href": "materials/M2_RiepilogoR.html#section-12",
+    "title": "Analisi di dati di trascrittomica con R",
+    "section": "",
+    "text": "Project Goals:\n\n\nTo provide widespread access to a broad range of powerful statistical and graphical methods for the analysis of genomic data.\nTo facilitate the inclusion of biological metadata in the analysis of genomic data, e.g. literature data from PubMed, annotation data from Entrez genes.\nTo provide a common software platform that enables the rapid development and deployment of extensible, scalable, and interoperable software.\nTo further scientific understanding by producing high-quality documentation and reproducible research.\nTo train researchers on computational and statistical methods for the analysis of biological data.\n\n\n\nbioconductor.org\n\n\n\nDare l’accesso a innumerevoli pacchetti per l’analisi statistica e la visualizzazione di dati genomici\nFacilitare l’inclusione dei metadati! insieme di informazioni sui dati\nSviluppare una base comune di classi di R che permettano di sviluppare altri pacchetti che possano operare insieme: vedi SummarizedExperiment\nMettere l’accento sulla Ricerca riproducibile\nCreare corsi per insegnare l;analisi di dati biologici"
+  },
+  {
+    "objectID": "materials/M3_RNASeq_Pipeline.html",
+    "href": "materials/M3_RNASeq_Pipeline.html",
+    "title": "",
+    "section": "",
+    "text": "Introduzione all’RNASeq\nIntroduzione all’analisi RNASeq in R\nDipartimento di Biomedicina e Prevenzione\n \nMarco Chiapello, Revelo Datalab\n2024-11-18"
+  },
+  {
+    "objectID": "materials/M1_intro.html",
+    "href": "materials/M1_intro.html",
+    "title": "",
+    "section": "",
+    "text": "Introduzione al Corso\nIntroduzione all’analisi RNASeq in R\nDipartimento di Biomedicina e Prevenzione\n \nMarco Chiapello, Revelo Datalab\n2024-11-18"
   }
 ]
