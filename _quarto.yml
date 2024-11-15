@@ -32,7 +32,7 @@ website:
             text: "Riepilogo di R"
       - href: materials/risorse.qmd
         text: "Materiale aggiuntivo"
-      - href: https://revelotraining.slack.com
+      - href: https://revelotraining.slack.com/archives/C0811HB4Z18
         text: "Slack chat"
       - href: https://github.com/Revelo-RNASeq/2024_RNASeq_scaffoldCode
         text: "Parte pratica"
