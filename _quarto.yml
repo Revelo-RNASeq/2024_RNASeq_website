@@ -34,6 +34,8 @@ website:
         text: "Materiale aggiuntivo"
       - href: https://revelotraining.slack.com
         text: "Slack chat"
+      - href: https://github.com/Revelo-RNASeq/2024_RNASeq_scaffoldCode
+        text: "Parte pratica"
     right: 
       - text: "Revelo DataLabs"
         href: https://revelodatalabs.com
