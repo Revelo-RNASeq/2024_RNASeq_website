@@ -46,25 +46,23 @@ library(gtsummary)
 [November 2024]{style="font-size: 30px;font-weight: bold;"}
 :::
 
-#  {background-image="images/coding-g4ae00ad60_1920.jpg" background-size="cover" background-opacity="0.1"}
-
-<br>
-<br>
-
-::: {.p-img-center}
-
-```{r}
-#| echo: false
-#| layout-ncol: 1
-plot(qrcode::qr_code("https://forms.gle/t9vmzx6o2sedBNaB7"))
-```
-
-:::
 
 #  {background-image="images/coding-g4ae00ad60_1920.jpg" background-size="cover" background-opacity="0.1"}
 
 :::{.p-img-center}
 ![](images/Rerror.png){width=1200}
+:::
+
+#  {background-image="images/coding-g4ae00ad60_1920.jpg" background-size="cover" background-opacity="0.1"}
+
+[RStudio software]{.tit .p-span-center}
+
+##  {background-image="images/coding-g4ae00ad60_1920.jpg" background-size="cover" background-opacity="0.1"}
+
+[RStudio software]{.subtit}
+
+:::{.p-img-center}
+![](images/rstudio.png){width=1200}
 :::
 
 #  {background-image="images/coding-g4ae00ad60_1920.jpg" background-size="cover" background-opacity="0.1"}

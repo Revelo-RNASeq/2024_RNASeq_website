@@ -43,7 +43,8 @@ Via Montpellier 1
 
 | Orario     | Tema                  |
 |------------|-----------------------|
-|9:30  | [DEG](https://revelo-rnaseq.github.io/2024_RNASeq_book/)       |
+|9:30  | [R recap](materials/M2_RiepilogoR.qmd)|
+|10:00  | [DEG](https://revelo-rnaseq.github.io/2024_RNASeq_book/)       |
 |10:45 | Pausa                  | 
 |11:15 | Live coding|
 |12:45 | Pausa pranzo           | 
@@ -61,7 +62,8 @@ Per installare R cliccate sul seguente [link](https://cran.r-project.org) e segu
 
 #### RStudio
 
-Per installare RStudio cliccate sul seguente [link](https://posit.co/download/rstudio-desktop/) e seguite le istruzioni per il vostro sistema operativo.
+Per installare RStudio cliccate sul seguente [link](https://posit.co/download/rstudio-desktop/) e seguite le istruzioni per il vostro sistema operativo.     
+In alternativa potete usare il servizio cloud di RStudio cliccando sul seguente [link](https://posit.cloud/). 
 
     
 #### Slack
