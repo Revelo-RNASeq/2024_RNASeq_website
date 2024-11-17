@@ -86,7 +86,6 @@ library(gtsummary)
     *   **Key steps:**
         *   Differential gene expression analysis
         *   Clustering and classification
-        *   Pathway and network analysis
 
 :::
 ::: {.column width="3%"}
