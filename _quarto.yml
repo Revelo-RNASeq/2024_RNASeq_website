@@ -40,7 +40,7 @@ website:
       - text: "Revelo DataLabs"
         href: https://revelodatalabs.com
       - icon: github
-        href: https://revelo-rnaseq.github.io/2024_RNASeq_website
+        href: https://github.com/orgs/Revelo-RNASeq/repositories
 
 format:
   html:
