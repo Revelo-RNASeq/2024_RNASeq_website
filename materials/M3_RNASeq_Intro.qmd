@@ -95,7 +95,7 @@ library(gtsummary)
 *   **Tertiary Analysis:**
     *   Integrates transcriptomic data with other biological knowledge.
     *   **Key steps:**
-        *   Data interpretation and visualization
+        *   Pathway and network analysis
         *   Validation of findings
         *   Hypothesis generation and further experimentation
 :::
